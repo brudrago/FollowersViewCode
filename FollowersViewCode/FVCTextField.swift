@@ -20,6 +20,12 @@ class FVCTextField: UITextField {
         fatalError("init(coder:) has not been implemented")
     }
     
+    init(placeholder: String) {
+        super.init(frame: .zero)
+        self.placeholder = placeholder
+        configure()
+    }
+    
     // MARK: - Private Functions
     
     private func configure() {
@@ -38,8 +44,6 @@ class FVCTextField: UITextField {
         
         backgroundColor = .tertiarySystemBackground
         autocorrectionType = .no
-        
-        placeholder = "Digite o username"
         
     }
     

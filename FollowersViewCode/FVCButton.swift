@@ -9,6 +9,8 @@ import UIKit
 
 class FVCButton: UIButton {
     
+    // MARK: - Inits
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
