@@ -3,14 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		70D0AAC42610BF1B0045B210 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D0AAC32610BF1B0045B210 /* AppDelegate.swift */; };
 		70D0AAC62610BF1B0045B210 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D0AAC52610BF1B0045B210 /* SceneDelegate.swift */; };
 		70D0AAC82610BF1B0045B210 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D0AAC72610BF1B0045B210 /* ViewController.swift */; };
-		70D0AACB2610BF1B0045B210 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70D0AAC92610BF1B0045B210 /* Main.storyboard */; };
 		70D0AACD2610BF1C0045B210 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70D0AACC2610BF1C0045B210 /* Assets.xcassets */; };
 		70D0AAD02610BF1C0045B210 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70D0AACE2610BF1C0045B210 /* LaunchScreen.storyboard */; };
 		F929C0248D83DBA10EF156B3 /* Pods_FollowersViewCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA59C9FACE706593E59B1427 /* Pods_FollowersViewCode.framework */; };
@@ -21,7 +20,6 @@
 		70D0AAC32610BF1B0045B210 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70D0AAC52610BF1B0045B210 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		70D0AAC72610BF1B0045B210 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		70D0AACA2610BF1B0045B210 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		70D0AACC2610BF1C0045B210 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70D0AACF2610BF1C0045B210 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		70D0AAD12610BF1C0045B210 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -71,15 +69,46 @@
 		70D0AAC22610BF1B0045B210 /* FollowersViewCode */ = {
 			isa = PBXGroup;
 			children = (
-				70D0AAC32610BF1B0045B210 /* AppDelegate.swift */,
-				70D0AAC52610BF1B0045B210 /* SceneDelegate.swift */,
+				70F9EF752610C2490090BC9D /* SupportFiles */,
+				70F9EF742610C2350090BC9D /* Source */,
+				70F9EF732610C21D0090BC9D /* Resources */,
 				70D0AAC72610BF1B0045B210 /* ViewController.swift */,
-				70D0AAC92610BF1B0045B210 /* Main.storyboard */,
-				70D0AACC2610BF1C0045B210 /* Assets.xcassets */,
-				70D0AACE2610BF1C0045B210 /* LaunchScreen.storyboard */,
-				70D0AAD12610BF1C0045B210 /* Info.plist */,
 			);
 			path = FollowersViewCode;
+			sourceTree = "<group>";
+		};
+		70F9EF602610C19E0090BC9D /* Features */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		70F9EF732610C21D0090BC9D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				70D0AACC2610BF1C0045B210 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		70F9EF742610C2350090BC9D /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				70F9EF602610C19E0090BC9D /* Features */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		70F9EF752610C2490090BC9D /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				70D0AAD12610BF1C0045B210 /* Info.plist */,
+				70D0AAC52610BF1B0045B210 /* SceneDelegate.swift */,
+				70D0AAC32610BF1B0045B210 /* AppDelegate.swift */,
+				70D0AACE2610BF1C0045B210 /* LaunchScreen.storyboard */,
+			);
+			path = SupportFiles;
 			sourceTree = "<group>";
 		};
 		A1151B8BDF3FBDB367AE9DB1 /* Pods */ = {
@@ -88,7 +117,6 @@
 				AB33298DE43A689C62FE1799 /* Pods-FollowersViewCode.debug.xcconfig */,
 				B3087C6ABD0D0FC7E23A5A04 /* Pods-FollowersViewCode.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -153,7 +181,6 @@
 			files = (
 				70D0AAD02610BF1C0045B210 /* LaunchScreen.storyboard in Resources */,
 				70D0AACD2610BF1C0045B210 /* Assets.xcassets in Resources */,
-				70D0AACB2610BF1B0045B210 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,14 +242,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		70D0AAC92610BF1B0045B210 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				70D0AACA2610BF1B0045B210 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		70D0AACE2610BF1C0045B210 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -357,7 +376,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = FollowersViewCode/Info.plist;
+				INFOPLIST_FILE = FollowersViewCode/SupportFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -376,7 +395,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = FollowersViewCode/Info.plist;
+				INFOPLIST_FILE = FollowersViewCode/SupportFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
