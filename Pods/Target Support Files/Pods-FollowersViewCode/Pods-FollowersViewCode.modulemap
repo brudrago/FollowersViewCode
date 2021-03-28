@@ -1,0 +1,6 @@
+framework module Pods_FollowersViewCode {
+  umbrella header "Pods-FollowersViewCode-umbrella.h"
+
+  export *
+  module * { export * }
+}
