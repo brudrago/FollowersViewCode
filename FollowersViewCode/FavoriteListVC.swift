@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  FavoriteListVC.swift
 //  FollowersViewCode
 //
 //  Created by Bruna Drago on 28/03/21.
@@ -7,13 +7,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class FavoriteListVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemTeal
+        view.backgroundColor = .systemPink
     }
 
-
 }
-
