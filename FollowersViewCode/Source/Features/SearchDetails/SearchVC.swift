@@ -7,9 +7,19 @@
 
 import UIKit
 
+protocol SearchVCProtocol: AnyObject {
+    
+}
+
 class SearchVC: UIViewController {
     
     private var searchView = SearchView()
+    
+    // MARK: - VIP Properties
+    
+    var interactor: SearchInteractorProtocol!
+    
+    var router: SearchRouterProtocol!
     
     // MARK: - View Lifecycle
     
@@ -20,7 +30,8 @@ class SearchVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        createDismissKeyboardTapGesture() 
+        createDismissKeyboardTapGesture()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,5 +43,5 @@ class SearchVC: UIViewController {
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         view.addGestureRecognizer(tap)
     }
-    
 }
+

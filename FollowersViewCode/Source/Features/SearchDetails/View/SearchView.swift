@@ -18,6 +18,7 @@ class SearchView: UIView {
     
     private lazy var usernameTextField: UITextField = {
         let textField = FVCTextField(placeholder: "Digite o username")
+        textField.delegate = self 
         return textField
     } ()
     
@@ -25,6 +26,7 @@ class SearchView: UIView {
         let button = FVCButton(
             backgroundColor: .systemGreen,
             title: "Buscar Seguidores")
+        button.addTarget(self, action: #selector(pushFollowerListVC), for: .touchUpInside)
         return button
     } ()
     
@@ -38,6 +40,14 @@ class SearchView: UIView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setupUI()
+    }
+    
+    @objc
+    private func pushFollowerListVC() {
+        let followerLisVC = FollowerListVC()
+        followerLisVC.username = usernameTextField.text
+        followerLisVC.title = usernameTextField.text
+       
     }
 }
 
@@ -74,5 +84,12 @@ extension SearchView: ViewCodeProtocol {
     
     func setupComponents() {
         backgroundColor = .systemBackground
+    }
+}
+
+extension SearchView: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        return true
     }
 }
