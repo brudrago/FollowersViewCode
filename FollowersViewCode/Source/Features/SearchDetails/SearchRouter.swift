@@ -9,13 +9,14 @@ import Foundation
 
 protocol SearchRouterProtocol {
     
+    func proceedToFollowerList(username: String)
 }
 
 class SearchRouter: SearchRouterProtocol {
     
     // MARK: - VIP Properties
     
-    weak var viewController: SearchVC!
+    weak var viewController: SearchViewController!
     
     // MARK: - Public Functions
     

@@ -11,7 +11,7 @@
 		70D0AAC62610BF1B0045B210 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D0AAC52610BF1B0045B210 /* SceneDelegate.swift */; };
 		70D0AACD2610BF1C0045B210 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70D0AACC2610BF1C0045B210 /* Assets.xcassets */; };
 		70D0AAD02610BF1C0045B210 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70D0AACE2610BF1C0045B210 /* LaunchScreen.storyboard */; };
-		70F9EF802610D49E0090BC9D /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F9EF7F2610D49E0090BC9D /* SearchVC.swift */; };
+		70F9EF802610D49E0090BC9D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F9EF7F2610D49E0090BC9D /* SearchViewController.swift */; };
 		70F9EF832610D4D80090BC9D /* FavoriteListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F9EF822610D4D80090BC9D /* FavoriteListVC.swift */; };
 		70F9EF882610DA3E0090BC9D /* FVCButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F9EF872610DA3E0090BC9D /* FVCButton.swift */; };
 		70F9EF8C2610DE860090BC9D /* FVCTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F9EF8B2610DE860090BC9D /* FVCTextField.swift */; };
@@ -33,7 +33,7 @@
 		70D0AACC2610BF1C0045B210 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70D0AACF2610BF1C0045B210 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		70D0AAD12610BF1C0045B210 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		70F9EF7F2610D49E0090BC9D /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		70F9EF7F2610D49E0090BC9D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		70F9EF822610D4D80090BC9D /* FavoriteListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListVC.swift; sourceTree = "<group>"; };
 		70F9EF872610DA3E0090BC9D /* FVCButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FVCButton.swift; sourceTree = "<group>"; };
 		70F9EF8B2610DE860090BC9D /* FVCTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FVCTextField.swift; sourceTree = "<group>"; };
@@ -103,10 +103,10 @@
 		70F9EF602610C19E0090BC9D /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				70F9EF9B2610FACF0090BC9D /* FollowerListDetails */,
-				70F9EF972610E9D60090BC9D /* Shared */,
 				70F9EF862610D9990090BC9D /* FavoritesDetails */,
+				70F9EF9B2610FACF0090BC9D /* FollowerListDetails */,
 				70F9EF852610D92F0090BC9D /* SearchDetails */,
+				70F9EF972610E9D60090BC9D /* Shared */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -142,7 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				70F9EF8E2610E1DE0090BC9D /* View */,
-				70F9EF7F2610D49E0090BC9D /* SearchVC.swift */,
+				70F9EF7F2610D49E0090BC9D /* SearchViewController.swift */,
 				70F9EFA52610FD000090BC9D /* SearchBuilder.swift */,
 				70F9EFA82610FD150090BC9D /* SearchInteractor.swift */,
 				70F9EFAB2610FD290090BC9D /* SearchPresenter.swift */,
@@ -317,7 +317,7 @@
 				70F9EF9D2610FAF30090BC9D /* FollowerListVC.swift in Sources */,
 				70F9EF832610D4D80090BC9D /* FavoriteListVC.swift in Sources */,
 				70F9EF992610E9EA0090BC9D /* ViewCodeProtocol.swift in Sources */,
-				70F9EF802610D49E0090BC9D /* SearchVC.swift in Sources */,
+				70F9EF802610D49E0090BC9D /* SearchViewController.swift in Sources */,
 				70D0AAC42610BF1B0045B210 /* AppDelegate.swift in Sources */,
 				70F9EFA62610FD000090BC9D /* SearchBuilder.swift in Sources */,
 				70F9EFA92610FD150090BC9D /* SearchInteractor.swift in Sources */,

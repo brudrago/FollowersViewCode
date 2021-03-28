@@ -7,11 +7,11 @@
 
 import UIKit
 
-protocol SearchVCProtocol: AnyObject {
+protocol SearchViewControllerProtocol: AnyObject {
     
 }
 
-class SearchVC: UIViewController {
+class SearchViewController: UIViewController {
     
     private var searchView = SearchView()
     
@@ -30,8 +30,8 @@ class SearchVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchView.delegate = self
         createDismissKeyboardTapGesture()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -42,6 +42,13 @@ class SearchVC: UIViewController {
     func createDismissKeyboardTapGesture() {
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         view.addGestureRecognizer(tap)
+    }
+}
+
+extension SearchViewController: SearchViewDelegate {
+    
+    func sendUsername(username: String) {
+        router.proceedToFollowerList(username: username)
     }
 }
 

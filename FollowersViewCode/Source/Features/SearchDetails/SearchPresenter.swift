@@ -15,5 +15,5 @@ class SearchPresenter: SearchPresenterProtocol {
     
     // MARK: - VIP Properties
     
-    weak var viewController: SearchVCProtocol!
+    weak var viewController: SearchViewControllerProtocol!
 }

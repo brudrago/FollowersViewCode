@@ -8,6 +8,11 @@
 import UIKit
 import SnapKit
 
+protocol SearchViewDelegate: AnyObject {
+    
+    func sendUsername(username: String)
+}
+
 class SearchView: UIView {
     
     private lazy var logoImageView: UIImageView = {
@@ -26,9 +31,11 @@ class SearchView: UIView {
         let button = FVCButton(
             backgroundColor: .systemGreen,
             title: "Buscar Seguidores")
-        button.addTarget(self, action: #selector(pushFollowerListVC), for: .touchUpInside)
+        button.addTarget(self, action: #selector(actionButtontapped), for: .touchUpInside)
         return button
     } ()
+    
+    weak var delegate: SearchViewDelegate?
     
     // MARK: - Inits
     
@@ -43,9 +50,9 @@ class SearchView: UIView {
     }
     
     @objc
-    private func pushFollowerListVC() {
-        
-       
+    private func actionButtontapped() {
+        let username = usernameTextField.text ?? ""
+        delegate?.sendUsername(username: username)
     }
 }
 
@@ -87,7 +94,7 @@ extension SearchView: ViewCodeProtocol {
 
 extension SearchView: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
+        actionButtontapped()
         return true
     }
 }

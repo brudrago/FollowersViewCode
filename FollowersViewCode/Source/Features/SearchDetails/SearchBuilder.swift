@@ -10,7 +10,7 @@ import UIKit
 struct SearchBuilder {
     
     static func build() -> UIViewController {
-        let viewController = SearchVC()
+        let viewController = SearchViewController()
         let interactor = SearchInteractor()
         let presenter = SearchPresenter()
         let router = SearchRouter()
@@ -18,7 +18,7 @@ struct SearchBuilder {
         viewController.interactor = interactor
         viewController.router = router
         interactor.presenter = presenter
-        presenter.viewController = viewController as! SearchVCProtocol
+      //  presenter.viewController = viewController
         router.viewController = viewController
         
         return viewController
