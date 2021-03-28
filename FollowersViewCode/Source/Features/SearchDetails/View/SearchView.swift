@@ -44,9 +44,7 @@ class SearchView: UIView {
     
     @objc
     private func pushFollowerListVC() {
-        let followerLisVC = FollowerListVC()
-        followerLisVC.username = usernameTextField.text
-        followerLisVC.title = usernameTextField.text
+        
        
     }
 }

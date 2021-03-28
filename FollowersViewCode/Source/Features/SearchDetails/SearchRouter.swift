@@ -16,4 +16,15 @@ class SearchRouter: SearchRouterProtocol {
     // MARK: - VIP Properties
     
     weak var viewController: SearchVC!
+    
+    // MARK: - Public Functions
+    
+    func proceedToFollowerList(username: String) {
+        let followerLisVC = FollowerListVC()
+        followerLisVC.username = username
+        followerLisVC.title = username
+        
+        viewController.navigationController?
+            .pushViewController(followerLisVC, animated: true)
+    }
 }
