@@ -32,17 +32,47 @@ class SearchView: UIView {
     
     init() {
         super.init(frame: .zero)
-        
+        setupUI()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        
+        setupUI()
     }
+}
+
+extension SearchView: ViewCodeProtocol {
     
     func  setupSubviews()  {
         addSubview(logoImageView)
+        addSubview(usernameTextField)
+        addSubview(actionButton)
     }
     
+    func setupConstraints() {
+        logoImageView.snp.makeConstraints { make in
+            make.top.equalTo(safeAreaLayoutGuide).offset(80)
+            make.centerX.equalToSuperview()
+            make.height.equalTo(200)
+            make.width.equalTo(200)
+        }
+        
+        usernameTextField.snp.makeConstraints { make in
+            make.top.equalTo(logoImageView.snp.bottom).offset(48)
+            make.left.equalTo(safeAreaLayoutGuide).offset(50)
+            make.right.equalTo(safeAreaLayoutGuide).inset(50)
+            make.height.equalTo(50)
+        }
+        
+        actionButton.snp.makeConstraints { make in
+            make.bottom.equalTo(safeAreaLayoutGuide).inset(50)
+            make.left.equalTo(safeAreaLayoutGuide).offset(50)
+            make.right.equalTo(safeAreaLayoutGuide).inset(50)
+            make.height.equalTo(50)
+        }
+    }
+    
+    func setupComponents() {
+        backgroundColor = .systemBackground
+    }
 }
-
