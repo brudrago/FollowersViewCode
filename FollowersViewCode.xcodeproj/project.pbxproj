@@ -23,6 +23,10 @@
 		70F9EFA92610FD150090BC9D /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F9EFA82610FD150090BC9D /* SearchInteractor.swift */; };
 		70F9EFAC2610FD290090BC9D /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F9EFAB2610FD290090BC9D /* SearchPresenter.swift */; };
 		70F9EFAF2610FD440090BC9D /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F9EFAE2610FD440090BC9D /* SearchRouter.swift */; };
+		70F9EFB82611401E0090BC9D /* FVCTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F9EFB72611401E0090BC9D /* FVCTitleLabel.swift */; };
+		70F9EFBB2611416B0090BC9D /* FVCBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F9EFBA2611416B0090BC9D /* FVCBodyLabel.swift */; };
+		70F9EFBF261142700090BC9D /* FVCAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F9EFBE261142700090BC9D /* FVCAlertVC.swift */; };
+		70F9EFC4261142D30090BC9D /* FVCAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F9EFC3261142D30090BC9D /* FVCAlertView.swift */; };
 		F929C0248D83DBA10EF156B3 /* Pods_FollowersViewCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA59C9FACE706593E59B1427 /* Pods_FollowersViewCode.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +49,10 @@
 		70F9EFA82610FD150090BC9D /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
 		70F9EFAB2610FD290090BC9D /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
 		70F9EFAE2610FD440090BC9D /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
+		70F9EFB72611401E0090BC9D /* FVCTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FVCTitleLabel.swift; sourceTree = "<group>"; };
+		70F9EFBA2611416B0090BC9D /* FVCBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FVCBodyLabel.swift; sourceTree = "<group>"; };
+		70F9EFBE261142700090BC9D /* FVCAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FVCAlertVC.swift; sourceTree = "<group>"; };
+		70F9EFC3261142D30090BC9D /* FVCAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FVCAlertView.swift; sourceTree = "<group>"; };
 		AB33298DE43A689C62FE1799 /* Pods-FollowersViewCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FollowersViewCode.debug.xcconfig"; path = "Target Support Files/Pods-FollowersViewCode/Pods-FollowersViewCode.debug.xcconfig"; sourceTree = "<group>"; };
 		B3087C6ABD0D0FC7E23A5A04 /* Pods-FollowersViewCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FollowersViewCode.release.xcconfig"; path = "Target Support Files/Pods-FollowersViewCode/Pods-FollowersViewCode.release.xcconfig"; sourceTree = "<group>"; };
 		CA59C9FACE706593E59B1427 /* Pods_FollowersViewCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FollowersViewCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,6 +104,8 @@
 				70F9EF732610C21D0090BC9D /* Resources */,
 				70F9EF872610DA3E0090BC9D /* FVCButton.swift */,
 				70F9EF8B2610DE860090BC9D /* FVCTextField.swift */,
+				70F9EFB72611401E0090BC9D /* FVCTitleLabel.swift */,
+				70F9EFBA2611416B0090BC9D /* FVCBodyLabel.swift */,
 			);
 			path = FollowersViewCode;
 			sourceTree = "<group>";
@@ -103,6 +113,7 @@
 		70F9EF602610C19E0090BC9D /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				70F9EFC1261142930090BC9D /* AlertDetails */,
 				70F9EF862610D9990090BC9D /* FavoritesDetails */,
 				70F9EF9B2610FACF0090BC9D /* FollowerListDetails */,
 				70F9EF852610D92F0090BC9D /* SearchDetails */,
@@ -188,6 +199,23 @@
 			isa = PBXGroup;
 			children = (
 				70F9EFA12610FB1E0090BC9D /* FollowerListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		70F9EFC1261142930090BC9D /* AlertDetails */ = {
+			isa = PBXGroup;
+			children = (
+				70F9EFC2261142B00090BC9D /* View */,
+				70F9EFBE261142700090BC9D /* FVCAlertVC.swift */,
+			);
+			path = AlertDetails;
+			sourceTree = "<group>";
+		};
+		70F9EFC2261142B00090BC9D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				70F9EFC3261142D30090BC9D /* FVCAlertView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -319,10 +347,14 @@
 				70F9EF992610E9EA0090BC9D /* ViewCodeProtocol.swift in Sources */,
 				70F9EF802610D49E0090BC9D /* SearchViewController.swift in Sources */,
 				70D0AAC42610BF1B0045B210 /* AppDelegate.swift in Sources */,
+				70F9EFB82611401E0090BC9D /* FVCTitleLabel.swift in Sources */,
+				70F9EFBF261142700090BC9D /* FVCAlertVC.swift in Sources */,
 				70F9EFA62610FD000090BC9D /* SearchBuilder.swift in Sources */,
 				70F9EFA92610FD150090BC9D /* SearchInteractor.swift in Sources */,
+				70F9EFC4261142D30090BC9D /* FVCAlertView.swift in Sources */,
 				70F9EF902610E2080090BC9D /* SearchView.swift in Sources */,
 				70F9EFA22610FB1E0090BC9D /* FollowerListView.swift in Sources */,
+				70F9EFBB2611416B0090BC9D /* FVCBodyLabel.swift in Sources */,
 				70F9EFAC2610FD290090BC9D /* SearchPresenter.swift in Sources */,
 				70F9EFAF2610FD440090BC9D /* SearchRouter.swift in Sources */,
 				70F9EF882610DA3E0090BC9D /* FVCButton.swift in Sources */,
