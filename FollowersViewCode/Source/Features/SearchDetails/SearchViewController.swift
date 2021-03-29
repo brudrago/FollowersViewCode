@@ -45,6 +45,8 @@ class SearchViewController: UIViewController {
     }
 }
 
+// MARK: - SearchViewDelegate Extension
+
 extension SearchViewController: SearchViewDelegate {
     
     func sendUsername(username: String) {
@@ -52,4 +54,11 @@ extension SearchViewController: SearchViewDelegate {
         router.proceedToFollowerList(username: username)
     }
 }
+
+// MARK: - SearchViewControllerProtocol Extension
+
+extension SearchViewController: SearchViewControllerProtocol {
+    
+}
+
 

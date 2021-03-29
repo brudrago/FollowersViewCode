@@ -18,7 +18,7 @@ struct SearchBuilder {
         viewController.interactor = interactor
         viewController.router = router
         interactor.presenter = presenter
-      //  presenter.viewController = viewController
+        presenter.viewController = viewController
         router.viewController = viewController
         
         return viewController
