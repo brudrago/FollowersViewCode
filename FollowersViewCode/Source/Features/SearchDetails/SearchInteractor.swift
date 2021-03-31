@@ -14,6 +14,8 @@ protocol SearchInteractorProtocol {
 
 class SearchInteractor : SearchInteractorProtocol {
     
+    //MARK: - VIP Properties
+    
     var presenter: SearchPresenterProtocol!
     
     //MARK: - Public Functions

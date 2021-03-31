@@ -21,7 +21,7 @@ class SearchRouter: SearchRouterProtocol {
     // MARK: - Public Functions
     
     func proceedToFollowerList(username: String) {
-        let followerLisVC = FollowerListVC()
+        let followerLisVC = FollowerListViewController()
         followerLisVC.username = username
         followerLisVC.title = username
         

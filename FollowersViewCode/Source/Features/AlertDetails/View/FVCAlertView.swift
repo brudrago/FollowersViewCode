@@ -69,7 +69,7 @@ extension FVCAlertView: ViewCodeProtocol {
         }
         
         titleLabel.snp.makeConstraints { make in
-        //    make.top.equalTo(containerView.topAnchor).offset(20)
+         //   make.top.equalTo(containerView).offset(20)
         }
     }
     
