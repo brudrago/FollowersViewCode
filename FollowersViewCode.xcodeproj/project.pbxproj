@@ -86,6 +86,50 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		701CBC202617C92500A5D951 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				70F9EFC1261142930090BC9D /* Alert */,
+				701CBC232617C9B800A5D951 /* Button */,
+				701CBC242617C9C400A5D951 /* Label */,
+				701CBC252617C9DC00A5D951 /* TextField */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		701CBC212617C95F00A5D951 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				701CBC1D2617BBEF00A5D951 /* UIViewController+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		701CBC232617C9B800A5D951 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				70F9EF872610DA3E0090BC9D /* FVCButton.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		701CBC242617C9C400A5D951 /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				70F9EFB72611401E0090BC9D /* FVCTitleLabel.swift */,
+				70F9EFBA2611416B0090BC9D /* FVCBodyLabel.swift */,
+			);
+			path = Label;
+			sourceTree = "<group>";
+		};
+		701CBC252617C9DC00A5D951 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				70F9EF8B2610DE860090BC9D /* FVCTextField.swift */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
 		70D0AAB72610BF1B0045B210 = {
 			isa = PBXGroup;
 			children = (
@@ -110,10 +154,6 @@
 				70F9EF752610C2490090BC9D /* SupportFiles */,
 				70F9EF742610C2350090BC9D /* Source */,
 				70F9EF732610C21D0090BC9D /* Resources */,
-				70F9EF872610DA3E0090BC9D /* FVCButton.swift */,
-				70F9EF8B2610DE860090BC9D /* FVCTextField.swift */,
-				70F9EFB72611401E0090BC9D /* FVCTitleLabel.swift */,
-				70F9EFBA2611416B0090BC9D /* FVCBodyLabel.swift */,
 			);
 			path = FollowersViewCode;
 			sourceTree = "<group>";
@@ -121,7 +161,6 @@
 		70F9EF602610C19E0090BC9D /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				70F9EFC1261142930090BC9D /* AlertDetails */,
 				70F9EF862610D9990090BC9D /* FavoritesDetails */,
 				70F9EF9B2610FACF0090BC9D /* FollowerListDetails */,
 				70F9EF852610D92F0090BC9D /* SearchDetails */,
@@ -190,7 +229,8 @@
 			isa = PBXGroup;
 			children = (
 				70F9EF982610E9EA0090BC9D /* ViewCodeProtocol.swift */,
-				701CBC1D2617BBEF00A5D951 /* UIViewController+Ext.swift */,
+				701CBC212617C95F00A5D951 /* Extensions */,
+				701CBC202617C92500A5D951 /* Custom Views */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -215,13 +255,13 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		70F9EFC1261142930090BC9D /* AlertDetails */ = {
+		70F9EFC1261142930090BC9D /* Alert */ = {
 			isa = PBXGroup;
 			children = (
 				70F9EFC2261142B00090BC9D /* View */,
 				70F9EFBE261142700090BC9D /* FVCAlertVC.swift */,
 			);
-			path = AlertDetails;
+			path = Alert;
 			sourceTree = "<group>";
 		};
 		70F9EFC2261142B00090BC9D /* View */ = {
