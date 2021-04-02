@@ -9,6 +9,7 @@ import Foundation
 
 protocol SearchPresenterProtocol {
     
+    func showAlert()
 }
 
 class SearchPresenter: SearchPresenterProtocol {
@@ -16,4 +17,11 @@ class SearchPresenter: SearchPresenterProtocol {
     // MARK: - VIP Properties
     
     weak var viewController: SearchViewControllerProtocol!
+    
+    //MARK: - Public Functions
+
+    func showAlert() {
+        viewController.showAlert()
+    }
+
 }

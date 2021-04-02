@@ -9,9 +9,12 @@ import UIKit
 
 protocol SearchViewControllerProtocol: AnyObject {
     
+   func showAlert()
 }
 
 class SearchViewController: UIViewController {
+    
+    // MARK: - Private Properties
     
     private var searchView = SearchView()
     
@@ -39,9 +42,15 @@ class SearchViewController: UIViewController {
         navigationController?.isNavigationBarHidden = true
     }
     
+    // MARK: - Public Functions
+    
     func createDismissKeyboardTapGesture() {
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         view.addGestureRecognizer(tap)
+    }
+    
+    func showAlert() {
+      presentFVCAlertOnMainThread(title: "Hey!", message: "Digite o username 🤖", buttonTitle: "Ok")
     }
 }
 

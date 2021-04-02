@@ -22,7 +22,7 @@ class SearchInteractor : SearchInteractorProtocol {
     
     func validate(_ username: String) {
         if username.isEmpty {
-            //chamar o presenter - alert
+            presenter.showAlert()
             //verificar se tem numero minimo de caracteres
             print("chamar o alerta aqui")
         }

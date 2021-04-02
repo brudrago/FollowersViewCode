@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		701CBC1E2617BBEF00A5D951 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701CBC1D2617BBEF00A5D951 /* UIViewController+Ext.swift */; };
 		7098CA34261494F7000A60A0 /* FollowerListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7098CA33261494F7000A60A0 /* FollowerListBuilder.swift */; };
 		7098CA3726149508000A60A0 /* FollowerListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7098CA3626149508000A60A0 /* FollowerListInteractor.swift */; };
 		7098CA3A26149517000A60A0 /* FollowerListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7098CA3926149517000A60A0 /* FollowerListPresenter.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		701CBC1D2617BBEF00A5D951 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		7098CA33261494F7000A60A0 /* FollowerListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListBuilder.swift; sourceTree = "<group>"; };
 		7098CA3626149508000A60A0 /* FollowerListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListInteractor.swift; sourceTree = "<group>"; };
 		7098CA3926149517000A60A0 /* FollowerListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListPresenter.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				70F9EF982610E9EA0090BC9D /* ViewCodeProtocol.swift */,
+				701CBC1D2617BBEF00A5D951 /* UIViewController+Ext.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 				70F9EFA92610FD150090BC9D /* SearchInteractor.swift in Sources */,
 				70F9EFC4261142D30090BC9D /* FVCAlertView.swift in Sources */,
 				70F9EF902610E2080090BC9D /* SearchView.swift in Sources */,
+				701CBC1E2617BBEF00A5D951 /* UIViewController+Ext.swift in Sources */,
 				70F9EFA22610FB1E0090BC9D /* FollowerListView.swift in Sources */,
 				70F9EFBB2611416B0090BC9D /* FVCBodyLabel.swift in Sources */,
 				70F9EFAC2610FD290090BC9D /* SearchPresenter.swift in Sources */,

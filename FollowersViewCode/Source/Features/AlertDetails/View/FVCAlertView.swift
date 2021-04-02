@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol FVCAlertViewDelegate: AnyObject {
+    
+    func dismissVC()
+}
+
 class FVCAlertView: UIView {
     
     private lazy var containerView: UIView = {
@@ -16,36 +21,52 @@ class FVCAlertView: UIView {
     
     private lazy var titleLabel: UILabel = {
         let label = FVCTitleLabel(textAlignment: .center, fontsize: 20)
+        label.text = alertTitle ?? "Atenção"
         return label
     } ()
     
     private lazy var bodyLabel: UILabel = {
         let label = FVCBodyLabel(textAlignment: .center)
+        label.text = message ?? "Não foi possível completar esta tarefa"
+        label.numberOfLines = 4
         return label
     } ()
     
     private lazy var actionButton: UIButton = {
         let button = FVCButton(
             backgroundColor: .systemPink,
-            title: "Ok")
+            title: buttonTitle ?? "Ok")
+        button.addTarget(self, action: #selector(actionButtontapped), for: .touchUpInside)
         return button
     } ()
-   
-
+    
+    weak var delegate: FVCAlertViewDelegate?
+    
+    // MARK: - Public Properties
+    
+    var alertTitle: String?
+    var message: String?
+    var buttonTitle: String?
     
     // MARK: - Inits
     
     init() {
         super.init(frame: .zero)
         configure()
+        setupUI()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        
+        setupUI()
     }
     
     // MARK: - Private Functions
+    
+    @objc
+    private func actionButtontapped() {
+        delegate?.dismissVC()
+    }
     
     private func configure() {
         containerView.layer.cornerRadius = 16
@@ -55,9 +76,12 @@ class FVCAlertView: UIView {
     }
 }
 extension FVCAlertView: ViewCodeProtocol {
+    
     func setupSubviews() {
         addSubview(containerView)
         containerView.addSubview(titleLabel)
+        containerView.addSubview(actionButton)
+        containerView.addSubview(bodyLabel)
     }
     
     func setupConstraints() {
@@ -69,7 +93,24 @@ extension FVCAlertView: ViewCodeProtocol {
         }
         
         titleLabel.snp.makeConstraints { make in
-         //   make.top.equalTo(containerView).offset(20)
+            make.top.equalToSuperview().offset(20)
+            make.leading.equalToSuperview().offset(20)
+            make.trailing.equalToSuperview().inset(-20)
+            make.height.equalTo(28)
+        }
+        
+        actionButton.snp.makeConstraints { make in
+            make.bottom.equalToSuperview().offset(-20)
+            make.leading.equalTo(20)
+            make.trailing.equalTo(-20)
+            make.height.equalTo(44)
+        }
+        
+        bodyLabel.snp.makeConstraints { make in
+            make.top.equalTo(titleLabel.snp.bottom).offset(8)
+            make.leading.equalTo(20)
+            make.trailing.equalTo(-20)
+            make.bottom.equalTo(actionButton.snp.top).offset(-12)
         }
     }
     
