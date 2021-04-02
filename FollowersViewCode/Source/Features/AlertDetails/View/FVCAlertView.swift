@@ -94,8 +94,8 @@ extension FVCAlertView: ViewCodeProtocol {
         
         titleLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(20)
-            make.leading.equalToSuperview().offset(20)
-            make.trailing.equalToSuperview().inset(-20)
+            make.leading.equalToSuperview().offset(10)
+            make.trailing.equalToSuperview().inset(20)
             make.height.equalTo(28)
         }
         
