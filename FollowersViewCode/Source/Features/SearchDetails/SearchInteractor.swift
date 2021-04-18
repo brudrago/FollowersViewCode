@@ -21,10 +21,16 @@ class SearchInteractor : SearchInteractorProtocol {
     //MARK: - Public Functions
     
     func validate(_ username: String) {
+        
+        
         if username.isEmpty {
-            presenter.showAlert()
+            let title = "Hey!"
+            let message = "Digite o username 🤖"
+            let buttonTitle = "Ok"
+            presenter.showAlert(title: title, message: message, buttonTitle: buttonTitle)
+            print("?????????")
+            return
             //verificar se tem numero minimo de caracteres
-            print("chamar o alerta aqui")
         }
     }
 }

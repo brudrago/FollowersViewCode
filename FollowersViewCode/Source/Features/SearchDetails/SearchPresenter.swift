@@ -9,7 +9,7 @@ import Foundation
 
 protocol SearchPresenterProtocol {
     
-    func showAlert()
+    func showAlert(title: String, message: String, buttonTitle: String)
 }
 
 class SearchPresenter: SearchPresenterProtocol {
@@ -20,8 +20,7 @@ class SearchPresenter: SearchPresenterProtocol {
     
     //MARK: - Public Functions
 
-    func showAlert() {
-        viewController.showAlert()
+    func showAlert(title: String, message: String, buttonTitle: String){
+        viewController.showAlert(title: title, message: message, buttonTitle: buttonTitle)
     }
-
 }

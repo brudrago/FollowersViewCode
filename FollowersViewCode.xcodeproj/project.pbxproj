@@ -228,9 +228,9 @@
 		70F9EF972610E9D60090BC9D /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				70F9EF982610E9EA0090BC9D /* ViewCodeProtocol.swift */,
-				701CBC212617C95F00A5D951 /* Extensions */,
 				701CBC202617C92500A5D951 /* Custom Views */,
+				701CBC212617C95F00A5D951 /* Extensions */,
+				70F9EF982610E9EA0090BC9D /* ViewCodeProtocol.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";

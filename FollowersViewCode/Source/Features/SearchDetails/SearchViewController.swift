@@ -9,7 +9,7 @@ import UIKit
 
 protocol SearchViewControllerProtocol: AnyObject {
     
-   func showAlert()
+    func showAlert(title: String, message: String, buttonTitle: String)
 }
 
 class SearchViewController: UIViewController {
@@ -49,8 +49,8 @@ class SearchViewController: UIViewController {
         view.addGestureRecognizer(tap)
     }
     
-    func showAlert() {
-      presentFVCAlertOnMainThread(title: "Hey!", message: "Digite o username 🤖", buttonTitle: "Ok")
+    func showAlert(title: String, message: String, buttonTitle: String) {
+      presentFVCAlertOnMainThread(title: title , message: message, buttonTitle: buttonTitle)
     }
 }
 
