@@ -7,7 +7,7 @@
 
 import Alamofire
 
-typealias NetworkResult<T: Decodable> = ((Result<T?, AFError>) -> Void)
+typealias NetworkResult<T: Decodable> = ((Result<T?, FVCError>) -> Void)
 
 protocol NetworkManagerProtocol {
     

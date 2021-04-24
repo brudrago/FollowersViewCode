@@ -7,9 +7,14 @@
 
 import Foundation
 
-enum FVCError: String {
-    case invalidUsername = "ii"
-    case unableToComplete = "hh"
-    case invalidResponse = "xx"
-    case invalidData = "pp"
+enum FVCError: Error {
+    case networkError
+    case invalidUsername
+    case unableToComplete
+    case invalidResponse
+    case invalidData 
+}
+
+extension FVCError: LocalizedError {
+    
 }
