@@ -11,10 +11,21 @@ enum FVCError: Error {
     case networkError
     case invalidUsername
     case unableToComplete
-    case invalidResponse
     case invalidData 
 }
 
 extension FVCError: LocalizedError {
     
+//    var errorDescription: String? {
+//        switch self {
+//        case .networkError:
+//            return
+//        case .invalidUsername:
+//            return
+//        case .unableToComplete:
+//
+//        case .invalidData:
+//
+//        }
+//    }
 }

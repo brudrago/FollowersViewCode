@@ -17,6 +17,7 @@
 		704EEAD52634499000D40A36 /* GithubURLBuilder .swift in Sources */ = {isa = PBXBuildFile; fileRef = 704EEAD42634499000D40A36 /* GithubURLBuilder .swift */; };
 		704EEADB26344ED800D40A36 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 704EEADA26344ED800D40A36 /* Localizable.strings */; };
 		704EEADF26344F1500D40A36 /* FVCError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704EEADE26344F1500D40A36 /* FVCError.swift */; };
+		704EEB03263495E300D40A36 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704EEB02263495E300D40A36 /* R.generated.swift */; };
 		7098CA34261494F7000A60A0 /* FollowerListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7098CA33261494F7000A60A0 /* FollowerListBuilder.swift */; };
 		7098CA3726149508000A60A0 /* FollowerListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7098CA3626149508000A60A0 /* FollowerListInteractor.swift */; };
 		7098CA3A26149517000A60A0 /* FollowerListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7098CA3926149517000A60A0 /* FollowerListPresenter.swift */; };
@@ -57,6 +58,7 @@
 		704EEAD42634499000D40A36 /* GithubURLBuilder .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GithubURLBuilder .swift"; sourceTree = "<group>"; };
 		704EEADA26344ED800D40A36 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		704EEADE26344F1500D40A36 /* FVCError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FVCError.swift; sourceTree = "<group>"; };
+		704EEB02263495E300D40A36 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		7098CA33261494F7000A60A0 /* FollowerListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListBuilder.swift; sourceTree = "<group>"; };
 		7098CA3626149508000A60A0 /* FollowerListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListInteractor.swift; sourceTree = "<group>"; };
 		7098CA3926149517000A60A0 /* FollowerListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListPresenter.swift; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 			children = (
 				70D0AACC2610BF1C0045B210 /* Assets.xcassets */,
 				704EEADA26344ED800D40A36 /* Localizable.strings */,
+				704EEB02263495E300D40A36 /* R.generated.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 			buildConfigurationList = 70D0AAD42610BF1C0045B210 /* Build configuration list for PBXNativeTarget "FollowersViewCode" */;
 			buildPhases = (
 				D5BDF1C5C8988A2BD7181A1F /* [CP] Check Pods Manifest.lock */,
+				704EEAED263458F200D40A36 /* RSwift */,
 				70D0AABC2610BF1B0045B210 /* Sources */,
 				70D0AABD2610BF1B0045B210 /* Frameworks */,
 				70D0AABE2610BF1B0045B210 /* Resources */,
@@ -425,6 +429,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		704EEAED263458F200D40A36 /* RSwift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = RSwift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/FollowersViewCode/Resources/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/R.swift/rswift\" generate \"${SRCROOT}/FollowersViewCode/Resources/R.generated.swift\"\n\n";
+		};
 		C8A8AB52FEEF8ACE3CED55F7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -496,6 +520,7 @@
 				70F9EFAC2610FD290090BC9D /* SearchPresenter.swift in Sources */,
 				70F9EFAF2610FD440090BC9D /* SearchRouter.swift in Sources */,
 				70DFC7FF262CF0AB00A17501 /* Follower.swift in Sources */,
+				704EEB03263495E300D40A36 /* R.generated.swift in Sources */,
 				704EEAC9263446BE00D40A36 /* NetworkEncoding.swift in Sources */,
 				70DFC803262CF16800A17501 /* User.swift in Sources */,
 				70F9EF882610DA3E0090BC9D /* FVCButton.swift in Sources */,

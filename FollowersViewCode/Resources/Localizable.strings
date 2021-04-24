@@ -5,3 +5,14 @@
   Created by Bruna Drago on 24/04/21.
   
 */
+
+"errorTitle" = "Oops, an error has occurred!";
+
+"errorDescription" = "Sorry, something went wrong. Try again later.";
+
+"networkError" = "Sorry, there was an error connecting to the servers.";
+
+"databaseError" = "Sorry, an error occurred with the database.";
+
+"invalidUsername" = "Invalid username , try again!";
+
