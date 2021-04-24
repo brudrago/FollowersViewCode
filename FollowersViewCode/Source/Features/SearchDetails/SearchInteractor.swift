@@ -22,7 +22,6 @@ class SearchInteractor : SearchInteractorProtocol {
     
     func validate(_ username: String) {
         
-        
         if username.isEmpty {
             let title = "Hey!"
             let message = "Digite o username 🤖"

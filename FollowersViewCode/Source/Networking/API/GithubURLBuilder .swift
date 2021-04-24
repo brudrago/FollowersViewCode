@@ -13,20 +13,20 @@ class GithubURLBuilder {
     
     private var url: String
     
-    private var baseUrl = "https://api.github.com"
+    
     
    // let endpoint = baseUrl + "/users/\(username)/followers?per_page=100&\(page)"
     
     // MARK: - Inits
     
-    init(url:String) {
-        self.url = "\(baseUrl)/"
+    init(resource: GithubResource) {
+        self.url = "\(GithubAPI.baseURL)"
     }
     
     // MARK: - Public Functions
     
     func set(username: String) -> GithubURLBuilder {
-        self.url += "users/\(username)"
+        self.url += "/users/\(username)"
         return self
     }
     
