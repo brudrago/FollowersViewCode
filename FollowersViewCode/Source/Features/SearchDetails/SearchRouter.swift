@@ -12,11 +12,20 @@ protocol SearchRouterProtocol {
     func proceedToFollowerList(username: String)
 }
 
+protocol SearchDataPassingProtocol {
+    
+    var dataStore: SearchDataStoreProtocol! { get }
+}
+
 class SearchRouter: SearchRouterProtocol {
     
     // MARK: - VIP Properties
     
     weak var viewController: SearchViewController!
+    
+    // MARK: - Public Properties
+    
+    var dataStore: SearchDataStoreProtocol!
     
     // MARK: - Public Functions
     

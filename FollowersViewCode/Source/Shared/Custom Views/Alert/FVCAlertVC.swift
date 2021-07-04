@@ -42,7 +42,9 @@ class FVCAlertVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         alertView.delegate = self
+        alertView.set(title: alertTitle, message: message, buttonTitle: buttonTitle)
     }
+
     
 }
 // MARK: - SearchViewDelegate Extension

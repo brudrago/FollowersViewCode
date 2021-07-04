@@ -195,10 +195,16 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 5 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 8 localization keys.
     struct localizable {
-      /// Value: Invalid username , try again!
+      /// Value: Digite o username 🤖
+      static let emptyUsername = Rswift.StringResource(key: "emptyUsername", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Hey!
+      static let hello = Rswift.StringResource(key: "hello", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Não localizamos seu 🤖. Tente novamente!
       static let invalidUsername = Rswift.StringResource(key: "invalidUsername", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: OK
+      static let ok = Rswift.StringResource(key: "ok", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Oops, an error has occurred!
       static let errorTitle = Rswift.StringResource(key: "errorTitle", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Sorry, an error occurred with the database.
@@ -208,7 +214,33 @@ struct R: Rswift.Validatable {
       /// Value: Sorry, there was an error connecting to the servers.
       static let networkError = Rswift.StringResource(key: "networkError", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
 
-      /// Value: Invalid username , try again!
+      /// Value: Digite o username 🤖
+      static func emptyUsername(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("emptyUsername", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "emptyUsername"
+        }
+
+        return NSLocalizedString("emptyUsername", bundle: bundle, comment: "")
+      }
+
+      /// Value: Hey!
+      static func hello(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("hello", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "hello"
+        }
+
+        return NSLocalizedString("hello", bundle: bundle, comment: "")
+      }
+
+      /// Value: Não localizamos seu 🤖. Tente novamente!
       static func invalidUsername(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
           return NSLocalizedString("invalidUsername", bundle: hostingBundle, comment: "")
@@ -219,6 +251,19 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("invalidUsername", bundle: bundle, comment: "")
+      }
+
+      /// Value: OK
+      static func ok(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("ok", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "ok"
+        }
+
+        return NSLocalizedString("ok", bundle: bundle, comment: "")
       }
 
       /// Value: Oops, an error has occurred!

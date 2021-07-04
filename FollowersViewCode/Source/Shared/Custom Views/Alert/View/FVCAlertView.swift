@@ -21,13 +21,13 @@ class FVCAlertView: UIView {
     
     private lazy var titleLabel: UILabel = {
         let label = FVCTitleLabel(textAlignment: .center, fontsize: 20)
-        label.text = alertTitle ?? "Atenção"
+      //  label.text = alertTitle ?? "Atenção"
         return label
     } ()
     
     private lazy var bodyLabel: UILabel = {
         let label = FVCBodyLabel(textAlignment: .center)
-        label.text = message ?? "Não foi possível completar esta tarefa"
+      //  label.text = message ?? "Não foi possível completar esta tarefa"
         label.numberOfLines = 4
         return label
     } ()
@@ -59,6 +59,14 @@ class FVCAlertView: UIView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setupUI()
+    }
+    
+    // MARK: - Public Functions
+    
+    func set(title: String?, message: String?, buttonTitle: String?) {
+        titleLabel.text = title
+        bodyLabel.text = message
+        actionButton.setTitle(buttonTitle, for: .normal)
     }
     
     // MARK: - Private Functions
