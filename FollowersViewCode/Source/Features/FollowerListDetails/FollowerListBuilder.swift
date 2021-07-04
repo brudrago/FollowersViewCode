@@ -9,7 +9,7 @@ import UIKit
 
 struct FollowerListBuilder {
     
-    static func build() -> UIViewController {
+    static func build(_ username: String?) -> UIViewController {
         
         let viewController = FollowerListViewController()
         let interactor = FollowerListInteractor()
@@ -18,6 +18,8 @@ struct FollowerListBuilder {
         viewController.interactor = interactor
         interactor.presenter = presenter
         presenter.viewController = viewController
+        
+        viewController.username = username
         
         return viewController
     }

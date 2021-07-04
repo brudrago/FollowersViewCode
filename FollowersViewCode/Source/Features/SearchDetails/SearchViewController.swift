@@ -58,9 +58,10 @@ class SearchViewController: UIViewController {
 
 extension SearchViewController: SearchViewDelegate {
     
-    func sendUsername(username: String) {
+    func getUsername(username: String) {
         interactor.validate(username)
-        router.proceedToFollowerList(username: username)
+        router.proceedToFollowerList(username)
+        
     }
 }
 

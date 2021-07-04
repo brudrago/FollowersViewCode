@@ -26,6 +26,8 @@
 		7098CA34261494F7000A60A0 /* FollowerListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7098CA33261494F7000A60A0 /* FollowerListBuilder.swift */; };
 		7098CA3726149508000A60A0 /* FollowerListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7098CA3626149508000A60A0 /* FollowerListInteractor.swift */; };
 		7098CA3A26149517000A60A0 /* FollowerListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7098CA3926149517000A60A0 /* FollowerListPresenter.swift */; };
+		70A6E7742692583B00AC91FA /* FollowerListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A6E7732692583B00AC91FA /* FollowerListRouter.swift */; };
+		70A6E7762692615000AC91FA /* SearchViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A6E7752692615000AC91FA /* SearchViewDelegate.swift */; };
 		70D0AAC42610BF1B0045B210 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D0AAC32610BF1B0045B210 /* AppDelegate.swift */; };
 		70D0AAC62610BF1B0045B210 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D0AAC52610BF1B0045B210 /* SceneDelegate.swift */; };
 		70D0AACD2610BF1C0045B210 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70D0AACC2610BF1C0045B210 /* Assets.xcassets */; };
@@ -72,6 +74,8 @@
 		7098CA33261494F7000A60A0 /* FollowerListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListBuilder.swift; sourceTree = "<group>"; };
 		7098CA3626149508000A60A0 /* FollowerListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListInteractor.swift; sourceTree = "<group>"; };
 		7098CA3926149517000A60A0 /* FollowerListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListPresenter.swift; sourceTree = "<group>"; };
+		70A6E7732692583B00AC91FA /* FollowerListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListRouter.swift; sourceTree = "<group>"; };
+		70A6E7752692615000AC91FA /* SearchViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewDelegate.swift; sourceTree = "<group>"; };
 		70D0AAC02610BF1B0045B210 /* FollowersViewCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FollowersViewCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70D0AAC32610BF1B0045B210 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70D0AAC52610BF1B0045B210 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -323,6 +327,7 @@
 			isa = PBXGroup;
 			children = (
 				70F9EF8F2610E2080090BC9D /* SearchView.swift */,
+				70A6E7752692615000AC91FA /* SearchViewDelegate.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -345,6 +350,7 @@
 				7098CA33261494F7000A60A0 /* FollowerListBuilder.swift */,
 				7098CA3626149508000A60A0 /* FollowerListInteractor.swift */,
 				7098CA3926149517000A60A0 /* FollowerListPresenter.swift */,
+				70A6E7732692583B00AC91FA /* FollowerListRouter.swift */,
 			);
 			path = FollowerListDetails;
 			sourceTree = "<group>";
@@ -528,6 +534,7 @@
 				704EEB142634995800D40A36 /* FollowerWorker.swift in Sources */,
 				70F9EF802610D49E0090BC9D /* SearchViewController.swift in Sources */,
 				704EEB1E26349E6B00D40A36 /* GithubResource.swift in Sources */,
+				70A6E7742692583B00AC91FA /* FollowerListRouter.swift in Sources */,
 				70D0AAC42610BF1B0045B210 /* AppDelegate.swift in Sources */,
 				704EEB1A2634999700D40A36 /* FollowersListResult.swift in Sources */,
 				704EEAD1263448C500D40A36 /* DefaultDecoder.swift in Sources */,
@@ -539,6 +546,7 @@
 				70F9EFC4261142D30090BC9D /* FVCAlertView.swift in Sources */,
 				704EEACD2634489700D40A36 /* SnakeCaseDecoder.swift in Sources */,
 				70F9EF902610E2080090BC9D /* SearchView.swift in Sources */,
+				70A6E7762692615000AC91FA /* SearchViewDelegate.swift in Sources */,
 				704EEAC62634466E00D40A36 /* NetworkRequest.swift in Sources */,
 				701CBC1E2617BBEF00A5D951 /* UIViewController+Ext.swift in Sources */,
 				70F9EFA22610FB1E0090BC9D /* FollowerListView.swift in Sources */,

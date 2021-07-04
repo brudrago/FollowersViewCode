@@ -30,6 +30,7 @@
 /* H */
 
 "hello" = "Hey!";
+
 /* I */
 "invalidUsername" = "Não localizamos seu 🤖. Tente novamente!";
 
@@ -56,6 +57,8 @@
 /* R */
 
 /* S */
+
+"searchFollowers" = "Buscar seguidores";
 
 /* T */
 

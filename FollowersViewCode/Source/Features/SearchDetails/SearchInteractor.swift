@@ -31,6 +31,7 @@ class SearchInteractor : SearchInteractorProtocol, SearchDataStoreProtocol {
     
     func validate(_ username: String) {
         guard validate(username) else { return }
+        self.username = username
     }
     
    private func validate(_ name: String) -> Bool {

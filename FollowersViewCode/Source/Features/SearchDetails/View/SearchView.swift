@@ -8,30 +8,26 @@
 import UIKit
 import SnapKit
 
-protocol SearchViewDelegate: AnyObject {
-    
-    func sendUsername(username: String)
-}
-
 class SearchView: UIView {
     
     private lazy var logoImageView: UIImageView = {
         let logo = UIImageView()
-        logo.image = UIImage(named: "gh-logo")
+        logo.image = R.image.ghLogo()
+        logo.contentMode = .scaleToFill
         return logo
     }()
     
     private lazy var usernameTextField: UITextField = {
-        let textField = FVCTextField(placeholder: "Digite o username")
+        let textField = FVCTextField()
+        textField.placeholder = R.Localizable.emptyUsername()
         textField.delegate = self 
         return textField
     } ()
     
-    private lazy var actionButton: UIButton = {
+    private lazy var searchFollowerButton: UIButton = {
         let button = FVCButton(
             backgroundColor: .systemGreen,
-            title: "Buscar Seguidores")
-        button.addTarget(self, action: #selector(actionButtontapped), for: .touchUpInside)
+            title: R.Localizable.searchFollowers())
         return button
     } ()
     
@@ -49,19 +45,28 @@ class SearchView: UIView {
         setupUI()
     }
     
+    // MARK: - Public Functions
+    
+    func getUsername() -> String {
+        return usernameTextField.text ?? ""
+    }
+    
+    // MARK: - Private Functions
+    
     @objc
-    private func actionButtontapped() {
-        let username = usernameTextField.text ?? ""
-        delegate?.sendUsername(username: username)
+    private func didSelecSearchFollowerButton(_ button: FVCButton) {
+        
     }
 }
+
+// MARK: - ViewCodeProtocol Extension
 
 extension SearchView: ViewCodeProtocol {
     
     func  setupSubviews()  {
         addSubview(logoImageView)
         addSubview(usernameTextField)
-        addSubview(actionButton)
+        addSubview(searchFollowerButton)
     }
     
     func setupConstraints() {
@@ -79,7 +84,7 @@ extension SearchView: ViewCodeProtocol {
             make.height.equalTo(50)
         }
         
-        actionButton.snp.makeConstraints { make in
+        searchFollowerButton.snp.makeConstraints { make in
             make.bottom.equalTo(safeAreaLayoutGuide).inset(50)
             make.left.equalTo(safeAreaLayoutGuide).offset(50)
             make.right.equalTo(safeAreaLayoutGuide).inset(50)
@@ -89,12 +94,17 @@ extension SearchView: ViewCodeProtocol {
     
     func setupComponents() {
         backgroundColor = .systemBackground
+        
+        let searchFollowerButtonAction = #selector(didSelecSearchFollowerButton(_:))
+        searchFollowerButton.addTarget(self, action: searchFollowerButtonAction, for: .touchUpInside)
     }
 }
 
+// MARK: - UITextField Delegate Extension
+
 extension SearchView: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        actionButtontapped()
+        // chamar algo da textfield/button aqui
         return true
     }
 }

@@ -9,7 +9,7 @@ import Foundation
 
 protocol SearchRouterProtocol {
     
-    func proceedToFollowerList(username: String)
+    func proceedToFollowerList(_ username: String?)
 }
 
 protocol SearchDataPassingProtocol {
@@ -29,12 +29,21 @@ class SearchRouter: SearchRouterProtocol {
     
     // MARK: - Public Functions
     
-    func proceedToFollowerList(username: String) {
-        let followerLisVC = FollowerListViewController()
-        followerLisVC.username = username
-        followerLisVC.title = username
+//    func proceedToFollowerList(username: String) {
+//        let followerLisVC = FollowerListViewController()
+//        followerLisVC.username = username
+//        followerLisVC.title = username
+//
+//        viewController.navigationController?
+//            .pushViewController(followerLisVC, animated: true)
+//    }
+    
+    func proceedToFollowerList(_ username: String?) {
+        let followerListViewController = FollowerListBuilder.build(username)
+        
+      //  guard let username = dataStore.username else { return }
         
         viewController.navigationController?
-            .pushViewController(followerLisVC, animated: true)
+            .pushViewController(followerListViewController, animated: true)
     }
 }
