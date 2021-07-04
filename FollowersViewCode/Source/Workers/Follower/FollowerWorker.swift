@@ -34,8 +34,8 @@ class FollowerWorker: FollowerWorkerProtocol {
     
     func fetchList(for username: String, page: Int, completion: @escaping FollowerCompletion) {
         let url = GithubURLBuilder(resource: .followers)
-            .set(page: page)
             .set(username: username)
+            .set(page: page)
             .buil()
         
         requestFollowers(url, completion: completion)

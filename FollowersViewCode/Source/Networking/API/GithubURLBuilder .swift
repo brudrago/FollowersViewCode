@@ -31,7 +31,7 @@ class GithubURLBuilder {
     }
     
     func set(page: Int) -> GithubURLBuilder {
-        self.url += "/followers?per_page=100&\(page)"
+        self.url += "/followers?per_page=100&page=\(page)"
         return self
     }
     

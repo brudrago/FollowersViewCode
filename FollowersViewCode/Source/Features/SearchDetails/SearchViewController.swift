@@ -67,7 +67,8 @@ extension SearchViewController: SearchViewDelegate {
     
     func didSelectSearchFollowerButton(username: String?) {
         guard let user = username else { return }
-        interactor.validate(user)
+       // interactor.validate(user)
+        interactor.fetchFollowers(user)
     }
     
     
