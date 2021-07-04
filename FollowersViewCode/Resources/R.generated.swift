@@ -195,10 +195,12 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 9 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 10 localization keys.
     struct localizable {
       /// Value: Buscar seguidores
       static let searchFollowers = Rswift.StringResource(key: "searchFollowers", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Digite o username
+      static let enterUsername = Rswift.StringResource(key: "enterUsername", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Digite o username 🤖
       static let emptyUsername = Rswift.StringResource(key: "emptyUsername", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Hey!
@@ -227,6 +229,19 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("searchFollowers", bundle: bundle, comment: "")
+      }
+
+      /// Value: Digite o username
+      static func enterUsername(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("enterUsername", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "enterUsername"
+        }
+
+        return NSLocalizedString("enterUsername", bundle: bundle, comment: "")
       }
 
       /// Value: Digite o username 🤖

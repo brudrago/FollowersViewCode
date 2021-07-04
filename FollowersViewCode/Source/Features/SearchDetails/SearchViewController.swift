@@ -10,6 +10,8 @@ import UIKit
 protocol SearchViewControllerProtocol: AnyObject {
     
     func showAlert(title: String, message: String, buttonTitle: String)
+    
+    func searchFollowers()
 }
 
 class SearchViewController: UIViewController {
@@ -52,15 +54,26 @@ class SearchViewController: UIViewController {
     func showAlert(title: String, message: String, buttonTitle: String) {
       presentFVCAlertOnMainThread(title: title , message: message, buttonTitle: buttonTitle)
     }
+    
+    func searchFollowers() {
+        let follower = searchView.getUsername()
+        router.proceedToFollowerList(follower)
+    }
 }
 
 // MARK: - SearchViewDelegate Extension
 
 extension SearchViewController: SearchViewDelegate {
     
+    func didSelectSearchFollowerButton(username: String?) {
+        guard let user = username else { return }
+        interactor.validate(user)
+    }
+    
+    
     func getUsername(username: String) {
-        interactor.validate(username)
-        router.proceedToFollowerList(username)
+        let usernameUpdate = searchView.getUsername()
+        
         
     }
 }

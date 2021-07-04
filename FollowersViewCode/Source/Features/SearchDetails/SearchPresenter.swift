@@ -10,6 +10,8 @@ import Foundation
 protocol SearchPresenterProtocol {
     
     func showAlert(title: String, message: String, buttonTitle: String)
+    
+    func searchFollowers()
 }
 
 class SearchPresenter: SearchPresenterProtocol {
@@ -22,5 +24,9 @@ class SearchPresenter: SearchPresenterProtocol {
 
     func showAlert(title: String, message: String, buttonTitle: String){
         viewController.showAlert(title: title, message: message, buttonTitle: buttonTitle)
+    }
+    
+    func searchFollowers() {
+        viewController.searchFollowers()
     }
 }

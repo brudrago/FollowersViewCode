@@ -17,6 +17,8 @@
 
 /* E */
 
+"enterUsername" = "Digite o username";
+
 "emptyUsername" = "Digite o username 🤖";
 
 "errorTitle" = "Oops, an error has occurred!";

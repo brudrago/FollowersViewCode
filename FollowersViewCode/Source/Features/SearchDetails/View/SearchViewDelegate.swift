@@ -11,5 +11,5 @@ protocol SearchViewDelegate: AnyObject {
     
     func getUsername(username: String)
     
-    func didSelectSearchFollowerButton()
+    func didSelectSearchFollowerButton(username: String?)
 }

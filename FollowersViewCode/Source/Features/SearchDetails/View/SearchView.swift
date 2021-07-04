@@ -19,7 +19,7 @@ class SearchView: UIView {
     
     private lazy var usernameTextField: UITextField = {
         let textField = FVCTextField()
-        textField.placeholder = R.Localizable.emptyUsername()
+        textField.placeholder = R.Localizable.enterUsername()
         textField.delegate = self 
         return textField
     } ()
@@ -55,7 +55,8 @@ class SearchView: UIView {
     
     @objc
     private func didSelecSearchFollowerButton(_ button: FVCButton) {
-        
+        let user = usernameTextField.text
+        delegate?.didSelectSearchFollowerButton(username: user)
     }
 }
 
