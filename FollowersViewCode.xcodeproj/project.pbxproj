@@ -140,6 +140,7 @@
 		701CBC212617C95F00A5D951 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				704EEADE26344F1500D40A36 /* FVCError.swift */,
 				701CBC1D2617BBEF00A5D951 /* UIViewController+Ext.swift */,
 				704EEB102634987000D40A36 /* R+Extensions.swift */,
 			);
@@ -254,7 +255,6 @@
 				704EEAC1263445A300D40A36 /* NetworkMethod.swift */,
 				704EEAC52634466E00D40A36 /* NetworkRequest.swift */,
 				704EEAC8263446BE00D40A36 /* NetworkEncoding.swift */,
-				704EEADE26344F1500D40A36 /* FVCError.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";

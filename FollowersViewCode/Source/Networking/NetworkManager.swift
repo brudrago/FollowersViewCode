@@ -28,6 +28,7 @@ class NetworkManager: NetworkManagerProtocol {
             method: data.method.httpMethod,
             parameters: data.parameters,
             encoding: data.encoding.default)
+        print("====== url \(data.url)")
         
         request.validate().responseJSON { response in
             switch response.result {

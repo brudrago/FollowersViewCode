@@ -9,7 +9,5 @@ import Foundation
 
 protocol SearchViewDelegate: AnyObject {
     
-    func getUsername(username: String)
-    
     func didSelectSearchFollowerButton(username: String?)
 }
