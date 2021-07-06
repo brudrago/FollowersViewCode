@@ -57,7 +57,8 @@ class SearchViewController: UIViewController {
     
     func searchFollowers() {
         let follower = searchView.getUsername()
-        router.proceedToFollowerList(follower)
+        //router.proceedToFollowerList(follower)
+        router.proceedToFollowerList()
     }
 }
 
@@ -67,15 +68,7 @@ extension SearchViewController: SearchViewDelegate {
     
     func didSelectSearchFollowerButton(username: String?) {
         guard let user = username else { return }
-       // interactor.validate(user)
-        interactor.fetchFollowers(user)
-    }
-    
-    
-    func getUsername(username: String) {
-        let usernameUpdate = searchView.getUsername()
-        
-        
+        interactor.validate(user)
     }
 }
 

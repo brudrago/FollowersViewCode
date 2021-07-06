@@ -15,8 +15,6 @@ protocol SearchDataStoreProtocol {
 protocol SearchInteractorProtocol {
     
     func validate(_ username: String)
-    
-    func fetchFollowers(_ username: String)
 }
 
 class SearchInteractor : SearchInteractorProtocol, SearchDataStoreProtocol {
@@ -29,23 +27,9 @@ class SearchInteractor : SearchInteractorProtocol, SearchDataStoreProtocol {
     
     var username: String?
     
-    //MARK: - Private Properties
-    
-    private var followerWorker: FollowerWorkerProtocol
-    
-    private var page = 1
-    
-    private var followerList : [Follower] = []
-    
     //MARK: - Inits
     
-    init() {
-        followerWorker = FollowerWorker()
-    }
-    
-    init(followerWorker: FollowerWorkerProtocol) {
-        self.followerWorker = followerWorker
-    }
+    init() {}
     
     //MARK: - Public Functions
     
@@ -54,30 +38,9 @@ class SearchInteractor : SearchInteractorProtocol, SearchDataStoreProtocol {
         self.username = username
         presenter.searchFollowers()
     }
-    
-    //implementar no followerList
-    func fetchFollowers(_ username: String) {
-        guard validate(username) else { return }
-        self.username = username
-        
-        followerWorker.fetchList(for: username, page: page) { [weak self] result in
-            print(result)
-            switch result {
-            case .success(let followerResponse):
-                self?.didFetchSuccess(followerResponse)
-            case .failure(let error):
-                print(error)
-            }
-        }
-
-    }
-    
+ 
     //MARK: - Private Functions
-    
-    private func didFetchSuccess(_ response: [Follower]?) {
-        print("====> RESPONSE: \(response?.count)")
-    }
-    
+
    private func validate(_ name: String) -> Bool {
     let isUsernameEmpty = name.isEmpty
     let isUsernameValid = isUsernameValid(name)
