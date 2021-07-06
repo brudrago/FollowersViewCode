@@ -8,5 +8,6 @@
 import Foundation
 
 struct FollowerListResult: Decodable {
+    
     var results: [Follower]
 }

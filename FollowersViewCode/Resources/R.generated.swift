@@ -195,10 +195,12 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 10 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 11 localization keys.
     struct localizable {
       /// Value: Buscar seguidores
       static let searchFollowers = Rswift.StringResource(key: "searchFollowers", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Desculpe! Encontramos um erro no decode.
+      static let decodeError = Rswift.StringResource(key: "decodeError", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Digite o username
       static let enterUsername = Rswift.StringResource(key: "enterUsername", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Digite o username 🤖
@@ -229,6 +231,19 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("searchFollowers", bundle: bundle, comment: "")
+      }
+
+      /// Value: Desculpe! Encontramos um erro no decode.
+      static func decodeError(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("decodeError", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "decodeError"
+        }
+
+        return NSLocalizedString("decodeError", bundle: bundle, comment: "")
       }
 
       /// Value: Digite o username

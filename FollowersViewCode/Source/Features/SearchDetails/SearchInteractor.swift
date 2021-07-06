@@ -35,6 +35,8 @@ class SearchInteractor : SearchInteractorProtocol, SearchDataStoreProtocol {
     
     private var page = 1
     
+    private var followerList : [Follower] = []
+    
     //MARK: - Inits
     
     init() {
@@ -56,20 +58,25 @@ class SearchInteractor : SearchInteractorProtocol, SearchDataStoreProtocol {
     //implementar no followerList
     func fetchFollowers(_ username: String) {
         guard validate(username) else { return }
-        
         self.username = username
         
         followerWorker.fetchList(for: username, page: page) { [weak self] result in
+            print(result)
             switch result {
             case .success(let followerResponse):
-                print("====== LIST\(followerResponse)")
+                self?.didFetchSuccess(followerResponse)
             case .failure(let error):
-                print("====== ER\(error)")
+                print(error)
             }
         }
+
     }
     
     //MARK: - Private Functions
+    
+    private func didFetchSuccess(_ response: [Follower]?) {
+        print("====> RESPONSE: \(response?.count)")
+    }
     
    private func validate(_ name: String) -> Bool {
     let isUsernameEmpty = name.isEmpty

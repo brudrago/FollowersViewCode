@@ -11,7 +11,7 @@ typealias NetworkResult<T: Decodable> = ((Result<T?, FVCError>) -> Void)
 
 protocol NetworkManagerProtocol {
     
-    func request<T: Decodable>(_ data: NetworkRequest, decoder: DefaultDecoder<T>, completation:  @escaping NetworkResult<T>)
+    static func request<T: Decodable>(url: String, completion: @escaping NetworkResult<T>)
 }
 
 class NetworkManager: NetworkManagerProtocol {
@@ -22,25 +22,24 @@ class NetworkManager: NetworkManagerProtocol {
     
     // MARK: - Public Functions
     
-    func request<T: Decodable>(_ data: NetworkRequest, decoder: DefaultDecoder<T>, completation: @escaping NetworkResult<T>) {
-        let request = AF.request(
-            data.url,
-            method: data.method.httpMethod,
-            parameters: data.parameters,
-            encoding: data.encoding.default)
-        print("====== url \(data.url)")
+    static func request<T: Decodable>(url: String, completion: @escaping NetworkResult<T>) {
+        let request = AF.request(url, method: .get)
         
         request.validate().responseJSON { response in
             switch response.result {
             case .success:
-                let data = response.data ?? Data()
-                let result = decoder.decode(from: data)
-                completation(.success(result))
+                do {
+                    let decoder = JSONDecoder()
+                    decoder.keyDecodingStrategy = .convertFromSnakeCase
+                    let data = response.data ?? Data()
+                    let result = try decoder.decode(T.self, from: data)
+                    completion(.success(result))
+                } catch {
+                    completion(.failure(.decodeError))
+                }
             case .failure:
-                completation(.failure(.networkError))
+                completion(.failure(.networkError))
             }
         }
     }
 }
-
-

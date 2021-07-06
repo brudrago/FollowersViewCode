@@ -8,6 +8,7 @@
 import Foundation
 
 enum FVCError: Error {
+    case decodeError
     case networkError
     case invalidUsername
     case invalidData 
@@ -17,6 +18,8 @@ extension FVCError: LocalizedError {
     
     var errorDescription: String? {
         switch self {
+        case .decodeError:
+            return R.Localizable.decodeError()
         case .networkError:
             return R.Localizable.networkError()
         case .invalidUsername:
