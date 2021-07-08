@@ -15,7 +15,7 @@ class FollowerListView: UIView {
     private lazy var collectionView: UICollectionView = {
        let collectionView = UICollectionView(
         frame: self.bounds,
-        collectionViewLayout: UICollectionViewFlowLayout())
+        collectionViewLayout: createThreeColumnFlowLayout())
         return collectionView
     }()
     
@@ -30,7 +30,23 @@ class FollowerListView: UIView {
         super.init(coder: coder)
         setupUI()
     }
-
+    
+    // MARK: - Private Functions
+    
+    private func createThreeColumnFlowLayout() -> UICollectionViewFlowLayout {
+        let padding: CGFloat = 12
+        let width = self.bounds.width
+        let minimumItemSpacing: CGFloat = 10
+        let availableWidth = width - (padding * 2) - (minimumItemSpacing * 2)
+        let itemWidth = availableWidth / 3
+        let height = itemWidth + 40
+        
+        let flowLayout = UICollectionViewFlowLayout()
+        flowLayout.sectionInset = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)
+        flowLayout.itemSize = CGSize(width: itemWidth, height: height)
+        
+        return flowLayout
+    }
 }
 
 // MARK: - ViewCodeProtocol Extension
@@ -42,7 +58,10 @@ extension FollowerListView: ViewCodeProtocol {
     }
     
     func setupConstraints() {
-        
+        collectionView.snp.makeConstraints { make in
+            make.top.bottom.equalTo(safeAreaLayoutGuide)
+            make.left.right.equalToSuperview()
+        }
     }
     
     func setupComponents() {
