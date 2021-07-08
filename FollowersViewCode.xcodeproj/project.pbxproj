@@ -17,7 +17,6 @@
 		704EEB0E263497ED00D40A36 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 704EEB0D263497ED00D40A36 /* Localizable.strings */; };
 		704EEB112634987000D40A36 /* R+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704EEB102634987000D40A36 /* R+Extensions.swift */; };
 		704EEB142634995800D40A36 /* FollowerWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704EEB132634995800D40A36 /* FollowerWorker.swift */; };
-		704EEB172634998800D40A36 /* FollowerListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704EEB162634998800D40A36 /* FollowerListResponse.swift */; };
 		704EEB1A2634999700D40A36 /* FollowersListResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704EEB192634999700D40A36 /* FollowersListResult.swift */; };
 		704EEB1E26349E6B00D40A36 /* GithubResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704EEB1D26349E6B00D40A36 /* GithubResource.swift */; };
 		7098CA34261494F7000A60A0 /* FollowerListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7098CA33261494F7000A60A0 /* FollowerListBuilder.swift */; };
@@ -61,7 +60,6 @@
 		704EEB0D263497ED00D40A36 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		704EEB102634987000D40A36 /* R+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "R+Extensions.swift"; sourceTree = "<group>"; };
 		704EEB132634995800D40A36 /* FollowerWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerWorker.swift; sourceTree = "<group>"; };
-		704EEB162634998800D40A36 /* FollowerListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListResponse.swift; sourceTree = "<group>"; };
 		704EEB192634999700D40A36 /* FollowersListResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersListResult.swift; sourceTree = "<group>"; };
 		704EEB1D26349E6B00D40A36 /* GithubResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubResource.swift; sourceTree = "<group>"; };
 		7098CA33261494F7000A60A0 /* FollowerListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListBuilder.swift; sourceTree = "<group>"; };
@@ -193,7 +191,6 @@
 		704EEB202634A06F00D40A36 /* Follower */ = {
 			isa = PBXGroup;
 			children = (
-				704EEB162634998800D40A36 /* FollowerListResponse.swift */,
 				704EEB192634999700D40A36 /* FollowersListResult.swift */,
 				704EEB132634995800D40A36 /* FollowerWorker.swift */,
 			);
@@ -529,7 +526,6 @@
 				70F9EFB82611401E0090BC9D /* FVCTitleLabel.swift in Sources */,
 				70F9EFBF261142700090BC9D /* FVCAlertVC.swift in Sources */,
 				70F9EFA62610FD000090BC9D /* SearchBuilder.swift in Sources */,
-				704EEB172634998800D40A36 /* FollowerListResponse.swift in Sources */,
 				70F9EFA92610FD150090BC9D /* SearchInteractor.swift in Sources */,
 				70F9EFC4261142D30090BC9D /* FVCAlertView.swift in Sources */,
 				70F9EF902610E2080090BC9D /* SearchView.swift in Sources */,

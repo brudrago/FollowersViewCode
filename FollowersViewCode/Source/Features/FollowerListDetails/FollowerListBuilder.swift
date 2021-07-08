@@ -19,7 +19,7 @@ struct FollowerListBuilder {
         interactor.presenter = presenter
         presenter.viewController = viewController
         
-        viewController.username = username
+        interactor.username = username
         
         return viewController
     }

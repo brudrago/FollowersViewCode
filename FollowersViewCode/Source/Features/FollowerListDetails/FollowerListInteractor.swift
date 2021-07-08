@@ -7,9 +7,16 @@
 
 import Foundation
 
+protocol FollowerListDataStoreProtocol {
+    
+    var username: String! { get set }
+}
+
 protocol FollowerListInteractorProtocol {
     
     func fetchFollowers(_ username: String)
+    
+    func fetchFollowers()
 }
 
 class FollowerListInteractor: FollowerListInteractorProtocol {
@@ -18,7 +25,7 @@ class FollowerListInteractor: FollowerListInteractorProtocol {
     
     //MARK: - Public Properties
     
-    var username: String?
+    var username: String!
     
     //MARK: - Private Properties
     
@@ -39,6 +46,18 @@ class FollowerListInteractor: FollowerListInteractorProtocol {
     }
     
     //MARK: - Public Functions
+    
+    func fetchFollowers() {
+        followerWorker.fetchList(for: username, page: page) { [weak self] result in
+            print(result)
+            switch result {
+            case .success(let followerResponse):
+                self?.didFetchSuccess(followerResponse)
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
     
     func fetchFollowers(_ username: String) {
         self.username = username

@@ -17,5 +17,5 @@ class FollowerListPresenter: FollowerListPresenterProtocol {
     
     // MARK: - VIP Properties
     
-    weak var viewController: FollowerListVCProtocol!
+    weak var viewController: FollowerListViewControllerProtocol!
 }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol FollowerListVCProtocol: AnyObject {
+protocol FollowerListViewControllerProtocol: AnyObject {
     
 }
 
@@ -23,20 +23,16 @@ class FollowerListViewController: UIViewController {
         return FollowerListView()
     }()
     
-    // MARK: - Public Properties
-    
-    var username: String? //VC não deve conhecer username, passar pelo Presenter/viewmodel
-    
     // MARK: - View Lifecycle
     
     override func loadView() {
         super.loadView()
         self.view = followerListView
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-      //  interactor.fetchFollowers(username??) //refatorar pra nao precisar receber username
+        interactor.fetchFollowers() 
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -46,14 +42,14 @@ class FollowerListViewController: UIViewController {
     
     // MARK: - Private Functions
     
-   private func setupNavigation() {
-    navigationController?.isNavigationBarHidden = false
-    navigationController?.navigationBar.prefersLargeTitles = true
+    private func setupNavigation() {
+        navigationController?.isNavigationBarHidden = false
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 }
 
 // MARK: - FollowerListVCProtocol Extension
 
-extension FollowerListViewController: FollowerListVCProtocol {
+extension FollowerListViewController: FollowerListViewControllerProtocol {
     
 }
