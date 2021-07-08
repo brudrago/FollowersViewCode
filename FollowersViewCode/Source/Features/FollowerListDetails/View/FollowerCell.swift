@@ -70,6 +70,4 @@ extension FollowerCell: ViewCodeProtocol {
             make.height.equalTo(20)
         }
     }
-    
-    
 }

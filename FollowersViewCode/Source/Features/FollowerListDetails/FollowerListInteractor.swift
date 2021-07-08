@@ -15,6 +15,8 @@ protocol FollowerListDataStoreProtocol {
 protocol FollowerListInteractorProtocol {
     
     func fetchFollowers()
+    
+    func set(follower: Follower)
 }
 
 class FollowerListInteractor: FollowerListInteractorProtocol {
@@ -56,6 +58,11 @@ class FollowerListInteractor: FollowerListInteractorProtocol {
             }
         }
     }
+    
+    func set(follower: Follower) {
+        
+    }
+    
     //MARK: - Private Functions
     
     private func didFetchSuccess(_ response: [Follower]?) {

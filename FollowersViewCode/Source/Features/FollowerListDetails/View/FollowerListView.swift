@@ -19,6 +19,14 @@ class FollowerListView: UIView {
         return collectionView
     }()
     
+    enum FollowerListSection {
+        case main
+    }
+    
+    var dataSource: UICollectionViewDiffableDataSource<FollowerListSection, Follower>!
+    
+  //  private unowned let delegate: FollowerListViewDelegate
+    
     // MARK: - Inits
     
     init() {
@@ -29,6 +37,12 @@ class FollowerListView: UIView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setupUI()
+    }
+    
+    // MARK: - Public Functions
+    
+    func set(follower: Follower) {
+        
     }
     
     // MARK: - Private Functions
@@ -46,6 +60,17 @@ class FollowerListView: UIView {
         flowLayout.itemSize = CGSize(width: itemWidth, height: height)
         
         return flowLayout
+    }
+    
+    private func configureDataSource() {
+        let identifier = FollowerCell.identifier
+        dataSource = UICollectionViewDiffableDataSource<FollowerListSection, Follower>(
+            collectionView: collectionView,
+            cellProvider: { (collectionView, indexPath, follower) -> UICollectionViewCell? in
+                guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as? FollowerCell else { return UICollectionViewCell() }
+               // cell.set(follower: )
+                return cell
+            })
     }
 }
 

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		701C0485269671D10010A5DE /* FollowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701C0484269671D10010A5DE /* FollowerCell.swift */; };
 		701C0488269673840010A5DE /* FVCAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701C0487269673840010A5DE /* FVCAvatarImageView.swift */; };
+		701C048A269692FB0010A5DE /* FollowerListViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701C0489269692FB0010A5DE /* FollowerListViewDelegate.swift */; };
 		701CBC1E2617BBEF00A5D951 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701CBC1D2617BBEF00A5D951 /* UIViewController+Ext.swift */; };
 		704EEABF263441D200D40A36 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704EEABE263441D200D40A36 /* NetworkManager.swift */; };
 		704EEAD52634499000D40A36 /* GithubURLBuilder .swift in Sources */ = {isa = PBXBuildFile; fileRef = 704EEAD42634499000D40A36 /* GithubURLBuilder .swift */; };
@@ -52,6 +53,7 @@
 /* Begin PBXFileReference section */
 		701C0484269671D10010A5DE /* FollowerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCell.swift; sourceTree = "<group>"; };
 		701C0487269673840010A5DE /* FVCAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FVCAvatarImageView.swift; sourceTree = "<group>"; };
+		701C0489269692FB0010A5DE /* FollowerListViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListViewDelegate.swift; sourceTree = "<group>"; };
 		701CBC1D2617BBEF00A5D951 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		704EEABE263441D200D40A36 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		704EEAD42634499000D40A36 /* GithubURLBuilder .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GithubURLBuilder .swift"; sourceTree = "<group>"; };
@@ -344,6 +346,7 @@
 			children = (
 				70F9EFA12610FB1E0090BC9D /* FollowerListView.swift */,
 				701C0484269671D10010A5DE /* FollowerCell.swift */,
+				701C0489269692FB0010A5DE /* FollowerListViewDelegate.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -513,6 +516,7 @@
 				7098CA34261494F7000A60A0 /* FollowerListBuilder.swift in Sources */,
 				7098CA3A26149517000A60A0 /* FollowerListPresenter.swift in Sources */,
 				70F9EF9D2610FAF30090BC9D /* FollowerListViewController.swift in Sources */,
+				701C048A269692FB0010A5DE /* FollowerListViewDelegate.swift in Sources */,
 				70F9EF832610D4D80090BC9D /* FavoriteListVC.swift in Sources */,
 				704EEAD52634499000D40A36 /* GithubURLBuilder .swift in Sources */,
 				70F9EF992610E9EA0090BC9D /* ViewCodeProtocol.swift in Sources */,

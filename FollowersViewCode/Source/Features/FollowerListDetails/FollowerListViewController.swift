@@ -9,6 +9,7 @@ import UIKit
 
 protocol FollowerListViewControllerProtocol: AnyObject {
     
+    func set(follower: Follower)
 }
 
 class FollowerListViewController: UIViewController {
@@ -51,5 +52,10 @@ class FollowerListViewController: UIViewController {
 // MARK: - FollowerListVCProtocol Extension
 
 extension FollowerListViewController: FollowerListViewControllerProtocol {
+    
+    func set(follower: Follower) {
+       // followerListView
+    }
+    
     
 }

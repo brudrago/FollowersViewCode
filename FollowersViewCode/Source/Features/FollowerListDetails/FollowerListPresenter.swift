@@ -11,6 +11,7 @@ import Foundation
 
 protocol FollowerListPresenterProtocol {
     
+    func set(follower: Follower)
 }
 
 class FollowerListPresenter: FollowerListPresenterProtocol {
@@ -18,4 +19,10 @@ class FollowerListPresenter: FollowerListPresenterProtocol {
     // MARK: - VIP Properties
     
     weak var viewController: FollowerListViewControllerProtocol!
+    
+    //MARK: - Public Functions
+    
+    func set(follower: Follower) {
+     //   viewController.set(follower: follower)
+    }
 }
