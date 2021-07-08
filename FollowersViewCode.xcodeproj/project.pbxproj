@@ -7,13 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		701C0485269671D10010A5DE /* FollowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701C0484269671D10010A5DE /* FollowerCell.swift */; };
+		701C0488269673840010A5DE /* FVCAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701C0487269673840010A5DE /* FVCAvatarImageView.swift */; };
 		701CBC1E2617BBEF00A5D951 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701CBC1D2617BBEF00A5D951 /* UIViewController+Ext.swift */; };
 		704EEABF263441D200D40A36 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704EEABE263441D200D40A36 /* NetworkManager.swift */; };
-		704EEAC2263445A300D40A36 /* NetworkMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704EEAC1263445A300D40A36 /* NetworkMethod.swift */; };
-		704EEAC62634466E00D40A36 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704EEAC52634466E00D40A36 /* NetworkRequest.swift */; };
-		704EEAC9263446BE00D40A36 /* NetworkEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704EEAC8263446BE00D40A36 /* NetworkEncoding.swift */; };
-		704EEACD2634489700D40A36 /* SnakeCaseDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704EEACC2634489700D40A36 /* SnakeCaseDecoder.swift */; };
-		704EEAD1263448C500D40A36 /* DefaultDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704EEAD0263448C500D40A36 /* DefaultDecoder.swift */; };
 		704EEAD52634499000D40A36 /* GithubURLBuilder .swift in Sources */ = {isa = PBXBuildFile; fileRef = 704EEAD42634499000D40A36 /* GithubURLBuilder .swift */; };
 		704EEADF26344F1500D40A36 /* FVCError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704EEADE26344F1500D40A36 /* FVCError.swift */; };
 		704EEB03263495E300D40A36 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704EEB02263495E300D40A36 /* R.generated.swift */; };
@@ -34,7 +31,6 @@
 		70D0AAD02610BF1C0045B210 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70D0AACE2610BF1C0045B210 /* LaunchScreen.storyboard */; };
 		70DFC7FF262CF0AB00A17501 /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DFC7FE262CF0AB00A17501 /* Follower.swift */; };
 		70DFC803262CF16800A17501 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DFC802262CF16800A17501 /* User.swift */; };
-		70DFC807262CF48200A17501 /* NetworkManager1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DFC806262CF48200A17501 /* NetworkManager1.swift */; };
 		70F9EF802610D49E0090BC9D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F9EF7F2610D49E0090BC9D /* SearchViewController.swift */; };
 		70F9EF832610D4D80090BC9D /* FavoriteListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F9EF822610D4D80090BC9D /* FavoriteListVC.swift */; };
 		70F9EF882610DA3E0090BC9D /* FVCButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F9EF872610DA3E0090BC9D /* FVCButton.swift */; };
@@ -55,13 +51,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		701C0484269671D10010A5DE /* FollowerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCell.swift; sourceTree = "<group>"; };
+		701C0487269673840010A5DE /* FVCAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FVCAvatarImageView.swift; sourceTree = "<group>"; };
 		701CBC1D2617BBEF00A5D951 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		704EEABE263441D200D40A36 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		704EEAC1263445A300D40A36 /* NetworkMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMethod.swift; sourceTree = "<group>"; };
-		704EEAC52634466E00D40A36 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
-		704EEAC8263446BE00D40A36 /* NetworkEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEncoding.swift; sourceTree = "<group>"; };
-		704EEACC2634489700D40A36 /* SnakeCaseDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnakeCaseDecoder.swift; sourceTree = "<group>"; };
-		704EEAD0263448C500D40A36 /* DefaultDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDecoder.swift; sourceTree = "<group>"; };
 		704EEAD42634499000D40A36 /* GithubURLBuilder .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GithubURLBuilder .swift"; sourceTree = "<group>"; };
 		704EEADE26344F1500D40A36 /* FVCError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FVCError.swift; sourceTree = "<group>"; };
 		704EEB02263495E300D40A36 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
@@ -84,7 +77,6 @@
 		70D0AAD12610BF1C0045B210 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70DFC7FE262CF0AB00A17501 /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 		70DFC802262CF16800A17501 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		70DFC806262CF48200A17501 /* NetworkManager1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager1.swift; sourceTree = "<group>"; };
 		70F9EF7F2610D49E0090BC9D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		70F9EF822610D4D80090BC9D /* FavoriteListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListVC.swift; sourceTree = "<group>"; };
 		70F9EF872610DA3E0090BC9D /* FVCButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FVCButton.swift; sourceTree = "<group>"; };
@@ -126,9 +118,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		701C0486269673340010A5DE /* ImageView */ = {
+			isa = PBXGroup;
+			children = (
+				701C0487269673840010A5DE /* FVCAvatarImageView.swift */,
+			);
+			path = ImageView;
+			sourceTree = "<group>";
+		};
 		701CBC202617C92500A5D951 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				701C0486269673340010A5DE /* ImageView */,
 				70F9EFC1261142930090BC9D /* Alert */,
 				701CBC232617C9B800A5D951 /* Button */,
 				701CBC242617C9C400A5D951 /* Label */,
@@ -170,15 +171,6 @@
 				70F9EF8B2610DE860090BC9D /* FVCTextField.swift */,
 			);
 			path = TextField;
-			sourceTree = "<group>";
-		};
-		704EEACB2634487E00D40A36 /* Decoders */ = {
-			isa = PBXGroup;
-			children = (
-				704EEACC2634489700D40A36 /* SnakeCaseDecoder.swift */,
-				704EEAD0263448C500D40A36 /* DefaultDecoder.swift */,
-			);
-			path = Decoders;
 			sourceTree = "<group>";
 		};
 		704EEAD32634497E00D40A36 /* API */ = {
@@ -249,12 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				704EEAD32634497E00D40A36 /* API */,
-				704EEACB2634487E00D40A36 /* Decoders */,
-				70DFC806262CF48200A17501 /* NetworkManager1.swift */,
 				704EEABE263441D200D40A36 /* NetworkManager.swift */,
-				704EEAC1263445A300D40A36 /* NetworkMethod.swift */,
-				704EEAC52634466E00D40A36 /* NetworkRequest.swift */,
-				704EEAC8263446BE00D40A36 /* NetworkEncoding.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -359,6 +346,7 @@
 			isa = PBXGroup;
 			children = (
 				70F9EFA12610FB1E0090BC9D /* FollowerListView.swift */,
+				701C0484269671D10010A5DE /* FollowerCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -535,19 +523,17 @@
 				70F9EF802610D49E0090BC9D /* SearchViewController.swift in Sources */,
 				704EEB1E26349E6B00D40A36 /* GithubResource.swift in Sources */,
 				70A6E7742692583B00AC91FA /* FollowerListRouter.swift in Sources */,
+				701C0485269671D10010A5DE /* FollowerCell.swift in Sources */,
 				70D0AAC42610BF1B0045B210 /* AppDelegate.swift in Sources */,
 				704EEB1A2634999700D40A36 /* FollowersListResult.swift in Sources */,
-				704EEAD1263448C500D40A36 /* DefaultDecoder.swift in Sources */,
 				70F9EFB82611401E0090BC9D /* FVCTitleLabel.swift in Sources */,
 				70F9EFBF261142700090BC9D /* FVCAlertVC.swift in Sources */,
 				70F9EFA62610FD000090BC9D /* SearchBuilder.swift in Sources */,
 				704EEB172634998800D40A36 /* FollowerListResponse.swift in Sources */,
 				70F9EFA92610FD150090BC9D /* SearchInteractor.swift in Sources */,
 				70F9EFC4261142D30090BC9D /* FVCAlertView.swift in Sources */,
-				704EEACD2634489700D40A36 /* SnakeCaseDecoder.swift in Sources */,
 				70F9EF902610E2080090BC9D /* SearchView.swift in Sources */,
 				70A6E7762692615000AC91FA /* SearchViewDelegate.swift in Sources */,
-				704EEAC62634466E00D40A36 /* NetworkRequest.swift in Sources */,
 				701CBC1E2617BBEF00A5D951 /* UIViewController+Ext.swift in Sources */,
 				70F9EFA22610FB1E0090BC9D /* FollowerListView.swift in Sources */,
 				704EEABF263441D200D40A36 /* NetworkManager.swift in Sources */,
@@ -556,13 +542,11 @@
 				70F9EFAF2610FD440090BC9D /* SearchRouter.swift in Sources */,
 				70DFC7FF262CF0AB00A17501 /* Follower.swift in Sources */,
 				704EEB03263495E300D40A36 /* R.generated.swift in Sources */,
-				704EEAC9263446BE00D40A36 /* NetworkEncoding.swift in Sources */,
 				70DFC803262CF16800A17501 /* User.swift in Sources */,
 				70F9EF882610DA3E0090BC9D /* FVCButton.swift in Sources */,
+				701C0488269673840010A5DE /* FVCAvatarImageView.swift in Sources */,
 				704EEADF26344F1500D40A36 /* FVCError.swift in Sources */,
-				70DFC807262CF48200A17501 /* NetworkManager1.swift in Sources */,
 				70D0AAC62610BF1B0045B210 /* SceneDelegate.swift in Sources */,
-				704EEAC2263445A300D40A36 /* NetworkMethod.swift in Sources */,
 				70F9EF8C2610DE860090BC9D /* FVCTextField.swift in Sources */,
 				704EEB112634987000D40A36 /* R+Extensions.swift in Sources */,
 			);

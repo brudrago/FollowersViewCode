@@ -16,15 +16,17 @@ protocol SearchViewControllerProtocol: AnyObject {
 
 class SearchViewController: UIViewController {
     
-    // MARK: - Private Properties
-    
-    private var searchView = SearchView()
-    
     // MARK: - VIP Properties
     
     var interactor: SearchInteractorProtocol!
     
     var router: SearchRouterProtocol!
+    
+    // MARK: - Private Properties
+    
+    private lazy var searchView: SearchView = {
+        return SearchView()
+    }()
     
     // MARK: - View Lifecycle
     
@@ -41,7 +43,7 @@ class SearchViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.isNavigationBarHidden = true
+        setupNavigation()
     }
     
     // MARK: - Public Functions
@@ -52,7 +54,7 @@ class SearchViewController: UIViewController {
     }
     
     func showAlert(title: String, message: String, buttonTitle: String) {
-      presentFVCAlertOnMainThread(title: title , message: message, buttonTitle: buttonTitle)
+        presentFVCAlertOnMainThread(title: title , message: message, buttonTitle: buttonTitle)
     }
     
     func searchFollowers() {
@@ -60,6 +62,13 @@ class SearchViewController: UIViewController {
         //router.proceedToFollowerList(follower)
         router.proceedToFollowerList()
     }
+    
+    // MARK: - Private Functions
+    
+    private func setupNavigation() {
+        navigationController?.isNavigationBarHidden = true
+    }
+    
 }
 
 // MARK: - SearchViewDelegate Extension

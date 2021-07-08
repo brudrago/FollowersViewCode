@@ -10,6 +10,8 @@ import SnapKit
 
 class SearchView: UIView {
     
+    // MARK: - UI Components
+    
     private lazy var logoImageView: UIImageView = {
         let logo = UIImageView()
         logo.image = R.image.ghLogo()
