@@ -11,7 +11,7 @@ import Foundation
 
 protocol FollowerListPresenterProtocol {
     
-    func set(follower: Follower)
+    func set(follower: [Follower])
 }
 
 class FollowerListPresenter: FollowerListPresenterProtocol {
@@ -22,7 +22,7 @@ class FollowerListPresenter: FollowerListPresenterProtocol {
     
     //MARK: - Public Functions
     
-    func set(follower: Follower) {
-     //   viewController.set(follower: follower)
+    func set(follower: [Follower]) {
+        viewController.set(follower: follower)
     }
 }

@@ -9,13 +9,14 @@ import UIKit
 import SnapKit
 
 class FollowerListView: UIView {
-
+    
     // MARK: - UI Components
     
     private lazy var collectionView: UICollectionView = {
-       let collectionView = UICollectionView(
-        frame: self.bounds,
-        collectionViewLayout: createThreeColumnFlowLayout())
+        let layout = UICollectionViewFlowLayout()
+        let collectionView = UICollectionView(
+            frame: self.bounds,
+            collectionViewLayout:layout)
         return collectionView
     }()
     
@@ -23,9 +24,9 @@ class FollowerListView: UIView {
         case main
     }
     
-    var dataSource: UICollectionViewDiffableDataSource<FollowerListSection, Follower>!
+    private var followers: [Follower] = []
     
-  //  private unowned let delegate: FollowerListViewDelegate
+    //  private unowned let delegate: FollowerListViewDelegate
     
     // MARK: - Inits
     
@@ -41,37 +42,24 @@ class FollowerListView: UIView {
     
     // MARK: - Public Functions
     
-    func set(follower: Follower) {
-        
+    func set(follower: [Follower]) {
+        self.followers = follower
+        collectionView.reloadData()
     }
     
+//    func updateData(follower: [Follower]) {
+//        self.followers = follower
+//        var snapshot = NSDiffableDataSourceSnapshot<FollowerListSection, Follower>()
+//        snapshot.appendSections([.main])
+//        snapshot.appendItems(followers)
+//        DispatchQueue.main.async {
+//            self.dataSource.apply(snapshot, animatingDifferences: true)
+//        }
+//    }
+
     // MARK: - Private Functions
     
-    private func createThreeColumnFlowLayout() -> UICollectionViewFlowLayout {
-        let padding: CGFloat = 12
-        let width = self.bounds.width
-        let minimumItemSpacing: CGFloat = 10
-        let availableWidth = width - (padding * 2) - (minimumItemSpacing * 2)
-        let itemWidth = availableWidth / 3
-        let height = itemWidth + 40
-        
-        let flowLayout = UICollectionViewFlowLayout()
-        flowLayout.sectionInset = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)
-        flowLayout.itemSize = CGSize(width: itemWidth, height: height)
-        
-        return flowLayout
-    }
-    
-    private func configureDataSource() {
-        let identifier = FollowerCell.identifier
-        dataSource = UICollectionViewDiffableDataSource<FollowerListSection, Follower>(
-            collectionView: collectionView,
-            cellProvider: { (collectionView, indexPath, follower) -> UICollectionViewCell? in
-                guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as? FollowerCell else { return UICollectionViewCell() }
-               // cell.set(follower: )
-                return cell
-            })
-    }
+
 }
 
 // MARK: - ViewCodeProtocol Extension
@@ -84,7 +72,7 @@ extension FollowerListView: ViewCodeProtocol {
     
     func setupConstraints() {
         collectionView.snp.makeConstraints { make in
-            make.top.bottom.equalTo(safeAreaLayoutGuide)
+            make.top.bottom.equalToSuperview()
             make.left.right.equalToSuperview()
         }
     }
@@ -92,7 +80,45 @@ extension FollowerListView: ViewCodeProtocol {
     func setupComponents() {
         backgroundColor = .systemBackground
         
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        
         collectionView.backgroundColor = .systemPink
         collectionView.register(FollowerCell.self, forCellWithReuseIdentifier: FollowerCell.identifier)
+    }
+}
+// MARK: - FollowerListViewDataSource Extension
+
+extension FollowerListView: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return followers.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let identifier = FollowerCell.identifier
+        
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as? FollowerCell  else { return UICollectionViewCell()}
+        cell.set(follower: self.followers[indexPath.item])
+        return cell
+    }
+}
+// MARK: - FollowerListViewDelegate Extension
+
+extension FollowerListView: UICollectionViewDelegate {}
+
+// MARK: - FollowerListViewFlowLayoutDelegate Extension
+
+extension FollowerListView: UICollectionViewDelegateFlowLayout {
+    
+    private var padding: CGFloat { 12}
+    
+    private var minimumItemSpacing: CGFloat { 10}
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = bounds.size.width
+        let availableWidth = width - (padding * 2) - (minimumItemSpacing * 2)
+        let itemWidth = availableWidth / 3
+        let height = itemWidth + 40
+        return CGSize(width: itemWidth, height: height)
     }
 }

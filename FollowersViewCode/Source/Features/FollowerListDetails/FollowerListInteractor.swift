@@ -16,7 +16,7 @@ protocol FollowerListInteractorProtocol {
     
     func fetchFollowers()
     
-    func set(follower: Follower)
+    func set(follower: [Follower])
 }
 
 class FollowerListInteractor: FollowerListInteractorProtocol {
@@ -53,14 +53,15 @@ class FollowerListInteractor: FollowerListInteractorProtocol {
             switch result {
             case .success(let followerResponse):
                 self?.didFetchSuccess(followerResponse)
+                self?.update(followerResponse)
             case .failure(let error):
                 print(error)
             }
         }
     }
     
-    func set(follower: Follower) {
-        
+    func set(follower: [Follower]) {
+        presenter.set(follower: follower)
     }
     
     //MARK: - Private Functions
@@ -71,4 +72,12 @@ class FollowerListInteractor: FollowerListInteractorProtocol {
         print("===== LIST => \(followerList)")
     }
     
+    private func update(_ response: [Follower]?) {
+        guard let followers = response else { return }
+        presenter.set(follower: followers)
+    }
+    
+    private func didFetchFailed(){
+        //TO DO : - tratamento para quando falha
+    }
 }

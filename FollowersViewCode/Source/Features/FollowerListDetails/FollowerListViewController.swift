@@ -9,7 +9,7 @@ import UIKit
 
 protocol FollowerListViewControllerProtocol: AnyObject {
     
-    func set(follower: Follower)
+    func set(follower: [Follower])
 }
 
 class FollowerListViewController: UIViewController {
@@ -33,7 +33,7 @@ class FollowerListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        interactor.fetchFollowers() 
+        interactor.fetchFollowers()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -53,9 +53,7 @@ class FollowerListViewController: UIViewController {
 
 extension FollowerListViewController: FollowerListViewControllerProtocol {
     
-    func set(follower: Follower) {
-       // followerListView
+    func set(follower: [Follower]) {
+        followerListView.set(follower: follower)
     }
-    
-    
 }

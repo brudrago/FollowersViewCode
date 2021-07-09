@@ -43,7 +43,6 @@ class FollowerCell: UICollectionViewCell {
     func set(follower: Follower) {
         usernameLabel.text = follower.login
     }
-    
 }
 
 // MARK: - ViewCode Protocol Extension
@@ -59,15 +58,19 @@ extension FollowerCell: ViewCodeProtocol {
         
         avatarImageView.snp.makeConstraints { make in
             make.top.left.equalToSuperview().offset(8)
-            make.right.equalToSuperview().inset(8)
+            make.right.equalToSuperview().offset(-8)
             make.height.equalTo(avatarImageView.snp.width)
         }
         
         usernameLabel.snp.makeConstraints { make in
             make.top.equalTo(avatarImageView.snp.bottom).offset(12)
             make.left.equalToSuperview().offset(8)
-            make.right.equalToSuperview().inset(8)
+            make.right.equalToSuperview().offset(-8)
             make.height.equalTo(20)
         }
+    }
+    
+    func setupComponents() {
+        backgroundColor = .green
     }
 }
