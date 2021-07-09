@@ -23,7 +23,7 @@ class FollowerListViewController: UIViewController {
     // MARK: - Private Properties
     
     private lazy var followerListView: FollowerListView = {
-        return FollowerListView()
+        return FollowerListView(self)
     }()
     
     // MARK: - View Lifecycle
@@ -72,6 +72,6 @@ extension FollowerListViewController: FollowerListViewControllerProtocol {
 extension FollowerListViewController: FollowerListViewDelegate {
     
     func fetchPagination() {
-        interactor.fetchFollowersNextPage()
+        interactor.fetchNextPage()
     }
 }

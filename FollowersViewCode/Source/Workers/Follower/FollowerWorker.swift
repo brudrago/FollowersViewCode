@@ -11,20 +11,39 @@ typealias FollowerListResults = (Result<[Follower]?,FVCError>) -> Void
 
 protocol FollowerWorkerProtocol {
     
-    func fetchList(for username: String, page: Int, completion: @escaping FollowerListResults)
+    var currentPage: Int { get }
+    
+    func fetchList(for username: String, completion: @escaping FollowerListResults)
+    
+    func nextPage()
 }
 
 class FollowerWorker: FollowerWorkerProtocol {
     
+    var currentPage = 1
+    
     // MARK: - Public Functions
     
-    func fetchList(for username: String, page: Int, completion: @escaping FollowerListResults) {
+//    func fetchList(for username: String, page: Int, completion: @escaping FollowerListResults) {
+//        let url = GithubURLBuilder(resource: .followers)
+//            .set(username: username)
+//            .set(page: currentPage)
+//            .buil()
+//
+//        requestFollowers(url, completion: completion)
+//    }
+    
+    func fetchList(for username: String, completion: @escaping FollowerListResults) {
         let url = GithubURLBuilder(resource: .followers)
             .set(username: username)
-            .set(page: page)
+            .set(page: currentPage)
             .buil()
         
         requestFollowers(url, completion: completion)
+    }
+    
+    func nextPage() {
+        self.currentPage += 1
     }
     
     // MARK: - Private Functions

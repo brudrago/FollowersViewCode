@@ -18,7 +18,7 @@ protocol FollowerListInteractorProtocol {
     
     func set(follower: [Follower])
     
-    func fetchFollowersNextPage()
+    func fetchNextPage()
 }
 
 class FollowerListInteractor: FollowerListInteractorProtocol {
@@ -51,32 +51,12 @@ class FollowerListInteractor: FollowerListInteractorProtocol {
     
     //MARK: - Public Functions
     
-    func fetchFollowers() {
-        followerWorker.fetchList(for: username, page: page) { [weak self] result in
-            guard let self = self else { return }
-            
-            switch result {
-            case .success(let response):
-                if response?.count ?? 0 < 100 { self.hasMoreFollowers = false }
-                self.didFetchSuccess(response)
-            case .failure:
-                self.didFetchFailed()
-            }
-        }
-    }
-    
     func set(follower: [Follower]) {
         presenter.set(follower: follower)
     }
     
-    func fetchFollowersNextPage() {
-        guard hasMoreFollowers else { return }
-        
-        self.page += 1
-        
-        print("=======> PAGE:\(page)")
-        
-        followerWorker.fetchList(for: username, page: page) { [weak self] result in
+    func fetchFollowers() {
+        followerWorker.fetchList(for: username ) { [weak self] result in
             guard let self = self else { return }
             
             switch result {
@@ -89,13 +69,19 @@ class FollowerListInteractor: FollowerListInteractorProtocol {
             }
         }
     }
- 
+    
+    func fetchNextPage() {
+        if hasMoreFollowers {
+            followerWorker.nextPage()
+            fetchFollowers()
+        }
+    }
+    
     
     //MARK: - Private Functions
     
     private func didFetchSuccess(_ response: [Follower]?) {
         guard let followers = response else { return }
-        //  if followers.count < 100 { self.hasMoreFollowers = false }
         self.followerList.append(contentsOf: followers)
         presenter.set(follower: followerList)
     }
