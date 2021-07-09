@@ -93,16 +93,6 @@ extension FollowerListView: UICollectionViewDataSource {
 
 extension FollowerListView: UICollectionViewDelegate {
     
-    //    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-    //        let offsetY = scrollView.contentOffset.y
-    //        let contentHeight = scrollView.contentSize.height
-    //        let height = scrollView.frame.size.height
-    //
-    //        if offsetY > contentHeight - height {
-    //            self.delegate?.fetchPagination()
-    //        }
-    //    }
-    
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell,
                         forItemAt indexPath: IndexPath) {
         
@@ -110,7 +100,7 @@ extension FollowerListView: UICollectionViewDelegate {
         
         if lastRowIndex == indexPath.row {
             DispatchQueue.main.async {
-                self.delegate?.fetchPagination()
+                self.delegate?.fetchNextPage()
             }
         }
     }

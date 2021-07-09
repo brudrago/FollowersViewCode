@@ -71,7 +71,7 @@ extension FollowerListViewController: FollowerListViewControllerProtocol {
 
 extension FollowerListViewController: FollowerListViewDelegate {
     
-    func fetchPagination() {
+    func fetchNextPage() {
         interactor.fetchNextPage()
     }
 }

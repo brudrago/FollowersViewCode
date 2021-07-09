@@ -16,8 +16,6 @@ protocol FollowerListInteractorProtocol {
     
     func fetchFollowers()
     
-    func set(follower: [Follower])
-    
     func fetchNextPage()
 }
 
@@ -50,10 +48,6 @@ class FollowerListInteractor: FollowerListInteractorProtocol {
     }
     
     //MARK: - Public Functions
-    
-    func set(follower: [Follower]) {
-        presenter.set(follower: follower)
-    }
     
     func fetchFollowers() {
         followerWorker.fetchList(for: username ) { [weak self] result in

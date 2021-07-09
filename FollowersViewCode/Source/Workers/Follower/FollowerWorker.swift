@@ -23,16 +23,7 @@ class FollowerWorker: FollowerWorkerProtocol {
     var currentPage = 1
     
     // MARK: - Public Functions
-    
-//    func fetchList(for username: String, page: Int, completion: @escaping FollowerListResults) {
-//        let url = GithubURLBuilder(resource: .followers)
-//            .set(username: username)
-//            .set(page: currentPage)
-//            .buil()
-//
-//        requestFollowers(url, completion: completion)
-//    }
-    
+
     func fetchList(for username: String, completion: @escaping FollowerListResults) {
         let url = GithubURLBuilder(resource: .followers)
             .set(username: username)
