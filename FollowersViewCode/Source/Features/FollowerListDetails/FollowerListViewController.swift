@@ -36,6 +36,7 @@ class FollowerListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         interactor.fetchFollowers()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -63,5 +64,14 @@ extension FollowerListViewController: FollowerListViewControllerProtocol {
     
     func set(follower: [Follower]) {
         followerListView.set(follower: follower)
+    }
+}
+
+// MARK: - FollowerListViewDelegate Extension
+
+extension FollowerListViewController: FollowerListViewDelegate {
+    
+    func fetchPagination() {
+        interactor.fetchFollowersNextPage()
     }
 }

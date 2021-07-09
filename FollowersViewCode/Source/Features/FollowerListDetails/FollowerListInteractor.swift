@@ -17,6 +17,8 @@ protocol FollowerListInteractorProtocol {
     func fetchFollowers()
     
     func set(follower: [Follower])
+    
+    func fetchFollowersNextPage()
 }
 
 class FollowerListInteractor: FollowerListInteractorProtocol {
@@ -35,6 +37,8 @@ class FollowerListInteractor: FollowerListInteractorProtocol {
     
     private var followerList : [Follower] = []
     
+    private var hasMoreFollowers = true
+    
     //MARK: - Inits
     
     init() {
@@ -52,11 +56,11 @@ class FollowerListInteractor: FollowerListInteractorProtocol {
             guard let self = self else { return }
             
             switch result {
-            case .success(let followerResponse):
-                self.didFetchSuccess(followerResponse)
-            case .failure(let error):
+            case .success(let response):
+                if response?.count ?? 0 < 100 { self.hasMoreFollowers = false }
+                self.didFetchSuccess(response)
+            case .failure:
                 self.didFetchFailed()
-                print(error)
             }
         }
     }
@@ -65,11 +69,35 @@ class FollowerListInteractor: FollowerListInteractorProtocol {
         presenter.set(follower: follower)
     }
     
+    func fetchFollowersNextPage() {
+        guard hasMoreFollowers else { return }
+        
+        self.page += 1
+        
+        print("=======> PAGE:\(page)")
+        
+        followerWorker.fetchList(for: username, page: page) { [weak self] result in
+            guard let self = self else { return }
+            
+            switch result {
+            case .success(let response):
+                if response?.count ?? 0 < 100 { self.hasMoreFollowers = false }
+                self.didFetchSuccess(response)
+            case .failure(let error):
+                self.didFetchFailed()
+                print(error)
+            }
+        }
+    }
+ 
+    
     //MARK: - Private Functions
     
     private func didFetchSuccess(_ response: [Follower]?) {
         guard let followers = response else { return }
-        presenter.set(follower: followers)
+        //  if followers.count < 100 { self.hasMoreFollowers = false }
+        self.followerList.append(contentsOf: followers)
+        presenter.set(follower: followerList)
     }
     
     private func didFetchFailed(){

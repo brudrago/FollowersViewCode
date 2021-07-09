@@ -9,7 +9,9 @@ import Foundation
 
 protocol FollowerListViewDelegate: AnyObject {
     
-    func set(follower: Follower)
+//    func set(follower: Follower)
+    
+    func fetchPagination()
 }
 
 

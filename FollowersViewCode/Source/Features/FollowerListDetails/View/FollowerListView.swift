@@ -26,7 +26,7 @@ class FollowerListView: UIView {
     
     private var followers: [Follower] = []
     
-    //  private unowned let delegate: FollowerListViewDelegate
+    weak var delegate: FollowerListViewDelegate?
     
     // MARK: - Inits
     
@@ -46,10 +46,6 @@ class FollowerListView: UIView {
         self.followers = follower
         collectionView.reloadData()
     }
-    
-    // MARK: - Private Functions
-    
-
 }
 
 // MARK: - ViewCodeProtocol Extension
@@ -94,7 +90,18 @@ extension FollowerListView: UICollectionViewDataSource {
 }
 // MARK: - UICollectionViewDelegate Extension
 
-extension FollowerListView: UICollectionViewDelegate {}
+extension FollowerListView: UICollectionViewDelegate {
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        let height = scrollView.frame.size.height
+        
+        if offsetY > contentHeight - height {
+            self.delegate?.fetchPagination()
+        }
+    }
+}
 
 // MARK: - UICollectionViewDelegateFlowLayout Extension
 
