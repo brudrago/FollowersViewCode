@@ -29,6 +29,7 @@
 		70D0AAC62610BF1B0045B210 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D0AAC52610BF1B0045B210 /* SceneDelegate.swift */; };
 		70D0AACD2610BF1C0045B210 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70D0AACC2610BF1C0045B210 /* Assets.xcassets */; };
 		70D0AAD02610BF1C0045B210 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70D0AACE2610BF1C0045B210 /* LaunchScreen.storyboard */; };
+		70DEBC7E2698B1EA00FBD477 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DEBC7D2698B1EA00FBD477 /* UIImageView.swift */; };
 		70DFC7FF262CF0AB00A17501 /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DFC7FE262CF0AB00A17501 /* Follower.swift */; };
 		70DFC803262CF16800A17501 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DFC802262CF16800A17501 /* User.swift */; };
 		70F9EF802610D49E0090BC9D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F9EF7F2610D49E0090BC9D /* SearchViewController.swift */; };
@@ -75,6 +76,7 @@
 		70D0AACC2610BF1C0045B210 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70D0AACF2610BF1C0045B210 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		70D0AAD12610BF1C0045B210 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70DEBC7D2698B1EA00FBD477 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		70DFC7FE262CF0AB00A17501 /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 		70DFC802262CF16800A17501 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		70F9EF7F2610D49E0090BC9D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				704EEADE26344F1500D40A36 /* FVCError.swift */,
 				701CBC1D2617BBEF00A5D951 /* UIViewController+Ext.swift */,
 				704EEB102634987000D40A36 /* R+Extensions.swift */,
+				70DEBC7D2698B1EA00FBD477 /* UIImageView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -225,6 +228,14 @@
 				70F9EF752610C2490090BC9D /* SupportFiles */,
 			);
 			path = FollowersViewCode;
+			sourceTree = "<group>";
+		};
+		70DEBC7C2698B1D100FBD477 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				70F9EF982610E9EA0090BC9D /* ViewCodeProtocol.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		70DFC7FD262CF09A00A17501 /* Model */ = {
@@ -321,9 +332,9 @@
 		70F9EF972610E9D60090BC9D /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				70DEBC7C2698B1D100FBD477 /* Common */,
 				701CBC202617C92500A5D951 /* Custom Views */,
 				701CBC212617C95F00A5D951 /* Extensions */,
-				70F9EF982610E9EA0090BC9D /* ViewCodeProtocol.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -524,6 +535,7 @@
 				70F9EF802610D49E0090BC9D /* SearchViewController.swift in Sources */,
 				704EEB1E26349E6B00D40A36 /* GithubResource.swift in Sources */,
 				70A6E7742692583B00AC91FA /* FollowerListRouter.swift in Sources */,
+				70DEBC7E2698B1EA00FBD477 /* UIImageView.swift in Sources */,
 				701C0485269671D10010A5DE /* FollowerCell.swift in Sources */,
 				70D0AAC42610BF1B0045B210 /* AppDelegate.swift in Sources */,
 				704EEB1A2634999700D40A36 /* FollowersListResult.swift in Sources */,

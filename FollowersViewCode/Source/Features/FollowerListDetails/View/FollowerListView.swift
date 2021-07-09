@@ -73,11 +73,11 @@ extension FollowerListView: ViewCodeProtocol {
         collectionView.dataSource = self
         collectionView.delegate = self
         
-        collectionView.backgroundColor = .systemPink
+        collectionView.backgroundColor = .clear
         collectionView.register(FollowerCell.self, forCellWithReuseIdentifier: FollowerCell.identifier)
     }
 }
-// MARK: - FollowerListViewDataSource Extension
+// MARK: - UICollectionViewDataSource Extension
 
 extension FollowerListView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -92,19 +92,17 @@ extension FollowerListView: UICollectionViewDataSource {
         return cell
     }
 }
-// MARK: - FollowerListViewDelegate Extension
+// MARK: - UICollectionViewDelegate Extension
 
 extension FollowerListView: UICollectionViewDelegate {}
 
-// MARK: - FollowerListViewFlowLayoutDelegate Extension
+// MARK: - UICollectionViewDelegateFlowLayout Extension
 
 extension FollowerListView: UICollectionViewDelegateFlowLayout {
     
-    private var padding: CGFloat { 12}
-    
-    private var minimumItemSpacing: CGFloat { 10}
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let padding: CGFloat = 12
+        let minimumItemSpacing: CGFloat = 10
         let width = bounds.size.width
         let availableWidth = width - (padding * 2) - (minimumItemSpacing * 2)
         let itemWidth = availableWidth / 3

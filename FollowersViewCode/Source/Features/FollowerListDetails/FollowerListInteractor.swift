@@ -49,12 +49,13 @@ class FollowerListInteractor: FollowerListInteractorProtocol {
     
     func fetchFollowers() {
         followerWorker.fetchList(for: username, page: page) { [weak self] result in
-            print(result)
+            guard let self = self else { return }
+            
             switch result {
             case .success(let followerResponse):
-                self?.didFetchSuccess(followerResponse)
+                self.didFetchSuccess(followerResponse)
             case .failure(let error):
-                self?.didFetchFailed()
+                self.didFetchFailed()
                 print(error)
             }
         }

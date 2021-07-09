@@ -13,10 +13,6 @@ class GithubURLBuilder {
     
     private var url: String
     
-    
-    
-   // let endpoint = baseUrl + "/users/\(username)/followers?per_page=100&\(page)"
-    
     // MARK: - Inits
     
     init(resource: GithubResource) {
