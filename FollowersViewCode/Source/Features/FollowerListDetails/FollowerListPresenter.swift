@@ -12,6 +12,8 @@ import Foundation
 protocol FollowerListPresenterProtocol {
     
     func set(follower: [Follower])
+    
+    func showAlert(title: String, message: String, buttonTitle: String)
 }
 
 class FollowerListPresenter: FollowerListPresenterProtocol {
@@ -24,5 +26,9 @@ class FollowerListPresenter: FollowerListPresenterProtocol {
     
     func set(follower: [Follower]) {
         viewController.set(follower: follower)
+    }
+
+    func showAlert(title: String, message: String, buttonTitle: String) {
+        viewController.showAlert(title: title, message: message, buttonTitle: buttonTitle)
     }
 }

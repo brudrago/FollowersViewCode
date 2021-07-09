@@ -71,6 +71,6 @@ extension FollowerCell: ViewCodeProtocol {
     }
     
     func setupComponents() {
-        backgroundColor = .green
+        backgroundColor = .systemBackground
     }
 }

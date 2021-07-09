@@ -58,8 +58,7 @@ class SearchViewController: UIViewController {
     }
     
     func searchFollowers() {
-        let follower = searchView.getUsername()
-        //router.proceedToFollowerList(follower)
+       // let follower = searchView.getUsername()
         router.proceedToFollowerList()
     }
     

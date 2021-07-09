@@ -47,16 +47,6 @@ class FollowerListView: UIView {
         collectionView.reloadData()
     }
     
-//    func updateData(follower: [Follower]) {
-//        self.followers = follower
-//        var snapshot = NSDiffableDataSourceSnapshot<FollowerListSection, Follower>()
-//        snapshot.appendSections([.main])
-//        snapshot.appendItems(followers)
-//        DispatchQueue.main.async {
-//            self.dataSource.apply(snapshot, animatingDifferences: true)
-//        }
-//    }
-
     // MARK: - Private Functions
     
 

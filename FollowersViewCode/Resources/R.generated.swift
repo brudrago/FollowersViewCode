@@ -195,10 +195,12 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 11 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 13 localization keys.
     struct localizable {
       /// Value: Buscar seguidores
       static let searchFollowers = Rswift.StringResource(key: "searchFollowers", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Desculpe 😥 
+      static let sorry = Rswift.StringResource(key: "sorry", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Desculpe! Encontramos um erro no decode.
       static let decodeError = Rswift.StringResource(key: "decodeError", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Digite o username
@@ -211,6 +213,8 @@ struct R: Rswift.Validatable {
       static let invalidUsername = Rswift.StringResource(key: "invalidUsername", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: OK
       static let ok = Rswift.StringResource(key: "ok", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Ocorreu um erro 🤕.Tente novamente!
+      static let somenthingBadHappend = Rswift.StringResource(key: "somenthingBadHappend", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Oops, an error has occurred!
       static let errorTitle = Rswift.StringResource(key: "errorTitle", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Sorry, an error occurred with the database.
@@ -231,6 +235,19 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("searchFollowers", bundle: bundle, comment: "")
+      }
+
+      /// Value: Desculpe 😥 
+      static func sorry(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("sorry", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "sorry"
+        }
+
+        return NSLocalizedString("sorry", bundle: bundle, comment: "")
       }
 
       /// Value: Desculpe! Encontramos um erro no decode.
@@ -309,6 +326,19 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("ok", bundle: bundle, comment: "")
+      }
+
+      /// Value: Ocorreu um erro 🤕.Tente novamente!
+      static func somenthingBadHappend(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("somenthingBadHappend", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "somenthingBadHappend"
+        }
+
+        return NSLocalizedString("somenthingBadHappend", bundle: bundle, comment: "")
       }
 
       /// Value: Oops, an error has occurred!

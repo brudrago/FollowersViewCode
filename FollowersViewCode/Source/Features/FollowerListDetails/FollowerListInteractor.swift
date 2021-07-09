@@ -53,8 +53,8 @@ class FollowerListInteractor: FollowerListInteractorProtocol {
             switch result {
             case .success(let followerResponse):
                 self?.didFetchSuccess(followerResponse)
-                self?.update(followerResponse)
             case .failure(let error):
+                self?.didFetchFailed()
                 print(error)
             }
         }
@@ -68,16 +68,13 @@ class FollowerListInteractor: FollowerListInteractorProtocol {
     
     private func didFetchSuccess(_ response: [Follower]?) {
         guard let followers = response else { return }
-        self.followerList.append(contentsOf: followers)
-        print("===== LIST => \(followerList)")
-    }
-    
-    private func update(_ response: [Follower]?) {
-        guard let followers = response else { return }
         presenter.set(follower: followers)
     }
     
     private func didFetchFailed(){
-        //TO DO : - tratamento para quando falha
+        let titleMessage = R.Localizable.sorry()
+        let message = R.Localizable.somenthingBadHappend()
+        let buttonTitle = R.Localizable.ok()
+        presenter.showAlert(title: titleMessage, message: message, buttonTitle: buttonTitle)
     }
 }

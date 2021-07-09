@@ -10,6 +10,8 @@ import UIKit
 protocol FollowerListViewControllerProtocol: AnyObject {
     
     func set(follower: [Follower])
+    
+    func showAlert(title: String, message: String, buttonTitle: String)
 }
 
 class FollowerListViewController: UIViewController {
@@ -39,6 +41,12 @@ class FollowerListViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setupNavigation()
+    }
+    
+    // MARK: - Public Functions
+    
+    func showAlert(title: String, message: String, buttonTitle: String) {
+        presentFVCAlertOnMainThread(title: title , message: message, buttonTitle: buttonTitle)
     }
     
     // MARK: - Private Functions
