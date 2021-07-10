@@ -111,11 +111,12 @@ extension FollowerListViewController: FollowerListViewDelegate {
 extension FollowerListViewController:  UISearchResultsUpdating,  UISearchBarDelegate {
     
     func updateSearchResults(for searchController: UISearchController) {
-        
+        guard let filter = searchController.searchBar.text , !filter.isEmpty else { return }
+        interactor.fetchFilteredFollowers(filter)
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         print("CANCEL BUTTON")
-        #warning("implementar update do array")
+        interactor.updateListFollowers()
     }
 }

@@ -17,6 +17,10 @@ protocol FollowerListInteractorProtocol {
     func fetchFollowers()
     
     func fetchNextPage()
+    
+    func fetchFilteredFollowers(_ filter: String)
+    
+    func updateListFollowers()
 }
 
 class FollowerListInteractor: FollowerListInteractorProtocol {
@@ -34,6 +38,8 @@ class FollowerListInteractor: FollowerListInteractorProtocol {
     private var page = 1
     
     private var followerList : [Follower] = []
+    
+    private var filteredFollowerList : [Follower] = []
     
     private var hasMoreFollowers = true
     
@@ -72,6 +78,18 @@ class FollowerListInteractor: FollowerListInteractorProtocol {
             followerWorker.nextPage()
             fetchFollowers()
         }
+    }
+    
+    func fetchFilteredFollowers(_ filter: String) {
+        filteredFollowerList = followerList.filter {
+            $0.login.lowercased().contains(filter.lowercased())}
+        
+        presenter.set(follower: filteredFollowerList)
+    }
+    
+    func updateListFollowers() {
+        let updateList = followerList
+        presenter.set(follower: updateList)
     }
     
     //MARK: - Private Functions
