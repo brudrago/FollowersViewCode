@@ -79,6 +79,11 @@ class FollowerListInteractor: FollowerListInteractorProtocol {
     private func didFetchSuccess(_ response: [Follower]?) {
         guard let followers = response else { return }
         self.followerList.append(contentsOf: followers)
+        if followers.isEmpty {
+            DispatchQueue.main.async { self.didFetchEmptyState() }
+            return
+        }
+        
         presenter.set(follower: followerList)
     }
     
@@ -87,5 +92,10 @@ class FollowerListInteractor: FollowerListInteractorProtocol {
         let message = R.Localizable.somenthingBadHappend()
         let buttonTitle = R.Localizable.ok()
         presenter.showAlert(title: titleMessage, message: message, buttonTitle: buttonTitle)
+    }
+    
+    private func didFetchEmptyState() {
+        let message = R.Localizable.emptyFollowers()
+        presenter.showEmptyState(message)
     }
 }

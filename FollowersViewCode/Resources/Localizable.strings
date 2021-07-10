@@ -21,6 +21,8 @@
 
 "enterUsername" = "Digite o username";
 
+"emptyFollowers" = "Não encontramos seguidores 👣 . Que tal ser o primeiro ? 😁";
+
 "emptyUsername" = "Digite o username 🤖";
 
 "errorTitle" = "Oops, an error has occurred!";

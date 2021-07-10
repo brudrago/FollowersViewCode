@@ -18,6 +18,8 @@ protocol FollowerListPresenterProtocol {
     func showLoading()
     
     func dismissLoading()
+    
+    func showEmptyState(_ message: String)
 }
 
 class FollowerListPresenter: FollowerListPresenterProtocol {
@@ -42,5 +44,9 @@ class FollowerListPresenter: FollowerListPresenterProtocol {
     
     func dismissLoading() {
         viewController.dismissLoading()
+    }
+    
+    func showEmptyState(_ message: String) {
+        viewController.showEmptyState(message)
     }
 }

@@ -16,6 +16,8 @@ protocol FollowerListViewControllerProtocol: AnyObject {
     func showLoading()
     
     func dismissLoading()
+    
+    func showEmptyState(_ message: String)
 }
 
 class FollowerListViewController: UIViewController {
@@ -60,6 +62,10 @@ class FollowerListViewController: UIViewController {
     
     func dismissLoading() {
         stopLoading()
+    }
+    
+    func showEmptyState(_ message: String) {
+        showEmptyStateView(with: message, in: self.view)
     }
     
     

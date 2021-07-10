@@ -29,6 +29,7 @@
 		70D0AAC62610BF1B0045B210 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D0AAC52610BF1B0045B210 /* SceneDelegate.swift */; };
 		70D0AACD2610BF1C0045B210 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70D0AACC2610BF1C0045B210 /* Assets.xcassets */; };
 		70D0AAD02610BF1C0045B210 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70D0AACE2610BF1C0045B210 /* LaunchScreen.storyboard */; };
+		70D76C5A26992DCC00E71B23 /* FVCEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D76C5926992DCC00E71B23 /* FVCEmptyStateView.swift */; };
 		70DEBC7E2698B1EA00FBD477 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DEBC7D2698B1EA00FBD477 /* UIImageView.swift */; };
 		70DFC7FF262CF0AB00A17501 /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DFC7FE262CF0AB00A17501 /* Follower.swift */; };
 		70DFC803262CF16800A17501 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DFC802262CF16800A17501 /* User.swift */; };
@@ -76,6 +77,7 @@
 		70D0AACC2610BF1C0045B210 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70D0AACF2610BF1C0045B210 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		70D0AAD12610BF1C0045B210 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70D76C5926992DCC00E71B23 /* FVCEmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FVCEmptyStateView.swift; sourceTree = "<group>"; };
 		70DEBC7D2698B1EA00FBD477 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		70DFC7FE262CF0AB00A17501 /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 		70DFC802262CF16800A17501 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -131,11 +133,12 @@
 		701CBC202617C92500A5D951 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
-				701C0486269673340010A5DE /* ImageView */,
 				70F9EFC1261142930090BC9D /* Alert */,
 				701CBC232617C9B800A5D951 /* Button */,
+				701C0486269673340010A5DE /* ImageView */,
 				701CBC242617C9C400A5D951 /* Label */,
 				701CBC252617C9DC00A5D951 /* TextField */,
+				70D76C5826992D8400E71B23 /* View */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -228,6 +231,14 @@
 				70F9EF752610C2490090BC9D /* SupportFiles */,
 			);
 			path = FollowersViewCode;
+			sourceTree = "<group>";
+		};
+		70D76C5826992D8400E71B23 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				70D76C5926992DCC00E71B23 /* FVCEmptyStateView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		70DEBC7C2698B1D100FBD477 /* Common */ = {
@@ -549,6 +560,7 @@
 				701CBC1E2617BBEF00A5D951 /* UIViewController+Ext.swift in Sources */,
 				70F9EFA22610FB1E0090BC9D /* FollowerListView.swift in Sources */,
 				704EEABF263441D200D40A36 /* NetworkManager.swift in Sources */,
+				70D76C5A26992DCC00E71B23 /* FVCEmptyStateView.swift in Sources */,
 				70F9EFBB2611416B0090BC9D /* FVCBodyLabel.swift in Sources */,
 				70F9EFAC2610FD290090BC9D /* SearchPresenter.swift in Sources */,
 				70F9EFAF2610FD440090BC9D /* SearchRouter.swift in Sources */,

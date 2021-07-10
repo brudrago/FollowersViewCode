@@ -195,7 +195,7 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 13 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 14 localization keys.
     struct localizable {
       /// Value: Buscar seguidores
       static let searchFollowers = Rswift.StringResource(key: "searchFollowers", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
@@ -209,6 +209,8 @@ struct R: Rswift.Validatable {
       static let emptyUsername = Rswift.StringResource(key: "emptyUsername", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Hey!
       static let hello = Rswift.StringResource(key: "hello", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Não encontramos seguidores 👣 . Que tal ser o primeiro ? 😁
+      static let emptyFollowers = Rswift.StringResource(key: "emptyFollowers", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Não localizamos seu 🤖. Tente novamente!
       static let invalidUsername = Rswift.StringResource(key: "invalidUsername", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: OK
@@ -300,6 +302,19 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("hello", bundle: bundle, comment: "")
+      }
+
+      /// Value: Não encontramos seguidores 👣 . Que tal ser o primeiro ? 😁
+      static func emptyFollowers(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("emptyFollowers", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "emptyFollowers"
+        }
+
+        return NSLocalizedString("emptyFollowers", bundle: bundle, comment: "")
       }
 
       /// Value: Não localizamos seu 🤖. Tente novamente!
