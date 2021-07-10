@@ -9,6 +9,13 @@ import UIKit
 
 protocol UserInfoViewControllerProtocol: AnyObject {
     
+    func set(user: User)
+    
+    func showAlert(title: String, message: String, buttonTitle: String)
+    
+    func showLoading()
+    
+    func dismissLoading()
 }
 
 class UserInfoViewController: UIViewController {
@@ -43,6 +50,19 @@ class UserInfoViewController: UIViewController {
        
     }
     
+    // MARK: - Public Functions
+    
+    func showAlert(title: String, message: String, buttonTitle: String) {
+        presentFVCAlertOnMainThread(title: title , message: message, buttonTitle: buttonTitle)
+    }
+    
+    func showLoading() {
+        startLoading()
+    }
+    
+    func dismissLoading() {
+        stopLoading()
+    }
     
     // MARK: - Private Funcitons
     
@@ -61,5 +81,9 @@ class UserInfoViewController: UIViewController {
 // MARK: - UserInfoViewControllerProtocol Extension
 
 extension UserInfoViewController: UserInfoViewControllerProtocol {
+    
+    func set(user: User) {
+      //  userInfoView.set
+    }
     
 }
