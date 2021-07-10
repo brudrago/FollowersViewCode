@@ -17,6 +17,7 @@
 		703CB5FA269A20F300647057 /* UserInfoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703CB5F9269A20F300647057 /* UserInfoInteractor.swift */; };
 		703CB5FC269A210300647057 /* UserInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703CB5FB269A210300647057 /* UserInfoPresenter.swift */; };
 		703CB5FE269A211100647057 /* UserInfoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703CB5FD269A211100647057 /* UserInfoRouter.swift */; };
+		703CB601269A3BE300647057 /* UserInfoWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703CB600269A3BE300647057 /* UserInfoWorker.swift */; };
 		704EEABF263441D200D40A36 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704EEABE263441D200D40A36 /* NetworkManager.swift */; };
 		704EEAD52634499000D40A36 /* GithubURLBuilder .swift in Sources */ = {isa = PBXBuildFile; fileRef = 704EEAD42634499000D40A36 /* GithubURLBuilder .swift */; };
 		704EEADF26344F1500D40A36 /* FVCError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704EEADE26344F1500D40A36 /* FVCError.swift */; };
@@ -69,6 +70,7 @@
 		703CB5F9269A20F300647057 /* UserInfoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoInteractor.swift; sourceTree = "<group>"; };
 		703CB5FB269A210300647057 /* UserInfoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoPresenter.swift; sourceTree = "<group>"; };
 		703CB5FD269A211100647057 /* UserInfoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoRouter.swift; sourceTree = "<group>"; };
+		703CB600269A3BE300647057 /* UserInfoWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoWorker.swift; sourceTree = "<group>"; };
 		704EEABE263441D200D40A36 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		704EEAD42634499000D40A36 /* GithubURLBuilder .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GithubURLBuilder .swift"; sourceTree = "<group>"; };
 		704EEADE26344F1500D40A36 /* FVCError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FVCError.swift; sourceTree = "<group>"; };
@@ -212,6 +214,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		703CB5FF269A3BCE00647057 /* UserInfo */ = {
+			isa = PBXGroup;
+			children = (
+				703CB600269A3BE300647057 /* UserInfoWorker.swift */,
+			);
+			path = UserInfo;
+			sourceTree = "<group>";
+		};
 		704EEAD32634497E00D40A36 /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +234,7 @@
 		704EEAD926344E0F00D40A36 /* Workers */ = {
 			isa = PBXGroup;
 			children = (
+				703CB5FF269A3BCE00647057 /* UserInfo */,
 				704EEB202634A06F00D40A36 /* Follower */,
 			);
 			path = Workers;
@@ -610,6 +621,7 @@
 				703CB5F8269A20E300647057 /* UserInfoBuilder.swift in Sources */,
 				701C0488269673840010A5DE /* FVCAvatarImageView.swift in Sources */,
 				704EEADF26344F1500D40A36 /* FVCError.swift in Sources */,
+				703CB601269A3BE300647057 /* UserInfoWorker.swift in Sources */,
 				70D0AAC62610BF1B0045B210 /* SceneDelegate.swift in Sources */,
 				70F9EF8C2610DE860090BC9D /* FVCTextField.swift in Sources */,
 				704EEB112634987000D40A36 /* R+Extensions.swift in Sources */,

@@ -5,7 +5,7 @@
 //  Created by Bruna Drago on 04/07/21.
 //
 
-import Foundation
+import UIKit
 
 protocol FollowerListRouterProtocol {
     
@@ -22,7 +22,9 @@ class FollowerListRouter: FollowerListRouterProtocol {
     
     func proceedToUserInfoDetails(follower: Follower) {
         let userInfoViewController = UserInfoBuilder.build(follower: follower)
+        let navController = UINavigationController(rootViewController: userInfoViewController)
         
-        viewController.present(userInfoViewController, animated: true)
+        viewController.navigationController?
+            .present(navController, animated: true)
     }
 }

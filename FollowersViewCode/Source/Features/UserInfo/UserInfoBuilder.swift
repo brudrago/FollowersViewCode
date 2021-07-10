@@ -21,7 +21,7 @@ struct UserInfoBuilder {
         presenter.viewController = viewController
         router.viewController = viewController
         
-        viewController.follower = follower
+        interactor.follower = follower
         
         return viewController
     }

@@ -24,11 +24,7 @@ class UserInfoViewController: UIViewController {
     private lazy var userInfoView: UserInfoView = {
         return UserInfoView()
     }()
-    
-    // MARK: - Public Properties
-    
-    var follower: Follower!
-    
+
     // MARK: - View Lifecycle
     
     override func loadView() {
@@ -38,18 +34,25 @@ class UserInfoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupNavigationItem()
+        interactor.fetchUser()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+       
+    }
+    
     
     // MARK: - Private Funcitons
     
     private func setupNavigationItem() {
-        let doneButton = UIBarButtonItem(barButtonSystemItem: .close, target: self, action: #selector(dismissScreen))
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissScreen))
         navigationItem.rightBarButtonItem = doneButton
     }
     
     @objc
-    private func dismissScreen() {
+    func dismissScreen() {
         dismiss(animated: true)
     }
 

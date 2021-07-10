@@ -37,6 +37,6 @@ extension UserInfoView: ViewCodeProtocol {
     }
     
     func setupComponents() {
-        backgroundColor = .systemPink
+        backgroundColor = .systemBackground
     }
 }
