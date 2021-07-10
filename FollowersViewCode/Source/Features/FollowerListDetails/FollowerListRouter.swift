@@ -9,6 +9,7 @@ import Foundation
 
 protocol FollowerListRouterProtocol {
     
+    func proceedToUserInfoDetails(follower: Follower)
 }
 
 class FollowerListRouter: FollowerListRouterProtocol {
@@ -17,4 +18,11 @@ class FollowerListRouter: FollowerListRouterProtocol {
     
     weak var viewController: FollowerListViewController!
     
+    // MARK: - Public Functions
+    
+    func proceedToUserInfoDetails(follower: Follower) {
+        let userInfoViewController = UserInfoBuilder.build(follower: follower)
+        
+        viewController.present(userInfoViewController, animated: true)
+    }
 }

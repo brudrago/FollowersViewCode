@@ -25,6 +25,8 @@ protocol FollowerListInteractorProtocol {
 
 class FollowerListInteractor: FollowerListInteractorProtocol {
     
+    //MARK: - VIP Properties
+    
     var presenter: FollowerListPresenterProtocol!
     
     //MARK: - Public Properties
@@ -42,6 +44,8 @@ class FollowerListInteractor: FollowerListInteractorProtocol {
     private var filteredFollowerList : [Follower] = []
     
     private var hasMoreFollowers = true
+    
+    private var isSearching = false
     
     //MARK: - Inits
     
@@ -81,6 +85,7 @@ class FollowerListInteractor: FollowerListInteractorProtocol {
     }
     
     func fetchFilteredFollowers(_ filter: String) {
+        isSearching = true
         filteredFollowerList = followerList.filter {
             $0.login.lowercased().contains(filter.lowercased())}
         
@@ -88,8 +93,14 @@ class FollowerListInteractor: FollowerListInteractorProtocol {
     }
     
     func updateListFollowers() {
+        isSearching = false
         let updateList = followerList
         presenter.set(follower: updateList)
+    }
+    
+    func selectedUserInfoDetails(_ follower: [Follower]) {
+        let followerStatus = isSearching ? filteredFollowerList : followerList
+       // followerStatus[indexPath]
     }
     
     //MARK: - Private Functions

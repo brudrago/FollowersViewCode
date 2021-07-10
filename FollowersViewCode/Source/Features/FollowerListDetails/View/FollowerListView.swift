@@ -104,6 +104,12 @@ extension FollowerListView: UICollectionViewDelegate {
             }
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let userSelected = followers[indexPath.item]
+        print("====USER :\(userSelected)")
+        delegate?.selectedUserInfo(userSelected)
+    }
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout Extension

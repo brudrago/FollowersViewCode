@@ -26,6 +26,8 @@ class FollowerListViewController: UIViewController {
     
     var interactor: FollowerListInteractorProtocol!
     
+    var router: FollowerListRouterProtocol!
+    
     // MARK: - Private Properties
     
     private lazy var followerListView: FollowerListView = {
@@ -81,7 +83,6 @@ class FollowerListViewController: UIViewController {
         search.searchBar.delegate = self
         search.obscuresBackgroundDuringPresentation   = false
         search.searchBar.placeholder = R.Localizable.searchByUsername()
-        //search.searchBar.barTintColor = .black
         definesPresentationContext = true
         navigationItem.searchController = search
         navigationItem.hidesSearchBarWhenScrolling = false
@@ -104,6 +105,10 @@ extension FollowerListViewController: FollowerListViewDelegate {
     func fetchNextPage() {
         interactor.fetchNextPage()
     }
+    
+    func selectedUserInfo(_ userSelected: Follower) {
+        router.proceedToUserInfoDetails(follower: userSelected)
+    }
 }
 
 // MARK: - UISearchResultsUpdating Extension
@@ -116,7 +121,6 @@ extension FollowerListViewController:  UISearchResultsUpdating,  UISearchBarDele
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        print("CANCEL BUTTON")
         interactor.updateListFollowers()
     }
 }

@@ -10,6 +10,8 @@ import Foundation
 protocol FollowerListViewDelegate: AnyObject {
     
     func fetchNextPage()
+    
+    func selectedUserInfo(_ userSelected: Follower)
 }
 
 
