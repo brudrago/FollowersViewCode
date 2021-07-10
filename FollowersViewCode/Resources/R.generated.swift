@@ -195,7 +195,7 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 14 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 15 localization keys.
     struct localizable {
       /// Value: Buscar seguidores
       static let searchFollowers = Rswift.StringResource(key: "searchFollowers", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
@@ -219,6 +219,8 @@ struct R: Rswift.Validatable {
       static let somenthingBadHappend = Rswift.StringResource(key: "somenthingBadHappend", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Oops, an error has occurred!
       static let errorTitle = Rswift.StringResource(key: "errorTitle", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Procure por username
+      static let searchByUsername = Rswift.StringResource(key: "searchByUsername", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Sorry, an error occurred with the database.
       static let databaseError = Rswift.StringResource(key: "databaseError", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Sorry, something went wrong. Try again later.
@@ -367,6 +369,19 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("errorTitle", bundle: bundle, comment: "")
+      }
+
+      /// Value: Procure por username
+      static func searchByUsername(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("searchByUsername", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "searchByUsername"
+        }
+
+        return NSLocalizedString("searchByUsername", bundle: bundle, comment: "")
       }
 
       /// Value: Sorry, an error occurred with the database.

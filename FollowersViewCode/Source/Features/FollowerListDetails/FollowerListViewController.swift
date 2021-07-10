@@ -42,12 +42,12 @@ class FollowerListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         interactor.fetchFollowers()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setupNavigation()
+        setupNavigationItem()
     }
     
     // MARK: - Public Functions
@@ -68,12 +68,23 @@ class FollowerListViewController: UIViewController {
         showEmptyStateView(with: message, in: self.view)
     }
     
-    
     // MARK: - Private Functions
     
     private func setupNavigation() {
-        navigationController?.isNavigationBarHidden = false
+        navigationController?.setNavigationBarHidden(false, animated: true)
         navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
+    private func setupNavigationItem() {
+        let search = UISearchController(searchResultsController: nil)
+        search.searchResultsUpdater = self
+        search.searchBar.delegate = self
+        search.obscuresBackgroundDuringPresentation   = false
+        search.searchBar.placeholder = R.Localizable.searchByUsername()
+        //search.searchBar.barTintColor = .black
+        definesPresentationContext = true
+        navigationItem.searchController = search
+        navigationItem.hidesSearchBarWhenScrolling = false
     }
 }
 
@@ -92,5 +103,19 @@ extension FollowerListViewController: FollowerListViewDelegate {
     
     func fetchNextPage() {
         interactor.fetchNextPage()
+    }
+}
+
+// MARK: - UISearchResultsUpdating Extension
+
+extension FollowerListViewController:  UISearchResultsUpdating,  UISearchBarDelegate {
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        print("CANCEL BUTTON")
+        #warning("implementar update do array")
     }
 }
