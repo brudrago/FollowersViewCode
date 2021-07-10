@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import SnapKit
+
+fileprivate var containerView: UIView!
 
 extension UIViewController {
     
@@ -15,6 +18,37 @@ extension UIViewController {
             alertVC.modalPresentationStyle = .overFullScreen
             alertVC.modalTransitionStyle = .crossDissolve
             self.present(alertVC, animated: true)
+        }
+    }
+    
+    func startLoading() {
+        containerView = UIView(frame: view.bounds)
+        view.addSubview(containerView)
+        
+        containerView.backgroundColor = .systemBackground
+        containerView.alpha = 0
+        
+        UIView.animate(withDuration: 0.25) {
+            containerView.alpha = 0.8
+        }
+        
+        let activityIndicator = UIActivityIndicatorView(style: .large)
+        activityIndicator.color = .systemGreen
+        
+        containerView.addSubview(activityIndicator)
+        
+        activityIndicator.snp.makeConstraints { make in
+            make.centerY.equalToSuperview()
+            make.centerX.equalToSuperview()
+        }
+        
+        activityIndicator.startAnimating()
+    }
+    
+    func stopLoading() {
+        DispatchQueue.main.async {
+            containerView.removeFromSuperview()
+            containerView = nil
         }
     }
 }

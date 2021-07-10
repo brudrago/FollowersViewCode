@@ -50,16 +50,19 @@ class FollowerListInteractor: FollowerListInteractorProtocol {
     //MARK: - Public Functions
     
     func fetchFollowers() {
+        presenter.showLoading()
+        
         followerWorker.fetchList(for: username ) { [weak self] result in
             guard let self = self else { return }
+            
+            self.presenter.dismissLoading()
             
             switch result {
             case .success(let response):
                 if response?.count ?? 0 < 100 { self.hasMoreFollowers = false }
                 self.didFetchSuccess(response)
-            case .failure(let error):
+            case .failure:
                 self.didFetchFailed()
-                print(error)
             }
         }
     }
@@ -70,7 +73,6 @@ class FollowerListInteractor: FollowerListInteractorProtocol {
             fetchFollowers()
         }
     }
-    
     
     //MARK: - Private Functions
     

@@ -12,6 +12,10 @@ protocol FollowerListViewControllerProtocol: AnyObject {
     func set(follower: [Follower])
     
     func showAlert(title: String, message: String, buttonTitle: String)
+    
+    func showLoading()
+    
+    func dismissLoading()
 }
 
 class FollowerListViewController: UIViewController {
@@ -49,6 +53,15 @@ class FollowerListViewController: UIViewController {
     func showAlert(title: String, message: String, buttonTitle: String) {
         presentFVCAlertOnMainThread(title: title , message: message, buttonTitle: buttonTitle)
     }
+    
+    func showLoading() {
+        startLoading()
+    }
+    
+    func dismissLoading() {
+        stopLoading()
+    }
+    
     
     // MARK: - Private Functions
     

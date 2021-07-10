@@ -14,6 +14,10 @@ protocol FollowerListPresenterProtocol {
     func set(follower: [Follower])
     
     func showAlert(title: String, message: String, buttonTitle: String)
+    
+    func showLoading()
+    
+    func dismissLoading()
 }
 
 class FollowerListPresenter: FollowerListPresenterProtocol {
@@ -30,5 +34,13 @@ class FollowerListPresenter: FollowerListPresenterProtocol {
 
     func showAlert(title: String, message: String, buttonTitle: String) {
         viewController.showAlert(title: title, message: message, buttonTitle: buttonTitle)
+    }
+    
+    func showLoading() {
+        viewController.showLoading()
+    }
+    
+    func dismissLoading() {
+        viewController.dismissLoading()
     }
 }
