@@ -31,7 +31,15 @@
 
 /* F */
 
+"followers" = "Seguidores";
+
+"following" = "Seguindo";
+
 /* G */
+
+"getFollowers" = "Get Followers";
+
+"githubProfile" = "GitHub Profile";
 
 /* H */
 
@@ -61,6 +69,9 @@
 "ok" = "OK";
 
 /* P */
+"publicGists" = "Public Gists";
+
+"publicRepos" = "Public Repos";
 
 /* Q */
 

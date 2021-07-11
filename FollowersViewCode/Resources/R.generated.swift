@@ -195,7 +195,7 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 17 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 23 localization keys.
     struct localizable {
       /// Value: Buscar seguidores
       static let searchFollowers = Rswift.StringResource(key: "searchFollowers", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
@@ -207,6 +207,10 @@ struct R: Rswift.Validatable {
       static let enterUsername = Rswift.StringResource(key: "enterUsername", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Digite o username 🤖
       static let emptyUsername = Rswift.StringResource(key: "emptyUsername", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Get Followers
+      static let getFollowers = Rswift.StringResource(key: "getFollowers", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: GitHub Profile
+      static let githubProfile = Rswift.StringResource(key: "githubProfile", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Hey!
       static let hello = Rswift.StringResource(key: "hello", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Não disponível
@@ -225,6 +229,14 @@ struct R: Rswift.Validatable {
       static let errorTitle = Rswift.StringResource(key: "errorTitle", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Procure por username
       static let searchByUsername = Rswift.StringResource(key: "searchByUsername", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Public Gists
+      static let publicGists = Rswift.StringResource(key: "publicGists", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Public Repos
+      static let publicRepos = Rswift.StringResource(key: "publicRepos", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Seguidores
+      static let followers = Rswift.StringResource(key: "followers", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Seguindo
+      static let following = Rswift.StringResource(key: "following", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Sorry, an error occurred with the database.
       static let databaseError = Rswift.StringResource(key: "databaseError", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Sorry, something went wrong. Try again later.
@@ -295,6 +307,32 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("emptyUsername", bundle: bundle, comment: "")
+      }
+
+      /// Value: Get Followers
+      static func getFollowers(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("getFollowers", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "getFollowers"
+        }
+
+        return NSLocalizedString("getFollowers", bundle: bundle, comment: "")
+      }
+
+      /// Value: GitHub Profile
+      static func githubProfile(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("githubProfile", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "githubProfile"
+        }
+
+        return NSLocalizedString("githubProfile", bundle: bundle, comment: "")
       }
 
       /// Value: Hey!
@@ -412,6 +450,58 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("searchByUsername", bundle: bundle, comment: "")
+      }
+
+      /// Value: Public Gists
+      static func publicGists(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("publicGists", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "publicGists"
+        }
+
+        return NSLocalizedString("publicGists", bundle: bundle, comment: "")
+      }
+
+      /// Value: Public Repos
+      static func publicRepos(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("publicRepos", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "publicRepos"
+        }
+
+        return NSLocalizedString("publicRepos", bundle: bundle, comment: "")
+      }
+
+      /// Value: Seguidores
+      static func followers(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("followers", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "followers"
+        }
+
+        return NSLocalizedString("followers", bundle: bundle, comment: "")
+      }
+
+      /// Value: Seguindo
+      static func following(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("following", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "following"
+        }
+
+        return NSLocalizedString("following", bundle: bundle, comment: "")
       }
 
       /// Value: Sorry, an error occurred with the database.

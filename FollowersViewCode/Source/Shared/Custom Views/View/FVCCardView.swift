@@ -36,7 +36,7 @@ class FVCCardView: UIView {
         }
     }
     
-    @IBInspectable var shadowColored: UIColor? = .none {
+    @IBInspectable var shadowColored: UIColor? = .shadow {
         didSet {
             self.layer.shadowColor = self.shadowColored?.cgColor
         }
@@ -48,7 +48,7 @@ class FVCCardView: UIView {
         }
     }
     
-    @IBInspectable var borderedColor: UIColor = .lightGray {
+    @IBInspectable var borderedColor: UIColor = .silver {
         didSet {
             self.layer.borderColor = self.borderedColor.cgColor
         }

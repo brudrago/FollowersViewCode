@@ -46,10 +46,45 @@ class UserInfoView: UIView {
         return label
     }()
     
-    private lazy var card: FVCCardView = {
+    private lazy var cardItemOne: FVCCardView = {
         let card = FVCCardView()
-        card.backgroundColor = .systemPink
+        card.backgroundColor = .secondarySystemBackground
         return card
+    }()
+    
+    private lazy var cardItemOneStack: UIStackView = {
+        let stack = UIStackView()
+        stack.axis = .horizontal
+        stack.distribution = .equalSpacing
+        return stack
+    }()
+    
+    private lazy var itemInfoOne: FVCItemInfoView = {
+        let item = FVCItemInfoView()
+        return item
+    }()
+    
+    private lazy var itemInfoTwo: FVCItemInfoView = {
+        let item = FVCItemInfoView()
+        return item
+    }()
+    
+    private lazy var itemInfoButtonAction: FVCButton = {
+        let button = FVCButton(
+            backgroundColor: .systemPurple,
+            title: R.Localizable.githubProfile())
+        return button
+    }()
+    
+//    private lazy var cardItemTwo: FVCCardView = {
+//        let card = FVCCardView()
+//        card.backgroundColor = .systemGreen
+//        return card
+//    }()
+    
+    private lazy var cardItemTwo: CardItemTwo = {
+        let cardItem = CardItemTwo()
+        return cardItem
     }()
     
     // MARK: - Private Properties
@@ -77,6 +112,9 @@ class UserInfoView: UIView {
         nameLabel.text = user.name ?? ""
         locationLabel.text = user.location ??  R.Localizable.notInformed()
         bioLabel.text = user.bio ?? R.Localizable.notAvailable()
+        itemInfoOne.set(itemInfoType: .repos, withCount: user.publicRepos)
+        itemInfoTwo.set(itemInfoType: .gists, withCount: user.publicGists)
+        cardItemTwo.set(countFollowers: user.followers, countFollowing: user.following)
     }
 }
 
@@ -90,7 +128,12 @@ extension UserInfoView: ViewCodeProtocol {
         addSubview(locationImageView)
         addSubview(locationLabel)
         addSubview(bioLabel)
-        addSubview(card)
+        addSubview(cardItemOne)
+        cardItemOne.addSubview(cardItemOneStack)
+        cardItemOneStack.addArrangedSubview(itemInfoOne)
+        cardItemOneStack.addArrangedSubview(itemInfoTwo)
+        cardItemOne.addSubview(itemInfoButtonAction)
+        addSubview(cardItemTwo)
     }
     
     func setupConstraints() {
@@ -135,11 +178,30 @@ extension UserInfoView: ViewCodeProtocol {
             make.height.equalTo(60)
         }
         
-        card.snp.makeConstraints { make in
+        cardItemOne.snp.makeConstraints { make in
             make.top.equalTo(bioLabel.snp.bottom).offset(12)
             make.left.equalToSuperview().offset(12)
             make.right.equalToSuperview().inset(12)
             make.height.equalTo(140)
+        }
+        
+        cardItemTwo.snp.makeConstraints { make in
+            make.top.equalTo(cardItemOne.snp.bottom).offset(12)
+            make.left.equalToSuperview().offset(12)
+            make.right.equalToSuperview().inset(12)
+            make.height.equalTo(140)
+        }
+        
+        cardItemOneStack.snp.makeConstraints { make in
+            make.top.left.equalToSuperview().offset(20)
+            make.right.equalToSuperview().inset(20)
+            make.height.equalTo(50)
+        }
+        
+        itemInfoButtonAction.snp.makeConstraints { make in
+            make.bottom.right.equalToSuperview().inset(20)
+            make.left.equalToSuperview().offset(20)
+            make.height.equalTo(44)
         }
     }
     
