@@ -29,7 +29,7 @@ class UserInfoViewController: UIViewController {
     // MARK: - Private Properties
     
     private lazy var userInfoView: UserInfoView = {
-        return UserInfoView()
+        return UserInfoView(self)
     }()
 
     // MARK: - View Lifecycle
@@ -85,3 +85,19 @@ extension UserInfoViewController: UserInfoViewControllerProtocol {
         userInfoView.set(user: user)
     }
 }
+
+// MARK: - UserInfoViewDelegate Extension
+
+extension UserInfoViewController: UserInfoViewDelegate {
+    
+    func didSelectCardItemOneGetProfileButton() {
+        #warning("implementar action no interactor")
+        print("GET PROFILE BUTTON")
+    }
+    
+    func didSelectCardItemTwoGetFollowersButton() {
+        #warning("implementar action no interactor")
+        print("GET FOLLOWERS BUTTON")
+    }
+}
+

@@ -1,5 +1,5 @@
 //
-//  CardItemTwo.swift
+//  CardItemOne.swift
 //  FollowersViewCode
 //
 //  Created by Bruna Drago on 11/07/21.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CardItemTwo: FVCCardView {
+class CardItemOne: FVCCardView {
     
     // MARK: - UI Components
     
@@ -30,8 +30,8 @@ class CardItemTwo: FVCCardView {
     
     private lazy var itemInfoButtonAction: FVCButton = {
         let button = FVCButton(
-            backgroundColor: .systemGreen,
-            title: R.Localizable.getFollowers())
+            backgroundColor: .systemPurple,
+            title:  R.Localizable.githubProfile())
         return button
     }()
     
@@ -49,9 +49,9 @@ class CardItemTwo: FVCCardView {
     
     // MARK: - Public Functions
     
-    func set(countFollowers: Int, countFollowing: Int) {
-        itemInfoOne.set(itemInfoType: .followers, withCount: countFollowers)
-        itemInfoTwo.set(itemInfoType: .following, withCount: countFollowing)
+    func set(countRepos: Int, counGists: Int) {
+        itemInfoOne.set(itemInfoType: .repos, withCount: countRepos)
+        itemInfoTwo.set(itemInfoType: .gists, withCount: counGists)
     }
     
     func setItemInfoButtonActionTarget(_ target: Any?, action: Selector) {
@@ -60,7 +60,7 @@ class CardItemTwo: FVCCardView {
     
 }
 
-extension CardItemTwo: ViewCodeProtocol {
+extension CardItemOne: ViewCodeProtocol {
     
     func setupSubviews() {
         addSubview(cardItemStack)

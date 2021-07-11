@@ -9,6 +9,8 @@ import Foundation
 
 protocol UserInfoViewDelegate: AnyObject {
     
-    func set(user: User)
+    func didSelectCardItemOneGetProfileButton()
+    
+    func didSelectCardItemTwoGetFollowersButton()
     
 }

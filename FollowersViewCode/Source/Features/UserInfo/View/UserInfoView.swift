@@ -46,41 +46,10 @@ class UserInfoView: UIView {
         return label
     }()
     
-    private lazy var cardItemOne: FVCCardView = {
-        let card = FVCCardView()
-        card.backgroundColor = .secondarySystemBackground
-        return card
+    private lazy var cardItemOne: CardItemOne = {
+        let cardItem = CardItemOne()
+        return cardItem
     }()
-    
-    private lazy var cardItemOneStack: UIStackView = {
-        let stack = UIStackView()
-        stack.axis = .horizontal
-        stack.distribution = .equalSpacing
-        return stack
-    }()
-    
-    private lazy var itemInfoOne: FVCItemInfoView = {
-        let item = FVCItemInfoView()
-        return item
-    }()
-    
-    private lazy var itemInfoTwo: FVCItemInfoView = {
-        let item = FVCItemInfoView()
-        return item
-    }()
-    
-    private lazy var itemInfoButtonAction: FVCButton = {
-        let button = FVCButton(
-            backgroundColor: .systemPurple,
-            title: R.Localizable.githubProfile())
-        return button
-    }()
-    
-//    private lazy var cardItemTwo: FVCCardView = {
-//        let card = FVCCardView()
-//        card.backgroundColor = .systemGreen
-//        return card
-//    }()
     
     private lazy var cardItemTwo: CardItemTwo = {
         let cardItem = CardItemTwo()
@@ -91,30 +60,46 @@ class UserInfoView: UIView {
     
     private var user: User!
     
+    private unowned let delegate: UserInfoViewDelegate
+    
     // MARK: - Inits
     
-    init() {
+    init(_ delegate: UserInfoViewDelegate) {
+        self.delegate = delegate
         super.init(frame: .zero)
         setupUI()
     }
     
+    @available(*, unavailable)
     required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        setupUI()
+        fatalError("init(coder:) has not been implemented")
     }
     
     // MARK: - Public Functions
     
     func set(user: User) {
         self.user = user
+        
         avatarImageView.load(url: user.avatarUrl)
         usernameLabel.text = user.login
         nameLabel.text = user.name ?? ""
         locationLabel.text = user.location ??  R.Localizable.notInformed()
         bioLabel.text = user.bio ?? R.Localizable.notAvailable()
-        itemInfoOne.set(itemInfoType: .repos, withCount: user.publicRepos)
-        itemInfoTwo.set(itemInfoType: .gists, withCount: user.publicGists)
+      
+        cardItemOne.set(countRepos: user.publicRepos, counGists: user.publicGists)
         cardItemTwo.set(countFollowers: user.followers, countFollowing: user.following)
+    }
+    
+    // MARK: - Private Functions
+    
+    @objc
+    private func didSelectCardItemOneGetProfileButton(_ sender: Any) {
+        delegate.didSelectCardItemOneGetProfileButton()
+    }
+    
+    @objc
+    private func didSelectCardItemTwoGetFollowersButton(_ sender: Any) {
+        delegate.didSelectCardItemTwoGetFollowersButton()
     }
 }
 
@@ -129,10 +114,6 @@ extension UserInfoView: ViewCodeProtocol {
         addSubview(locationLabel)
         addSubview(bioLabel)
         addSubview(cardItemOne)
-        cardItemOne.addSubview(cardItemOneStack)
-        cardItemOneStack.addArrangedSubview(itemInfoOne)
-        cardItemOneStack.addArrangedSubview(itemInfoTwo)
-        cardItemOne.addSubview(itemInfoButtonAction)
         addSubview(cardItemTwo)
     }
     
@@ -191,21 +172,15 @@ extension UserInfoView: ViewCodeProtocol {
             make.right.equalToSuperview().inset(12)
             make.height.equalTo(140)
         }
-        
-        cardItemOneStack.snp.makeConstraints { make in
-            make.top.left.equalToSuperview().offset(20)
-            make.right.equalToSuperview().inset(20)
-            make.height.equalTo(50)
-        }
-        
-        itemInfoButtonAction.snp.makeConstraints { make in
-            make.bottom.right.equalToSuperview().inset(20)
-            make.left.equalToSuperview().offset(20)
-            make.height.equalTo(44)
-        }
     }
     
     func setupComponents() {
         backgroundColor = .systemBackground
+        
+        let getProfileAction = #selector(didSelectCardItemOneGetProfileButton(_:))
+        cardItemOne.setItemInfoButtonActionTarget(self, action: getProfileAction)
+        
+        let getFollowersAction = #selector(didSelectCardItemTwoGetFollowersButton(_:))
+        cardItemTwo.setItemInfoButtonActionTarget(self, action: getFollowersAction)
     }
 }
