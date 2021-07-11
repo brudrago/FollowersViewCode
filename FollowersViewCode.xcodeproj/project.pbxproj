@@ -35,6 +35,7 @@
 		70B7328B269B85EA00B3A09A /* FVCSubtitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B7328A269B85EA00B3A09A /* FVCSubtitleLabel.swift */; };
 		70B7328D269B922300B3A09A /* UserInfoViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B7328C269B922300B3A09A /* UserInfoViewDelegate.swift */; };
 		70B7328F269B938800B3A09A /* SFSymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B7328E269B938800B3A09A /* SFSymbols.swift */; };
+		70B73291269B99D700B3A09A /* FVCCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B73290269B99D700B3A09A /* FVCCardView.swift */; };
 		70D0AAC42610BF1B0045B210 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D0AAC32610BF1B0045B210 /* AppDelegate.swift */; };
 		70D0AAC62610BF1B0045B210 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D0AAC52610BF1B0045B210 /* SceneDelegate.swift */; };
 		70D0AACD2610BF1C0045B210 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70D0AACC2610BF1C0045B210 /* Assets.xcassets */; };
@@ -91,6 +92,7 @@
 		70B7328A269B85EA00B3A09A /* FVCSubtitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FVCSubtitleLabel.swift; sourceTree = "<group>"; };
 		70B7328C269B922300B3A09A /* UserInfoViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewDelegate.swift; sourceTree = "<group>"; };
 		70B7328E269B938800B3A09A /* SFSymbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbols.swift; sourceTree = "<group>"; };
+		70B73290269B99D700B3A09A /* FVCCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FVCCardView.swift; sourceTree = "<group>"; };
 		70D0AAC02610BF1B0045B210 /* FollowersViewCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FollowersViewCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70D0AAC32610BF1B0045B210 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70D0AAC52610BF1B0045B210 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -289,6 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				70D76C5926992DCC00E71B23 /* FVCEmptyStateView.swift */,
+				70B73290269B99D700B3A09A /* FVCCardView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -604,6 +607,7 @@
 				701C0485269671D10010A5DE /* FollowerCell.swift in Sources */,
 				70D0AAC42610BF1B0045B210 /* AppDelegate.swift in Sources */,
 				704EEB1A2634999700D40A36 /* FollowersListResult.swift in Sources */,
+				70B73291269B99D700B3A09A /* FVCCardView.swift in Sources */,
 				70F9EFB82611401E0090BC9D /* FVCTitleLabel.swift in Sources */,
 				703CB5F3269A209300647057 /* UserInfoViewController.swift in Sources */,
 				70B7328B269B85EA00B3A09A /* FVCSubtitleLabel.swift in Sources */,

@@ -46,6 +46,12 @@ class UserInfoView: UIView {
         return label
     }()
     
+    private lazy var card: FVCCardView = {
+        let card = FVCCardView()
+        card.backgroundColor = .systemPink
+        return card
+    }()
+    
     // MARK: - Private Properties
     
     private var user: User!
@@ -68,7 +74,7 @@ class UserInfoView: UIView {
         self.user = user
         avatarImageView.load(url: user.avatarUrl)
         usernameLabel.text = user.login
-        nameLabel.text = user.name ?? R.Localizable.notInformed()
+        nameLabel.text = user.name ?? ""
         locationLabel.text = user.location ??  R.Localizable.notInformed()
         bioLabel.text = user.bio ?? R.Localizable.notAvailable()
     }
@@ -84,6 +90,7 @@ extension UserInfoView: ViewCodeProtocol {
         addSubview(locationImageView)
         addSubview(locationLabel)
         addSubview(bioLabel)
+        addSubview(card)
     }
     
     func setupConstraints() {
@@ -118,17 +125,22 @@ extension UserInfoView: ViewCodeProtocol {
         locationLabel.snp.makeConstraints { make in
             make.centerY.equalTo(locationImageView.snp.centerY)
             make.left.equalTo(locationImageView.snp.right).offset(5)
-            make.right.equalToSuperview().inset(12)
             make.height.equalTo(12)
         }
         
         bioLabel.snp.makeConstraints { make in
             make.top.equalTo(avatarImageView.snp.bottom).offset(20)
-            make.left.equalTo(avatarImageView.snp.right)
+            make.left.equalToSuperview().offset(12)
             make.right.equalToSuperview().inset(12)
             make.height.equalTo(60)
         }
         
+        card.snp.makeConstraints { make in
+            make.top.equalTo(bioLabel.snp.bottom).offset(12)
+            make.left.equalToSuperview().offset(12)
+            make.right.equalToSuperview().inset(12)
+            make.height.equalTo(140)
+        }
     }
     
     func setupComponents() {
