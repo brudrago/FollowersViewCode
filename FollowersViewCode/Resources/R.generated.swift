@@ -195,7 +195,7 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 15 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 17 localization keys.
     struct localizable {
       /// Value: Buscar seguidores
       static let searchFollowers = Rswift.StringResource(key: "searchFollowers", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
@@ -209,8 +209,12 @@ struct R: Rswift.Validatable {
       static let emptyUsername = Rswift.StringResource(key: "emptyUsername", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Hey!
       static let hello = Rswift.StringResource(key: "hello", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Não disponível
+      static let notAvailable = Rswift.StringResource(key: "notAvailable", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Não encontramos seguidores 👣 . Que tal ser o primeiro ? 😁
       static let emptyFollowers = Rswift.StringResource(key: "emptyFollowers", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Não informado
+      static let notInformed = Rswift.StringResource(key: "notInformed", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Não localizamos seu 🤖. Tente novamente!
       static let invalidUsername = Rswift.StringResource(key: "invalidUsername", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: OK
@@ -306,6 +310,19 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("hello", bundle: bundle, comment: "")
       }
 
+      /// Value: Não disponível
+      static func notAvailable(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("notAvailable", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "notAvailable"
+        }
+
+        return NSLocalizedString("notAvailable", bundle: bundle, comment: "")
+      }
+
       /// Value: Não encontramos seguidores 👣 . Que tal ser o primeiro ? 😁
       static func emptyFollowers(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
@@ -317,6 +334,19 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("emptyFollowers", bundle: bundle, comment: "")
+      }
+
+      /// Value: Não informado
+      static func notInformed(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("notInformed", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "notInformed"
+        }
+
+        return NSLocalizedString("notInformed", bundle: bundle, comment: "")
       }
 
       /// Value: Não localizamos seu 🤖. Tente novamente!

@@ -32,6 +32,9 @@
 		7098CA3A26149517000A60A0 /* FollowerListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7098CA3926149517000A60A0 /* FollowerListPresenter.swift */; };
 		70A6E7742692583B00AC91FA /* FollowerListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A6E7732692583B00AC91FA /* FollowerListRouter.swift */; };
 		70A6E7762692615000AC91FA /* SearchViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A6E7752692615000AC91FA /* SearchViewDelegate.swift */; };
+		70B7328B269B85EA00B3A09A /* FVCSubtitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B7328A269B85EA00B3A09A /* FVCSubtitleLabel.swift */; };
+		70B7328D269B922300B3A09A /* UserInfoViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B7328C269B922300B3A09A /* UserInfoViewDelegate.swift */; };
+		70B7328F269B938800B3A09A /* SFSymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B7328E269B938800B3A09A /* SFSymbols.swift */; };
 		70D0AAC42610BF1B0045B210 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D0AAC32610BF1B0045B210 /* AppDelegate.swift */; };
 		70D0AAC62610BF1B0045B210 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D0AAC52610BF1B0045B210 /* SceneDelegate.swift */; };
 		70D0AACD2610BF1C0045B210 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70D0AACC2610BF1C0045B210 /* Assets.xcassets */; };
@@ -85,6 +88,9 @@
 		7098CA3926149517000A60A0 /* FollowerListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListPresenter.swift; sourceTree = "<group>"; };
 		70A6E7732692583B00AC91FA /* FollowerListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListRouter.swift; sourceTree = "<group>"; };
 		70A6E7752692615000AC91FA /* SearchViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewDelegate.swift; sourceTree = "<group>"; };
+		70B7328A269B85EA00B3A09A /* FVCSubtitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FVCSubtitleLabel.swift; sourceTree = "<group>"; };
+		70B7328C269B922300B3A09A /* UserInfoViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewDelegate.swift; sourceTree = "<group>"; };
+		70B7328E269B938800B3A09A /* SFSymbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbols.swift; sourceTree = "<group>"; };
 		70D0AAC02610BF1B0045B210 /* FollowersViewCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FollowersViewCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70D0AAC32610BF1B0045B210 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70D0AAC52610BF1B0045B210 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -181,6 +187,7 @@
 			children = (
 				70F9EFB72611401E0090BC9D /* FVCTitleLabel.swift */,
 				70F9EFBA2611416B0090BC9D /* FVCBodyLabel.swift */,
+				70B7328A269B85EA00B3A09A /* FVCSubtitleLabel.swift */,
 			);
 			path = Label;
 			sourceTree = "<group>";
@@ -210,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				703CB5F5269A20B800647057 /* UserInfoView.swift */,
+				70B7328C269B922300B3A09A /* UserInfoViewDelegate.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -289,6 +297,7 @@
 			isa = PBXGroup;
 			children = (
 				70F9EF982610E9EA0090BC9D /* ViewCodeProtocol.swift */,
+				70B7328E269B938800B3A09A /* SFSymbols.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -597,9 +606,12 @@
 				704EEB1A2634999700D40A36 /* FollowersListResult.swift in Sources */,
 				70F9EFB82611401E0090BC9D /* FVCTitleLabel.swift in Sources */,
 				703CB5F3269A209300647057 /* UserInfoViewController.swift in Sources */,
+				70B7328B269B85EA00B3A09A /* FVCSubtitleLabel.swift in Sources */,
 				70F9EFBF261142700090BC9D /* FVCAlertVC.swift in Sources */,
 				70F9EFA62610FD000090BC9D /* SearchBuilder.swift in Sources */,
 				70F9EFA92610FD150090BC9D /* SearchInteractor.swift in Sources */,
+				70B7328F269B938800B3A09A /* SFSymbols.swift in Sources */,
+				70B7328D269B922300B3A09A /* UserInfoViewDelegate.swift in Sources */,
 				70F9EFC4261142D30090BC9D /* FVCAlertView.swift in Sources */,
 				70F9EF902610E2080090BC9D /* SearchView.swift in Sources */,
 				703CB5FE269A211100647057 /* UserInfoRouter.swift in Sources */,

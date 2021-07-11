@@ -52,6 +52,10 @@
 
 "networkError" = "Sorry, there was an error connecting to the servers.";
 
+"notAvailable" = "Não disponível";
+
+"notInformed" = "Não informado";
+
 /* O */
 
 "ok" = "OK";

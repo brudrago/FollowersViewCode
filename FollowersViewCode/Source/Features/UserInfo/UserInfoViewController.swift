@@ -75,7 +75,6 @@ class UserInfoViewController: UIViewController {
     func dismissScreen() {
         dismiss(animated: true)
     }
-
 }
 
 // MARK: - UserInfoViewControllerProtocol Extension
@@ -83,7 +82,6 @@ class UserInfoViewController: UIViewController {
 extension UserInfoViewController: UserInfoViewControllerProtocol {
     
     func set(user: User) {
-      //  userInfoView.set
+        userInfoView.set(user: user)
     }
-    
 }
