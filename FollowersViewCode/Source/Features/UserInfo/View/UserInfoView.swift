@@ -56,6 +56,11 @@ class UserInfoView: UIView {
         return cardItem
     }()
     
+    private lazy var dateLabel: FVCBodyLabel = {
+        let label = FVCBodyLabel(textAlignment: .center)
+        return label
+    }()
+    
     // MARK: - Private Properties
     
     private var user: User!
@@ -88,6 +93,9 @@ class UserInfoView: UIView {
       
         cardItemOne.set(countRepos: user.publicRepos, counGists: user.publicGists)
         cardItemTwo.set(countFollowers: user.followers, countFollowing: user.following)
+        
+        let date = user.createdAt.convertToDisplayFormat()
+        dateLabel.text = R.Localizable.githubSince(date)
     }
     
     // MARK: - Private Functions
@@ -115,6 +123,7 @@ extension UserInfoView: ViewCodeProtocol {
         addSubview(bioLabel)
         addSubview(cardItemOne)
         addSubview(cardItemTwo)
+        addSubview(dateLabel)
     }
     
     func setupConstraints() {
@@ -149,7 +158,7 @@ extension UserInfoView: ViewCodeProtocol {
         locationLabel.snp.makeConstraints { make in
             make.centerY.equalTo(locationImageView.snp.centerY)
             make.left.equalTo(locationImageView.snp.right).offset(5)
-            make.height.equalTo(12)
+            make.height.equalTo(14)
         }
         
         bioLabel.snp.makeConstraints { make in
@@ -171,6 +180,13 @@ extension UserInfoView: ViewCodeProtocol {
             make.left.equalToSuperview().offset(12)
             make.right.equalToSuperview().inset(12)
             make.height.equalTo(140)
+        }
+        
+        dateLabel.snp.makeConstraints { make in
+            make.top.equalTo(cardItemTwo.snp.bottom).offset(20)
+            make.left.equalToSuperview().offset(12)
+            make.right.equalToSuperview().inset(12)
+            make.height.equalTo(18)
         }
     }
     

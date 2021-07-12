@@ -195,7 +195,7 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 23 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 24 localization keys.
     struct localizable {
       /// Value: Buscar seguidores
       static let searchFollowers = Rswift.StringResource(key: "searchFollowers", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
@@ -211,6 +211,8 @@ struct R: Rswift.Validatable {
       static let getFollowers = Rswift.StringResource(key: "getFollowers", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: GitHub Profile
       static let githubProfile = Rswift.StringResource(key: "githubProfile", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: GitHub since %@
+      static let githubSince = Rswift.StringResource(key: "githubSince", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Hey!
       static let hello = Rswift.StringResource(key: "hello", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Não disponível
@@ -333,6 +335,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("githubProfile", bundle: bundle, comment: "")
+      }
+
+      /// Value: GitHub since %@
+      static func githubSince(_ value1: String, preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          let format = NSLocalizedString("githubSince", bundle: hostingBundle, comment: "")
+          return String(format: format, locale: applicationLocale, value1)
+        }
+
+        guard let (locale, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "githubSince"
+        }
+
+        let format = NSLocalizedString("githubSince", bundle: bundle, comment: "")
+        return String(format: format, locale: locale, value1)
       }
 
       /// Value: Hey!

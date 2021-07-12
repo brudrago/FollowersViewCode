@@ -60,6 +60,8 @@ class CardItemOne: FVCCardView {
     
 }
 
+// MARK: - ViewCodeProtocol Extension
+
 extension CardItemOne: ViewCodeProtocol {
     
     func setupSubviews() {
@@ -81,7 +83,6 @@ extension CardItemOne: ViewCodeProtocol {
             make.left.equalToSuperview().offset(20)
             make.height.equalTo(44)
         }
-        
     }
     
     func setupComponents() {

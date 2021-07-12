@@ -41,6 +41,8 @@
 
 "githubProfile" = "GitHub Profile";
 
+"githubSince" = "GitHub since %@";
+
 /* H */
 
 "hello" = "Hey!";

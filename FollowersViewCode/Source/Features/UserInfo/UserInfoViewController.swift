@@ -100,4 +100,3 @@ extension UserInfoViewController: UserInfoViewDelegate {
         print("GET FOLLOWERS BUTTON")
     }
 }
-
