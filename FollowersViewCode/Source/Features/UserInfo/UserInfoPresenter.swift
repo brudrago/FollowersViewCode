@@ -11,6 +11,8 @@ protocol UserInfoPresenterProtocol {
     
     func set(user: User)
     
+    func showUserProfile(for url: String)
+    
     func showAlert(title: String, message: String, buttonTitle: String)
     
     func showLoading()
@@ -28,6 +30,10 @@ class UserInfoPresenter: UserInfoPresenterProtocol {
     
     func set(user: User) {
         viewController.set(user: user)
+    }
+    
+    func showUserProfile(for url: String) {
+        viewController.showUserProfile(for: url)
     }
     
     func showAlert(title: String, message: String, buttonTitle: String) {

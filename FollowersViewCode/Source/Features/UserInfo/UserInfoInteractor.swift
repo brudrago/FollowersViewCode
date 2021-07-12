@@ -7,9 +7,16 @@
 
 import Foundation
 
+protocol UserInfoDataStoreProtocol {
+    
+    var user: User! { get set }
+}
+
 protocol UserInfoInteractorProtocol {
     
     func fetchUser()
+    
+    func showUserProfile()
 }
 
 class UserInfoInteractor: UserInfoInteractorProtocol {
@@ -58,6 +65,12 @@ class UserInfoInteractor: UserInfoInteractorProtocol {
                 self.didFetchFailed()
             }
         }
+    }
+    
+    func showUserProfile() {
+        guard let profileURL = user?.htmlUrl else { return}
+        
+        presenter.showUserProfile(for: profileURL)
     }
     
     //MARK: - Private Functions

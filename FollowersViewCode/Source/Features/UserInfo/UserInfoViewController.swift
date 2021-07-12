@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import SafariServices
 
 protocol UserInfoViewControllerProtocol: AnyObject {
     
     func set(user: User)
+    
+    func showUserProfile(for url: String)
     
     func showAlert(title: String, message: String, buttonTitle: String)
     
@@ -31,14 +34,14 @@ class UserInfoViewController: UIViewController {
     private lazy var userInfoView: UserInfoView = {
         return UserInfoView(self)
     }()
-
+    
     // MARK: - View Lifecycle
     
     override func loadView() {
         super.loadView()
         self.view = userInfoView
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationItem()
@@ -47,7 +50,7 @@ class UserInfoViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-       
+        
     }
     
     // MARK: - Public Functions
@@ -84,6 +87,13 @@ extension UserInfoViewController: UserInfoViewControllerProtocol {
     func set(user: User) {
         userInfoView.set(user: user)
     }
+    
+    func showUserProfile(for url: String) {
+        guard let profileURL = URL(string: url) else { return }
+        let safariViewController = SFSafariViewController(url: profileURL)
+        safariViewController.preferredControlTintColor = .systemGreen
+        present(safariViewController, animated: true)
+    }
 }
 
 // MARK: - UserInfoViewDelegate Extension
@@ -91,7 +101,7 @@ extension UserInfoViewController: UserInfoViewControllerProtocol {
 extension UserInfoViewController: UserInfoViewDelegate {
     
     func didSelectCardItemOneGetProfileButton() {
-        #warning("implementar action no interactor")
+        router.proceedToUserProfile()
         print("GET PROFILE BUTTON")
     }
     
