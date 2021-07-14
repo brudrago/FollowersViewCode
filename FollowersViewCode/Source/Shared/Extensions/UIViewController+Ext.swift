@@ -6,7 +6,8 @@
 //
 
 import UIKit
-import SnapKit
+//import SnapKit
+import SafariServices
 
 fileprivate var containerView: UIView!
 
@@ -56,5 +57,12 @@ extension UIViewController {
         let emptyStateView = FVCEmptyStateView(message: message)
         emptyStateView.frame = view.bounds
         view.addSubview(emptyStateView)
+    }
+    
+    func presentSafariViewController(with url: String) {
+        guard let newURL = URL(string: url) else { return }
+        let safariViewController = SFSafariViewController(url: newURL)
+        safariViewController.preferredControlTintColor = .systemGreen
+        present(safariViewController, animated: true)
     }
 }

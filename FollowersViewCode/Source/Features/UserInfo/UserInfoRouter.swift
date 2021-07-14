@@ -10,7 +10,6 @@ import SafariServices
 
 protocol UserInfoRouterProtocol {
     
-    func proceedToUserProfile(for url: String)
 }
 
 protocol UserInfoDataPassingProtocol {
@@ -29,11 +28,5 @@ class UserInfoRouter: UserInfoRouterProtocol {
     var dataStore: UserInfoDataStoreProtocol!
     
     // MARK: - Public Functions
-    
-    func proceedToUserProfile(for url: String) {
-        guard let profileURL = URL(string: url) else { return }
-        let safariViewController = SFSafariViewController(url: profileURL)
-        safariViewController.preferredControlTintColor = .systemGreen
-        viewController.present(safariViewController, animated: true)
-    }
+
 }

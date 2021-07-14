@@ -60,7 +60,6 @@ class UserInfoInteractor: UserInfoInteractorProtocol {
             switch result {
             case .success(let response):
                 self.didFetchSuccess(response)
-                print("=====USER response:\(String(describing: response))")
             case .failure:
                 self.didFetchFailed()
             }
@@ -68,7 +67,11 @@ class UserInfoInteractor: UserInfoInteractorProtocol {
     }
     
     func showUserProfile() {
-        guard let profileURL = user?.htmlUrl else { return}
+        guard let profileURL = user?.htmlUrl else {
+            self.didFetchFailed()
+            return
+        }
+        
         presenter.showUserProfile(for: profileURL)
     }
     

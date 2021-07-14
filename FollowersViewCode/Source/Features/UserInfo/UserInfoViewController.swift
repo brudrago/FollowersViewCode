@@ -89,7 +89,7 @@ extension UserInfoViewController: UserInfoViewControllerProtocol {
     }
     
     func showUserProfile(for url: String) {
-        router.proceedToUserProfile(for: url)
+        presentSafariViewController(with: url)
     }
 }
 
