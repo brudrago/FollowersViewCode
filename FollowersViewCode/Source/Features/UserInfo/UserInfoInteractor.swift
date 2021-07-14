@@ -69,7 +69,6 @@ class UserInfoInteractor: UserInfoInteractorProtocol {
     
     func showUserProfile() {
         guard let profileURL = user?.htmlUrl else { return}
-        
         presenter.showUserProfile(for: profileURL)
     }
     

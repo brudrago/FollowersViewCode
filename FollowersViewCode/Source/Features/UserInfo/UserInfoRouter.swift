@@ -10,7 +10,7 @@ import SafariServices
 
 protocol UserInfoRouterProtocol {
     
-    func proceedToUserProfile()
+    func proceedToUserProfile(for url: String)
 }
 
 protocol UserInfoDataPassingProtocol {
@@ -30,11 +30,10 @@ class UserInfoRouter: UserInfoRouterProtocol {
     
     // MARK: - Public Functions
     
-    func proceedToUserProfile() {
-//        let profileUrl = dataStore.user.htmlUrl
-//        guard let url = URL(string: profileUrl) else { return }
-//        let safariViewController = SFSafariViewController(url: url)
-//        safariViewController.preferredControlTintColor = .systemGreen
-//        viewController.present(safariViewController, animated: true)
+    func proceedToUserProfile(for url: String) {
+        guard let profileURL = URL(string: url) else { return }
+        let safariViewController = SFSafariViewController(url: profileURL)
+        safariViewController.preferredControlTintColor = .systemGreen
+        viewController.present(safariViewController, animated: true)
     }
 }

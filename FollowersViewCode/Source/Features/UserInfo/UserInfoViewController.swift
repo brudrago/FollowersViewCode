@@ -89,10 +89,7 @@ extension UserInfoViewController: UserInfoViewControllerProtocol {
     }
     
     func showUserProfile(for url: String) {
-        guard let profileURL = URL(string: url) else { return }
-        let safariViewController = SFSafariViewController(url: profileURL)
-        safariViewController.preferredControlTintColor = .systemGreen
-        present(safariViewController, animated: true)
+        router.proceedToUserProfile(for: url)
     }
 }
 
@@ -101,7 +98,7 @@ extension UserInfoViewController: UserInfoViewControllerProtocol {
 extension UserInfoViewController: UserInfoViewDelegate {
     
     func didSelectCardItemOneGetProfileButton() {
-        router.proceedToUserProfile()
+        interactor.showUserProfile()
         print("GET PROFILE BUTTON")
     }
     
