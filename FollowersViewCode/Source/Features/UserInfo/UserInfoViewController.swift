@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SafariServices
 
 protocol UserInfoViewControllerProtocol: AnyObject {
     
@@ -99,7 +98,6 @@ extension UserInfoViewController: UserInfoViewDelegate {
     
     func didSelectCardItemOneGetProfileButton() {
         interactor.showUserProfile()
-        print("GET PROFILE BUTTON")
     }
     
     func didSelectCardItemTwoGetFollowersButton() {
