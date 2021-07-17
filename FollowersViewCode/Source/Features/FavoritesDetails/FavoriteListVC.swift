@@ -9,6 +9,15 @@ import UIKit
 
 protocol FavoriteListVCProtocol: AnyObject {
     
+    func set(favorite: [Follower])
+    
+    func showAlert(title: String, message: String, buttonTitle: String)
+    
+    func showLoading()
+    
+    func dismissLoading()
+    
+    func showEmptyState(_ message: String)
 }
 
 class FavoriteListVC: UIViewController {
@@ -34,12 +43,30 @@ class FavoriteListVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setupNavigation()
+        interactor.getFavorites()
+    }
+    
+    // MARK: - Public Functions
+    
+    func showAlert(title: String, message: String, buttonTitle: String) {
+        presentFVCAlertOnMainThread(title: title , message: message, buttonTitle: buttonTitle)
+    }
+    
+    func showLoading() {
+        startLoading()
+    }
+    
+    func dismissLoading() {
+        stopLoading()
+    }
+    
+    func showEmptyState(_ message: String) {
+        showEmptyStateView(with: message, in: self.view)
     }
     
     // MARK: - Private Functions
@@ -54,4 +81,7 @@ class FavoriteListVC: UIViewController {
 
 extension FavoriteListVC: FavoriteListVCProtocol {
     
+    func set(favorite: [Follower]) {
+        favoritesView.set(favorites: favorite)
+    }
 }

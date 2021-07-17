@@ -14,6 +14,8 @@ typealias PersistenceFailedResult = (FVCError?) -> Void
 protocol PersistenceWorkerProtocol {
     
     func updateFavorites(favorite: Follower, actionType: PersistenceActionType, completion: @escaping PersistenceFailedResult)
+    
+    func retrieveFavoriteFollower(completion: @escaping PersistenceResults) 
 }
 
 class PersistenceWorker: PersistenceWorkerProtocol {
@@ -48,7 +50,7 @@ class PersistenceWorker: PersistenceWorkerProtocol {
     
     // MARK: - Private Functions
     
-    private func retrieveFavoriteFollower(completion: @escaping PersistenceResults) {
+    func retrieveFavoriteFollower(completion: @escaping PersistenceResults) {
         PersistenceManager.retrieveFavorites { result in
             completion(result)
         }

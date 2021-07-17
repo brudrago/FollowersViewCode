@@ -115,6 +115,7 @@ class FollowerListInteractor: FollowerListInteractorProtocol {
             case .success(let user):
                 self.didAddFavorite(user)
             case .failure(let error):
+                print(error)
                 self.didFetchFailed()
             }
         }

@@ -17,6 +17,7 @@
 		700FB6CB26A340300080E3CF /* PersistenceResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700FB6CA26A340300080E3CF /* PersistenceResource.swift */; };
 		700FB6CD26A35F110080E3CF /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700FB6CC26A35F110080E3CF /* FavoriteCell.swift */; };
 		700FB6CF26A366B20080E3CF /* UITableViewCell+ Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700FB6CE26A366B20080E3CF /* UITableViewCell+ Ext.swift */; };
+		700FB6D126A36AEC0080E3CF /* UICollectionView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700FB6D026A36AEC0080E3CF /* UICollectionView+Ext.swift */; };
 		701C0485269671D10010A5DE /* FollowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701C0484269671D10010A5DE /* FollowerCell.swift */; };
 		701C0488269673840010A5DE /* FVCAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701C0487269673840010A5DE /* FVCAvatarImageView.swift */; };
 		701C048A269692FB0010A5DE /* FollowerListViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701C0489269692FB0010A5DE /* FollowerListViewDelegate.swift */; };
@@ -90,6 +91,7 @@
 		700FB6CA26A340300080E3CF /* PersistenceResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceResource.swift; sourceTree = "<group>"; };
 		700FB6CC26A35F110080E3CF /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
 		700FB6CE26A366B20080E3CF /* UITableViewCell+ Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+ Ext.swift"; sourceTree = "<group>"; };
+		700FB6D026A36AEC0080E3CF /* UICollectionView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Ext.swift"; sourceTree = "<group>"; };
 		701C0484269671D10010A5DE /* FollowerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCell.swift; sourceTree = "<group>"; };
 		701C0487269673840010A5DE /* FVCAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FVCAvatarImageView.swift; sourceTree = "<group>"; };
 		701C0489269692FB0010A5DE /* FollowerListViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListViewDelegate.swift; sourceTree = "<group>"; };
@@ -230,10 +232,11 @@
 				704EEADE26344F1500D40A36 /* FVCError.swift */,
 				704EEB102634987000D40A36 /* R+Extensions.swift */,
 				706F3BC8269C5A8B005AC02A /* String + Ext.swift */,
+				700FB6D026A36AEC0080E3CF /* UICollectionView+Ext.swift */,
 				70B73292269B9DF500B3A09A /* UIColor+Ext.swift */,
 				70DEBC7D2698B1EA00FBD477 /* UIImageView.swift */,
-				701CBC1D2617BBEF00A5D951 /* UIViewController+Ext.swift */,
 				700FB6CE26A366B20080E3CF /* UITableViewCell+ Ext.swift */,
+				701CBC1D2617BBEF00A5D951 /* UIViewController+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -720,6 +723,7 @@
 				70DFC803262CF16800A17501 /* User.swift in Sources */,
 				70F9EF882610DA3E0090BC9D /* FVCButton.swift in Sources */,
 				70B73297269BAF4300B3A09A /* CardItemTwo.swift in Sources */,
+				700FB6D126A36AEC0080E3CF /* UICollectionView+Ext.swift in Sources */,
 				703CB5FC269A210300647057 /* UserInfoPresenter.swift in Sources */,
 				703CB5F8269A20E300647057 /* UserInfoBuilder.swift in Sources */,
 				701C0488269673840010A5DE /* FVCAvatarImageView.swift in Sources */,

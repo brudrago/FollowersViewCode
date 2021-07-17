@@ -32,6 +32,16 @@ class FavoriteListView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Public Functions
+    
+    func set(favorites: [Follower]) {
+        self.favorites = favorites
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+            self.bringSubviewToFront(self.tableView)
+        }
+    }
+    
 }
 
 // MARK: - ViewCodeProtocol Extension

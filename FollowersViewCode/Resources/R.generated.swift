@@ -195,8 +195,10 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 28 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 29 localization keys.
     struct localizable {
+      /// Value: Acho que você não tem favoritos! 😁
+      static let emptyFavorites = Rswift.StringResource(key: "emptyFavorites", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Buscar seguidores
       static let searchFollowers = Rswift.StringResource(key: "searchFollowers", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Desculpe 😥 
@@ -253,6 +255,19 @@ struct R: Rswift.Validatable {
       static let errorDescription = Rswift.StringResource(key: "errorDescription", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Sorry, there was an error connecting to the servers.
       static let networkError = Rswift.StringResource(key: "networkError", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+
+      /// Value: Acho que você não tem favoritos! 😁
+      static func emptyFavorites(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("emptyFavorites", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "emptyFavorites"
+        }
+
+        return NSLocalizedString("emptyFavorites", bundle: bundle, comment: "")
+      }
 
       /// Value: Buscar seguidores
       static func searchFollowers(preferredLanguages: [String]? = nil) -> String {

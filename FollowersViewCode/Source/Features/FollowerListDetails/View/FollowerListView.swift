@@ -72,7 +72,8 @@ extension FollowerListView: ViewCodeProtocol {
         collectionView.delegate = self
         
         collectionView.backgroundColor = .clear
-        collectionView.register(FollowerCell.self, forCellWithReuseIdentifier: FollowerCell.identifier)
+       // collectionView.register(FollowerCell.self, forCellWithReuseIdentifier: FollowerCell.identifier)
+        FollowerCell.registerOn(collectionView)
     }
 }
 // MARK: - UICollectionViewDataSource Extension
