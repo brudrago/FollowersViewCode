@@ -55,6 +55,7 @@ class FavoriteListInteractor: FavoriteListInteractorProtocol {
     
     private func didFetchSuccess(_ response: [Follower]?) {
         guard let favorites = response else { return }
+        print("====== FAVORITES \(favorites)")
         self.favoritesList.append(contentsOf: favorites)
         if favorites.isEmpty {
             DispatchQueue.main.async { self.didFetchEmptyState() }

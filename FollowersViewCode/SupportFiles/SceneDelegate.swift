@@ -39,7 +39,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     func createFavoritesNavigationController() -> UINavigationController {
-        let favoriteVC = FavoriteListVC()
+        let favoriteVC = FavoriteListBuilder.build()
         favoriteVC.title = "Favorites"
         favoriteVC.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
         

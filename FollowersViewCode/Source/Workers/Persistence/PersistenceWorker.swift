@@ -15,7 +15,8 @@ protocol PersistenceWorkerProtocol {
     
     func updateFavorites(favorite: Follower, actionType: PersistenceActionType, completion: @escaping PersistenceFailedResult)
     
-    func retrieveFavoriteFollower(completion: @escaping PersistenceResults) 
+    func retrieveFavoriteFollower(completion: @escaping PersistenceResults)
+    
 }
 
 class PersistenceWorker: PersistenceWorkerProtocol {

@@ -34,6 +34,21 @@ class PersistenceManager: PersistenceManagerProtocol {
     
     // MARK: - Public Functions
     
+//    static func retrieveFavorites(completed: @escaping (Result<[Follower], FVCError>) -> Void) {
+//         guard let favoritesD = defaults.object(forKey: Keys.favorites) as? Data else {
+//             completed(.success([]))
+//             return
+//         }
+//
+//         do {
+//             let decoder = JSONDecoder()
+//             let favorites = try decoder.decode([Follower].self, from: favoritesD)
+//             completed(.success(favorites))
+//         } catch {
+//             completed(.failure(.unableToFavorite))
+//         }
+//     }
+    
     static func retrieveFavorites<T: Decodable>(completion: @escaping PersistenceResult<T>) {
         guard let favoritesData = defaults.object(forKey: Keys.favorites) as? Data else {
             completion(.success([] as? T))
@@ -43,6 +58,7 @@ class PersistenceManager: PersistenceManagerProtocol {
         do {
             let decoder = JSONDecoder()
             let results = try decoder.decode(T.self, from: favoritesData)
+            print("====RESULTS \(results)")
             return completion(.success(results))
             
         } catch {
