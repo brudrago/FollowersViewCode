@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		700FB6BA26A32AD90080E3CF /* FavoriteListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700FB6B926A32AD90080E3CF /* FavoriteListBuilder.swift */; };
+		700FB6BC26A32AE90080E3CF /* FavoriteListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700FB6BB26A32AE90080E3CF /* FavoriteListInteractor.swift */; };
+		700FB6BE26A32AF50080E3CF /* FavoriteListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700FB6BD26A32AF50080E3CF /* FavoriteListPresenter.swift */; };
+		700FB6C026A32B060080E3CF /* FavoriteListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700FB6BF26A32B060080E3CF /* FavoriteListRouter.swift */; };
+		700FB6C326A32B1D0080E3CF /* FavoritListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700FB6C226A32B1D0080E3CF /* FavoritListView.swift */; };
 		701C0485269671D10010A5DE /* FollowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701C0484269671D10010A5DE /* FollowerCell.swift */; };
 		701C0488269673840010A5DE /* FVCAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701C0487269673840010A5DE /* FVCAvatarImageView.swift */; };
 		701C048A269692FB0010A5DE /* FollowerListViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701C0489269692FB0010A5DE /* FollowerListViewDelegate.swift */; };
@@ -70,6 +75,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		700FB6B926A32AD90080E3CF /* FavoriteListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListBuilder.swift; sourceTree = "<group>"; };
+		700FB6BB26A32AE90080E3CF /* FavoriteListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListInteractor.swift; sourceTree = "<group>"; };
+		700FB6BD26A32AF50080E3CF /* FavoriteListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListPresenter.swift; sourceTree = "<group>"; };
+		700FB6BF26A32B060080E3CF /* FavoriteListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListRouter.swift; sourceTree = "<group>"; };
+		700FB6C226A32B1D0080E3CF /* FavoritListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritListView.swift; sourceTree = "<group>"; };
 		701C0484269671D10010A5DE /* FollowerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCell.swift; sourceTree = "<group>"; };
 		701C0487269673840010A5DE /* FVCAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FVCAvatarImageView.swift; sourceTree = "<group>"; };
 		701C0489269692FB0010A5DE /* FollowerListViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListViewDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +164,14 @@
 				CA59C9FACE706593E59B1427 /* Pods_FollowersViewCode.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		700FB6C126A32B0C0080E3CF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				700FB6C226A32B1D0080E3CF /* FavoritListView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		701C0486269673340010A5DE /* ImageView */ = {
@@ -401,7 +419,12 @@
 		70F9EF862610D9990090BC9D /* FavoritesDetails */ = {
 			isa = PBXGroup;
 			children = (
+				700FB6C126A32B0C0080E3CF /* View */,
 				70F9EF822610D4D80090BC9D /* FavoriteListVC.swift */,
+				700FB6B926A32AD90080E3CF /* FavoriteListBuilder.swift */,
+				700FB6BB26A32AE90080E3CF /* FavoriteListInteractor.swift */,
+				700FB6BD26A32AF50080E3CF /* FavoriteListPresenter.swift */,
+				700FB6BF26A32B060080E3CF /* FavoriteListRouter.swift */,
 			);
 			path = FavoritesDetails;
 			sourceTree = "<group>";
@@ -612,17 +635,20 @@
 				7098CA3726149508000A60A0 /* FollowerListInteractor.swift in Sources */,
 				7098CA34261494F7000A60A0 /* FollowerListBuilder.swift in Sources */,
 				7098CA3A26149517000A60A0 /* FollowerListPresenter.swift in Sources */,
+				700FB6BE26A32AF50080E3CF /* FavoriteListPresenter.swift in Sources */,
 				70F9EF9D2610FAF30090BC9D /* FollowerListViewController.swift in Sources */,
 				701C048A269692FB0010A5DE /* FollowerListViewDelegate.swift in Sources */,
 				706F3BCB269C5A9F005AC02A /* Date + Ext.swift in Sources */,
 				70F9EF832610D4D80090BC9D /* FavoriteListVC.swift in Sources */,
 				70B73293269B9DF500B3A09A /* UIColor+Ext.swift in Sources */,
 				704EEAD52634499000D40A36 /* GithubURLBuilder .swift in Sources */,
+				700FB6BA26A32AD90080E3CF /* FavoriteListBuilder.swift in Sources */,
 				70F9EF992610E9EA0090BC9D /* ViewCodeProtocol.swift in Sources */,
 				704EEB142634995800D40A36 /* FollowerWorker.swift in Sources */,
 				70F9EF802610D49E0090BC9D /* SearchViewController.swift in Sources */,
 				704EEB1E26349E6B00D40A36 /* GithubResource.swift in Sources */,
 				70A6E7742692583B00AC91FA /* FollowerListRouter.swift in Sources */,
+				700FB6C026A32B060080E3CF /* FavoriteListRouter.swift in Sources */,
 				70DEBC7E2698B1EA00FBD477 /* UIImageView.swift in Sources */,
 				701C0485269671D10010A5DE /* FollowerCell.swift in Sources */,
 				70B73299269BB88A00B3A09A /* CardItemOne.swift in Sources */,
@@ -632,10 +658,12 @@
 				70F9EFB82611401E0090BC9D /* FVCTitleLabel.swift in Sources */,
 				703CB5F3269A209300647057 /* UserInfoViewController.swift in Sources */,
 				70B7328B269B85EA00B3A09A /* FVCSubtitleLabel.swift in Sources */,
+				700FB6C326A32B1D0080E3CF /* FavoritListView.swift in Sources */,
 				70F9EFBF261142700090BC9D /* FVCAlertVC.swift in Sources */,
 				70F9EFA62610FD000090BC9D /* SearchBuilder.swift in Sources */,
 				70F9EFA92610FD150090BC9D /* SearchInteractor.swift in Sources */,
 				70B7328F269B938800B3A09A /* SFSymbols.swift in Sources */,
+				700FB6BC26A32AE90080E3CF /* FavoriteListInteractor.swift in Sources */,
 				70B7328D269B922300B3A09A /* UserInfoViewDelegate.swift in Sources */,
 				70F9EFC4261142D30090BC9D /* FVCAlertView.swift in Sources */,
 				70F9EF902610E2080090BC9D /* SearchView.swift in Sources */,
