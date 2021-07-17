@@ -50,6 +50,7 @@ class FollowerListViewController: UIViewController {
         super.viewWillAppear(animated)
         setupNavigation()
         setupNavigationItem()
+        setupNavigationAddButtonItem()
     }
     
     // MARK: - Public Functions
@@ -86,6 +87,19 @@ class FollowerListViewController: UIViewController {
         definesPresentationContext = true
         navigationItem.searchController = search
         navigationItem.hidesSearchBarWhenScrolling = false
+    }
+    
+    // MARK: - Private Funcitons
+    
+    private func setupNavigationAddButtonItem() {
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didSelectAddButton))
+        navigationItem.rightBarButtonItem = addButton
+    }
+    
+    @objc
+    private func didSelectAddButton() {
+        interactor.addFollowerInFavoriteList()
+        print("ADD BUTTON")
     }
 }
 

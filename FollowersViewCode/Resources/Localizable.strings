@@ -7,6 +7,8 @@
  */
 /* A */
 
+"alreadyInFavorites" = "Este usuário já está na sua lista de favoritos!";
+
 /* B */
 
 /* C */
@@ -30,6 +32,8 @@
 "errorDescription" = "Sorry, something went wrong. Try again later.";
 
 /* F */
+
+"favorite" = "Favorito";
 
 "followers" = "Seguidores";
 
@@ -59,6 +63,8 @@
 /* M */
 
 /* N */
+
+"newFavoriteAdd" = "Seu usuário favorito foi adicionado!! 🤩";
 
 "networkError" = "Sorry, there was an error connecting to the servers.";
 
@@ -92,6 +98,8 @@
 /* T */
 
 /* U */
+
+"unableToFavorite" = "Desculpe 😥 , não conseguimos favoritar! Tente novamente!!";
 
 /* V */
 

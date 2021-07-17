@@ -21,6 +21,8 @@ protocol FollowerListInteractorProtocol {
     func fetchFilteredFollowers(_ filter: String)
     
     func updateListFollowers()
+    
+    func addFollowerInFavoriteList()
 }
 
 class FollowerListInteractor: FollowerListInteractorProtocol {
@@ -37,6 +39,10 @@ class FollowerListInteractor: FollowerListInteractorProtocol {
     
     private var followerWorker: FollowerWorkerProtocol
     
+    private var userWorker: UserInfoWorkerProtocol
+    
+    private var persistenceWorker: PersistenceWorkerProtocol
+    
     private var page = 1
     
     private var followerList : [Follower] = []
@@ -49,10 +55,14 @@ class FollowerListInteractor: FollowerListInteractorProtocol {
     
     init() {
         followerWorker = FollowerWorker()
+        userWorker = UserInfoWorker()
+        persistenceWorker = PersistenceWorker()
     }
     
-    init(followerWorker: FollowerWorkerProtocol) {
+    init(followerWorker: FollowerWorkerProtocol, userWorker: UserInfoWorkerProtocol, persistenceWorker: PersistenceWorkerProtocol) {
         self.followerWorker = followerWorker
+        self.userWorker = userWorker
+        self.persistenceWorker = persistenceWorker
     }
     
     //MARK: - Public Functions
@@ -93,7 +103,23 @@ class FollowerListInteractor: FollowerListInteractorProtocol {
         let updateList = followerList
         presenter.set(follower: updateList)
     }
-
+    
+    func addFollowerInFavoriteList() {
+        presenter.showLoading()
+        
+        userWorker.fetchList(for: username) { [weak self] result in
+            guard let self = self else { return }
+            self.presenter.dismissLoading()
+            
+            switch result {
+            case .success(let user):
+                self.didAddFavorite(user)
+            case .failure(let error):
+                self.didFetchFailed()
+            }
+        }
+    }
+    
     //MARK: - Private Functions
     
     private func didFetchSuccess(_ response: [Follower]?) {
@@ -117,5 +143,27 @@ class FollowerListInteractor: FollowerListInteractorProtocol {
     private func didFetchEmptyState() {
         let message = R.Localizable.emptyFollowers()
         presenter.showEmptyState(message)
+    }
+    
+    private func didAddFavorite(_ user: User?) {
+        guard let favoriteUser = user else { return }
+        let favorite = Follower(login: favoriteUser.login, avatarUrl: favoriteUser.avatarUrl)
+        persistenceWorker.updateFavorites(favorite: favorite, actionType: .add) { [weak self] error in
+            guard let self = self else { return }
+            
+            guard let _ = error else {
+                self.didAddFavoriteSucceedMessage()
+                return
+            }
+            self.didFetchFailed()
+        }
+        
+    }
+    
+    private func didAddFavoriteSucceedMessage() {
+        let titleMessage = R.Localizable.favorite()
+        let message = R.Localizable.newFavoriteAdd()
+        let buttonTitle = R.Localizable.ok()
+        presenter.showAlert(title: titleMessage, message: message, buttonTitle: buttonTitle)
     }
 }

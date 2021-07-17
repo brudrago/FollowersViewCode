@@ -11,7 +11,9 @@ enum FVCError: Error {
     case decodeError
     case networkError
     case invalidUsername
-    case invalidData 
+    case invalidData
+    case unableToFavorite
+    case alreadyInFavorites
 }
 
 extension FVCError: LocalizedError {
@@ -26,6 +28,10 @@ extension FVCError: LocalizedError {
             return R.Localizable.invalidUsername()
         case .invalidData:
             return R.Localizable.databaseError()
+        case .unableToFavorite:
+            return R.Localizable.unableToFavorite()
+        case .alreadyInFavorites:
+            return R.Localizable.alreadyInFavorites()
         }
     }
 }

@@ -195,18 +195,24 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 24 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 28 localization keys.
     struct localizable {
       /// Value: Buscar seguidores
       static let searchFollowers = Rswift.StringResource(key: "searchFollowers", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Desculpe 😥 
       static let sorry = Rswift.StringResource(key: "sorry", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Desculpe 😥 , não conseguimos favoritar! Tente novamente!!
+      static let unableToFavorite = Rswift.StringResource(key: "unableToFavorite", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Desculpe! Encontramos um erro no decode.
       static let decodeError = Rswift.StringResource(key: "decodeError", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Digite o username
       static let enterUsername = Rswift.StringResource(key: "enterUsername", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Digite o username 🤖
       static let emptyUsername = Rswift.StringResource(key: "emptyUsername", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Este usuário já está na sua lista de favoritos!
+      static let alreadyInFavorites = Rswift.StringResource(key: "alreadyInFavorites", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Favorito
+      static let favorite = Rswift.StringResource(key: "favorite", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Get Followers
       static let getFollowers = Rswift.StringResource(key: "getFollowers", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: GitHub Profile
@@ -239,6 +245,8 @@ struct R: Rswift.Validatable {
       static let followers = Rswift.StringResource(key: "followers", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Seguindo
       static let following = Rswift.StringResource(key: "following", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Seu usuário favorito foi adicionado!! 🤩
+      static let newFavoriteAdd = Rswift.StringResource(key: "newFavoriteAdd", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Sorry, an error occurred with the database.
       static let databaseError = Rswift.StringResource(key: "databaseError", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Sorry, something went wrong. Try again later.
@@ -270,6 +278,19 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("sorry", bundle: bundle, comment: "")
+      }
+
+      /// Value: Desculpe 😥 , não conseguimos favoritar! Tente novamente!!
+      static func unableToFavorite(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("unableToFavorite", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "unableToFavorite"
+        }
+
+        return NSLocalizedString("unableToFavorite", bundle: bundle, comment: "")
       }
 
       /// Value: Desculpe! Encontramos um erro no decode.
@@ -309,6 +330,32 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("emptyUsername", bundle: bundle, comment: "")
+      }
+
+      /// Value: Este usuário já está na sua lista de favoritos!
+      static func alreadyInFavorites(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("alreadyInFavorites", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "alreadyInFavorites"
+        }
+
+        return NSLocalizedString("alreadyInFavorites", bundle: bundle, comment: "")
+      }
+
+      /// Value: Favorito
+      static func favorite(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("favorite", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "favorite"
+        }
+
+        return NSLocalizedString("favorite", bundle: bundle, comment: "")
       }
 
       /// Value: Get Followers
@@ -519,6 +566,19 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("following", bundle: bundle, comment: "")
+      }
+
+      /// Value: Seu usuário favorito foi adicionado!! 🤩
+      static func newFavoriteAdd(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("newFavoriteAdd", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "newFavoriteAdd"
+        }
+
+        return NSLocalizedString("newFavoriteAdd", bundle: bundle, comment: "")
       }
 
       /// Value: Sorry, an error occurred with the database.
