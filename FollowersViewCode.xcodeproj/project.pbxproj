@@ -11,10 +11,12 @@
 		700FB6BC26A32AE90080E3CF /* FavoriteListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700FB6BB26A32AE90080E3CF /* FavoriteListInteractor.swift */; };
 		700FB6BE26A32AF50080E3CF /* FavoriteListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700FB6BD26A32AF50080E3CF /* FavoriteListPresenter.swift */; };
 		700FB6C026A32B060080E3CF /* FavoriteListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700FB6BF26A32B060080E3CF /* FavoriteListRouter.swift */; };
-		700FB6C326A32B1D0080E3CF /* FavoritListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700FB6C226A32B1D0080E3CF /* FavoritListView.swift */; };
+		700FB6C326A32B1D0080E3CF /* FavoriteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700FB6C226A32B1D0080E3CF /* FavoriteListView.swift */; };
 		700FB6C626A330B90080E3CF /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700FB6C526A330B90080E3CF /* PersistenceManager.swift */; };
 		700FB6C926A3398F0080E3CF /* PersistenceWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700FB6C826A3398F0080E3CF /* PersistenceWorker.swift */; };
 		700FB6CB26A340300080E3CF /* PersistenceResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700FB6CA26A340300080E3CF /* PersistenceResource.swift */; };
+		700FB6CD26A35F110080E3CF /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700FB6CC26A35F110080E3CF /* FavoriteCell.swift */; };
+		700FB6CF26A366B20080E3CF /* UITableViewCell+ Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700FB6CE26A366B20080E3CF /* UITableViewCell+ Ext.swift */; };
 		701C0485269671D10010A5DE /* FollowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701C0484269671D10010A5DE /* FollowerCell.swift */; };
 		701C0488269673840010A5DE /* FVCAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701C0487269673840010A5DE /* FVCAvatarImageView.swift */; };
 		701C048A269692FB0010A5DE /* FollowerListViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701C0489269692FB0010A5DE /* FollowerListViewDelegate.swift */; };
@@ -82,10 +84,12 @@
 		700FB6BB26A32AE90080E3CF /* FavoriteListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListInteractor.swift; sourceTree = "<group>"; };
 		700FB6BD26A32AF50080E3CF /* FavoriteListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListPresenter.swift; sourceTree = "<group>"; };
 		700FB6BF26A32B060080E3CF /* FavoriteListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListRouter.swift; sourceTree = "<group>"; };
-		700FB6C226A32B1D0080E3CF /* FavoritListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritListView.swift; sourceTree = "<group>"; };
+		700FB6C226A32B1D0080E3CF /* FavoriteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListView.swift; sourceTree = "<group>"; };
 		700FB6C526A330B90080E3CF /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		700FB6C826A3398F0080E3CF /* PersistenceWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceWorker.swift; sourceTree = "<group>"; };
 		700FB6CA26A340300080E3CF /* PersistenceResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceResource.swift; sourceTree = "<group>"; };
+		700FB6CC26A35F110080E3CF /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
+		700FB6CE26A366B20080E3CF /* UITableViewCell+ Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+ Ext.swift"; sourceTree = "<group>"; };
 		701C0484269671D10010A5DE /* FollowerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCell.swift; sourceTree = "<group>"; };
 		701C0487269673840010A5DE /* FVCAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FVCAvatarImageView.swift; sourceTree = "<group>"; };
 		701C0489269692FB0010A5DE /* FollowerListViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListViewDelegate.swift; sourceTree = "<group>"; };
@@ -175,7 +179,8 @@
 		700FB6C126A32B0C0080E3CF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				700FB6C226A32B1D0080E3CF /* FavoritListView.swift */,
+				700FB6C226A32B1D0080E3CF /* FavoriteListView.swift */,
+				700FB6CC26A35F110080E3CF /* FavoriteCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -228,6 +233,7 @@
 				70B73292269B9DF500B3A09A /* UIColor+Ext.swift */,
 				70DEBC7D2698B1EA00FBD477 /* UIImageView.swift */,
 				701CBC1D2617BBEF00A5D951 /* UIViewController+Ext.swift */,
+				700FB6CE26A366B20080E3CF /* UITableViewCell+ Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -685,12 +691,13 @@
 				70F9EFB82611401E0090BC9D /* FVCTitleLabel.swift in Sources */,
 				703CB5F3269A209300647057 /* UserInfoViewController.swift in Sources */,
 				70B7328B269B85EA00B3A09A /* FVCSubtitleLabel.swift in Sources */,
-				700FB6C326A32B1D0080E3CF /* FavoritListView.swift in Sources */,
+				700FB6C326A32B1D0080E3CF /* FavoriteListView.swift in Sources */,
 				70F9EFBF261142700090BC9D /* FVCAlertVC.swift in Sources */,
 				70F9EFA62610FD000090BC9D /* SearchBuilder.swift in Sources */,
 				70F9EFA92610FD150090BC9D /* SearchInteractor.swift in Sources */,
 				70B7328F269B938800B3A09A /* SFSymbols.swift in Sources */,
 				700FB6BC26A32AE90080E3CF /* FavoriteListInteractor.swift in Sources */,
+				700FB6CF26A366B20080E3CF /* UITableViewCell+ Ext.swift in Sources */,
 				70B7328D269B922300B3A09A /* UserInfoViewDelegate.swift in Sources */,
 				70F9EFC4261142D30090BC9D /* FVCAlertView.swift in Sources */,
 				70F9EF902610E2080090BC9D /* SearchView.swift in Sources */,
@@ -709,6 +716,7 @@
 				70F9EFAF2610FD440090BC9D /* SearchRouter.swift in Sources */,
 				70DFC7FF262CF0AB00A17501 /* Follower.swift in Sources */,
 				704EEB03263495E300D40A36 /* R.generated.swift in Sources */,
+				700FB6CD26A35F110080E3CF /* FavoriteCell.swift in Sources */,
 				70DFC803262CF16800A17501 /* User.swift in Sources */,
 				70F9EF882610DA3E0090BC9D /* FVCButton.swift in Sources */,
 				70B73297269BAF4300B3A09A /* CardItemTwo.swift in Sources */,

@@ -211,7 +211,7 @@ struct R: Rswift.Validatable {
       static let emptyUsername = Rswift.StringResource(key: "emptyUsername", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Este usuário já está na sua lista de favoritos!
       static let alreadyInFavorites = Rswift.StringResource(key: "alreadyInFavorites", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Favorito
+      /// Value: Favoritos
       static let favorite = Rswift.StringResource(key: "favorite", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Get Followers
       static let getFollowers = Rswift.StringResource(key: "getFollowers", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
@@ -345,7 +345,7 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("alreadyInFavorites", bundle: bundle, comment: "")
       }
 
-      /// Value: Favorito
+      /// Value: Favoritos
       static func favorite(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
           return NSLocalizedString("favorite", bundle: hostingBundle, comment: "")

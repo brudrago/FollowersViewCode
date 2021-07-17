@@ -24,21 +24,22 @@ class FollowerListView: UIView {
         case main
     }
     
+    // MARK: - Private Properties
+    
     private var followers: [Follower] = []
     
-    weak var delegate: FollowerListViewDelegate?
+    private unowned let delegate: FollowerListViewDelegate
     
     // MARK: - Inits
     
     init(_ delegate:FollowerListViewDelegate) {
-        super.init(frame: .zero)
         self.delegate = delegate
+        super.init(frame: .zero)
         setupUI()
     }
     
     required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        setupUI()
+        fatalError("init(coder:) has not been implemented")
     }
     
     // MARK: - Public Functions
@@ -100,14 +101,14 @@ extension FollowerListView: UICollectionViewDelegate {
         
         if lastRowIndex == indexPath.row {
             DispatchQueue.main.async {
-                self.delegate?.fetchNextPage()
+                self.delegate.fetchNextPage()
             }
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let userSelected = followers[indexPath.item]
-        delegate?.selectedUserInfo(userSelected)
+        delegate.selectedUserInfo(userSelected)
     }
 }
 
