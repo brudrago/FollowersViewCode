@@ -66,7 +66,6 @@ class SearchViewController: UIViewController {
     private func setupNavigation() {
         navigationController?.isNavigationBarHidden = true
     }
-    
 }
 
 // MARK: - SearchViewDelegate Extension

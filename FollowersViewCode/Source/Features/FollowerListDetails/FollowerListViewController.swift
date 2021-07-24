@@ -99,7 +99,6 @@ class FollowerListViewController: UIViewController {
     @objc
     private func didSelectAddButton() {
         interactor.addFollowerInFavoriteList()
-        print("ADD BUTTON")
     }
 }
 

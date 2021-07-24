@@ -22,6 +22,7 @@ class SearchView: UIView {
     private lazy var usernameTextField: UITextField = {
         let textField = FVCTextField()
         textField.placeholder = R.Localizable.enterUsername()
+        textField.clearButtonMode = .whileEditing
         textField.delegate = self 
         return textField
     } ()
@@ -106,8 +107,12 @@ extension SearchView: ViewCodeProtocol {
 // MARK: - UITextField Delegate Extension
 
 extension SearchView: UITextFieldDelegate {
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        // chamar algo da textfield/button aqui
+        let user = usernameTextField.text
+        delegate?.didSelectSearchFollowerButton(username: user)
+        textField.resignFirstResponder()
+        textField.text?.removeAll()
         return true
     }
 }
