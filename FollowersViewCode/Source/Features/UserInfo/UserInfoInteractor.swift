@@ -17,9 +17,11 @@ protocol UserInfoInteractorProtocol {
     func fetchUser()
     
     func showUserProfile()
+    
+    func getUserFollowers()
 }
 
-class UserInfoInteractor: UserInfoInteractorProtocol {
+class UserInfoInteractor: UserInfoInteractorProtocol, UserInfoDataStoreProtocol {
     
     //MARK: - VIP Properties
     
@@ -33,7 +35,9 @@ class UserInfoInteractor: UserInfoInteractorProtocol {
     
     private var userInfoWorker: UserInfoWorkerProtocol
     
-    private var user: User?
+    //MARK: - Public Properties
+    
+    var user: User!
     
      
     //MARK: - Inits
@@ -75,6 +79,17 @@ class UserInfoInteractor: UserInfoInteractorProtocol {
         presenter.showUserProfile(for: profileURL)
     }
     
+    func getUserFollowers() {
+        guard user.followers != 0 else {
+            let title = "Desculpe"
+            let message = "🔎 Não achamos seguidores"
+            let buttonTitle = "OK"
+            presenter.showAlert(title: title, message: message, buttonTitle: buttonTitle)
+            return
+        }
+        
+    }
+    
     //MARK: - Private Functions
     
     private func didFetchSuccess(_ response: User?) {
@@ -90,5 +105,4 @@ class UserInfoInteractor: UserInfoInteractorProtocol {
         let buttonTitle = R.Localizable.ok()
         presenter.showAlert(title: titleMessage, message: message, buttonTitle: buttonTitle)
     }
-    
 }

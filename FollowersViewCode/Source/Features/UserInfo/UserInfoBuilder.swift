@@ -20,6 +20,7 @@ struct UserInfoBuilder {
         interactor.presenter = presenter
         presenter.viewController = viewController
         router.viewController = viewController
+        router.dataStore = interactor
         
         interactor.follower = follower
         

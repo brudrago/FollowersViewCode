@@ -10,6 +10,7 @@ import SafariServices
 
 protocol UserInfoRouterProtocol {
     
+    func proceedToFollowersList()
 }
 
 protocol UserInfoDataPassingProtocol {
@@ -28,5 +29,14 @@ class UserInfoRouter: UserInfoRouterProtocol {
     var dataStore: UserInfoDataStoreProtocol!
     
     // MARK: - Public Functions
-
+    
+    func proceedToFollowersList() {
+        let userLogin = dataStore.user.login
+        
+        let followerListViewController = FollowerListBuilder.build(userLogin)
+        followerListViewController.title = userLogin
+        
+        viewController.navigationController?
+            .pushViewController(followerListViewController, animated: true)
+    }
 }
