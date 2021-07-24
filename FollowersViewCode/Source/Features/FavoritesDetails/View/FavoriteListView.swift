@@ -21,9 +21,12 @@ class FavoriteListView: UIView {
     
     private var favorites: [Follower] = []
     
+    private unowned let delegate: FavoriteListViewDelegate
+    
     // MARK: - Inits
     
-    init() {
+    init(_ delegate: FavoriteListViewDelegate) {
+        self.delegate = delegate
         super.init(frame: .zero)
         setupUI()
     }
@@ -41,7 +44,6 @@ class FavoriteListView: UIView {
             self.bringSubviewToFront(self.tableView)
         }
     }
-    
 }
 
 // MARK: - ViewCodeProtocol Extension
@@ -95,5 +97,19 @@ extension  FavoriteListView: UITableViewDataSource {
        
         return cell
        
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let favoriteSelected = favorites[indexPath.row]
+        delegate.selectedFavorite(favoriteSelected)
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        guard editingStyle == .delete else { return }
+        
+        let favoriteSelected = favorites[indexPath.row]
+        favorites.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .left)
+        delegate.deleteFavorite(favoriteSelected)
     }
 }

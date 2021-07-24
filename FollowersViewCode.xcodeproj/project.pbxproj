@@ -22,6 +22,7 @@
 		701C0488269673840010A5DE /* FVCAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701C0487269673840010A5DE /* FVCAvatarImageView.swift */; };
 		701C048A269692FB0010A5DE /* FollowerListViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701C0489269692FB0010A5DE /* FollowerListViewDelegate.swift */; };
 		701CBC1E2617BBEF00A5D951 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701CBC1D2617BBEF00A5D951 /* UIViewController+Ext.swift */; };
+		7034282626ACB8EA00AE10F5 /* FavoriteListViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7034282526ACB8EA00AE10F5 /* FavoriteListViewDelegate.swift */; };
 		703CB5F3269A209300647057 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703CB5F2269A209300647057 /* UserInfoViewController.swift */; };
 		703CB5F6269A20B800647057 /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703CB5F5269A20B800647057 /* UserInfoView.swift */; };
 		703CB5F8269A20E300647057 /* UserInfoBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703CB5F7269A20E300647057 /* UserInfoBuilder.swift */; };
@@ -96,6 +97,7 @@
 		701C0487269673840010A5DE /* FVCAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FVCAvatarImageView.swift; sourceTree = "<group>"; };
 		701C0489269692FB0010A5DE /* FollowerListViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListViewDelegate.swift; sourceTree = "<group>"; };
 		701CBC1D2617BBEF00A5D951 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		7034282526ACB8EA00AE10F5 /* FavoriteListViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListViewDelegate.swift; sourceTree = "<group>"; };
 		703CB5F2269A209300647057 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		703CB5F5269A20B800647057 /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
 		703CB5F7269A20E300647057 /* UserInfoBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoBuilder.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 			children = (
 				700FB6C226A32B1D0080E3CF /* FavoriteListView.swift */,
 				700FB6CC26A35F110080E3CF /* FavoriteCell.swift */,
+				7034282526ACB8EA00AE10F5 /* FavoriteListViewDelegate.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -729,6 +732,7 @@
 				701C0488269673840010A5DE /* FVCAvatarImageView.swift in Sources */,
 				704EEADF26344F1500D40A36 /* FVCError.swift in Sources */,
 				703CB601269A3BE300647057 /* UserInfoWorker.swift in Sources */,
+				7034282626ACB8EA00AE10F5 /* FavoriteListViewDelegate.swift in Sources */,
 				70D0AAC62610BF1B0045B210 /* SceneDelegate.swift in Sources */,
 				70B73295269BA04B00B3A09A /* FVCItemInfoView.swift in Sources */,
 				70F9EF8C2610DE860090BC9D /* FVCTextField.swift in Sources */,

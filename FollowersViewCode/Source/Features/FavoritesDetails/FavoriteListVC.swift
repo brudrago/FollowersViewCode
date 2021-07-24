@@ -31,7 +31,7 @@ class FavoriteListVC: UIViewController {
     // MARK: - Private Properties
     
     private lazy var favoritesView: FavoriteListView = {
-        return FavoriteListView()
+        return FavoriteListView(self)
     }()
     
     // MARK: - View Lifecycle
@@ -76,12 +76,26 @@ class FavoriteListVC: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         title = R.Localizable.favorite()
     }
-
 }
 
+// MARK: - FavoriteListVCProtocol Extension
+
 extension FavoriteListVC: FavoriteListVCProtocol {
-    
+
     func set(favorite: [Follower]) {
         favoritesView.set(favorites: favorite)
+    }
+}
+
+// MARK: - FavoriteListVCProtocol Extension
+
+extension FavoriteListVC: FavoriteListViewDelegate {
+
+    func selectedFavorite(_ favoriteSelected: Follower) {
+        router.proceedToUserInfoDetails(follower: favoriteSelected)
+    }
+    
+    func deleteFavorite(_ favoriteSelected: Follower) {
+        interactor.deleteFavorite(favoriteSelected)
     }
 }

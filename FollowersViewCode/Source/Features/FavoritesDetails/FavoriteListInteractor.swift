@@ -10,6 +10,10 @@ import Foundation
 protocol FavoriteListInteractorProtocol {
     
     func getFavorites()
+    
+    func deleteFavorite(_ favorite: Follower)
+    
+    func updateFavoritesList()
 }
 
 class FavoriteListInteractor: FavoriteListInteractorProtocol {
@@ -45,23 +49,37 @@ class FavoriteListInteractor: FavoriteListInteractorProtocol {
                 self.didFetchSuccess(favorites)
             case .failure(let error):
                 print(error)
-                print(error)
                 self.didFetchFailed()
             }
         }
+    }
+    
+    func deleteFavorite(_ favorite: Follower) {
+        persistenceWorker.updateFavorites(favorite: favorite, actionType: .remove) { [weak self] error in
+            guard let self = self else { return }
+            
+            self.delete(favorite: favorite)
+            
+            guard let _ = error else { return }
+            self.didFetchFailed()
+        }
+    }
+    
+    func updateFavoritesList() {
+        let updateList = favoritesList
+        presenter.set(favorite: updateList)
     }
     
     //MARK: - Private Functions
     
     private func didFetchSuccess(_ response: [Follower]?) {
         guard let favorites = response else { return }
-        print("====== FAVORITES \(favorites)")
-        self.favoritesList.append(contentsOf: favorites)
+        
         if favorites.isEmpty {
             DispatchQueue.main.async { self.didFetchEmptyState() }
             return
         }
-        
+        self.favoritesList.append(contentsOf: favorites)
         presenter.set(favorite: favoritesList)
     }
     
@@ -75,5 +93,9 @@ class FavoriteListInteractor: FavoriteListInteractorProtocol {
         let message = R.Localizable.somenthingBadHappend()
         let buttonTitle = R.Localizable.ok()
         presenter.showAlert(title: titleMessage, message: message, buttonTitle: buttonTitle)
+    }
+    
+    private func delete(favorite: Follower){
+        favoritesList = favoritesList.filter { $0 != favorite}
     }
 }
