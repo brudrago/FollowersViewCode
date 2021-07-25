@@ -12,8 +12,6 @@ protocol FavoriteListInteractorProtocol {
     func getFavorites()
     
     func deleteFavorite(_ favorite: Follower)
-    
-    func updateFavoritesList()
 }
 
 class FavoriteListInteractor: FavoriteListInteractorProtocol {
@@ -65,11 +63,6 @@ class FavoriteListInteractor: FavoriteListInteractorProtocol {
         }
     }
     
-    func updateFavoritesList() {
-        let updateList = favoritesList
-        presenter.set(favorite: updateList)
-    }
-    
     //MARK: - Private Functions
     
     private func didFetchSuccess(_ response: [Follower]?) {
@@ -79,7 +72,8 @@ class FavoriteListInteractor: FavoriteListInteractorProtocol {
             DispatchQueue.main.async { self.didFetchEmptyState() }
             return
         }
-        self.favoritesList.append(contentsOf: favorites)
+        
+        self.favoritesList = favorites
         presenter.set(favorite: favoritesList)
     }
     
