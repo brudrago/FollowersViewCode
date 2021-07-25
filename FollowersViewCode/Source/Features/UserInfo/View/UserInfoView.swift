@@ -94,7 +94,7 @@ class UserInfoView: UIView {
         cardItemOne.set(countRepos: user.publicRepos, counGists: user.publicGists)
         cardItemTwo.set(countFollowers: user.followers, countFollowing: user.following)
         
-        let date = user.createdAt.convertToDisplayFormat()
+        let date = user.createdAt.convertToMonthYearFormat()
         dateLabel.text = R.Localizable.githubSince(date)
     }
     
