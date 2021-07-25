@@ -22,6 +22,7 @@
 		701C0488269673840010A5DE /* FVCAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701C0487269673840010A5DE /* FVCAvatarImageView.swift */; };
 		701C048A269692FB0010A5DE /* FollowerListViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701C0489269692FB0010A5DE /* FollowerListViewDelegate.swift */; };
 		701CBC1E2617BBEF00A5D951 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701CBC1D2617BBEF00A5D951 /* UIViewController+Ext.swift */; };
+		702D16BA26AE0D9F009D559D /* FVCTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702D16B926AE0D9F009D559D /* FVCTabBar.swift */; };
 		7034282626ACB8EA00AE10F5 /* FavoriteListViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7034282526ACB8EA00AE10F5 /* FavoriteListViewDelegate.swift */; };
 		703CB5F3269A209300647057 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703CB5F2269A209300647057 /* UserInfoViewController.swift */; };
 		703CB5F6269A20B800647057 /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703CB5F5269A20B800647057 /* UserInfoView.swift */; };
@@ -97,6 +98,7 @@
 		701C0487269673840010A5DE /* FVCAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FVCAvatarImageView.swift; sourceTree = "<group>"; };
 		701C0489269692FB0010A5DE /* FollowerListViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListViewDelegate.swift; sourceTree = "<group>"; };
 		701CBC1D2617BBEF00A5D951 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		702D16B926AE0D9F009D559D /* FVCTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FVCTabBar.swift; sourceTree = "<group>"; };
 		7034282526ACB8EA00AE10F5 /* FavoriteListViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListViewDelegate.swift; sourceTree = "<group>"; };
 		703CB5F2269A209300647057 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		703CB5F5269A20B800647057 /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 		701CBC202617C92500A5D951 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				702D16B826AE0D76009D559D /* TabBarC */,
 				70F9EFC1261142930090BC9D /* Alert */,
 				701CBC232617C9B800A5D951 /* Button */,
 				701C0486269673340010A5DE /* ImageView */,
@@ -268,6 +271,14 @@
 				70F9EF8B2610DE860090BC9D /* FVCTextField.swift */,
 			);
 			path = TextField;
+			sourceTree = "<group>";
+		};
+		702D16B826AE0D76009D559D /* TabBarC */ = {
+			isa = PBXGroup;
+			children = (
+				702D16B926AE0D9F009D559D /* FVCTabBar.swift */,
+			);
+			path = TabBarC;
 			sourceTree = "<group>";
 		};
 		703CB5F1269A205D00647057 /* UserInfo */ = {
@@ -724,6 +735,7 @@
 				704EEB03263495E300D40A36 /* R.generated.swift in Sources */,
 				700FB6CD26A35F110080E3CF /* FavoriteCell.swift in Sources */,
 				70DFC803262CF16800A17501 /* User.swift in Sources */,
+				702D16BA26AE0D9F009D559D /* FVCTabBar.swift in Sources */,
 				70F9EF882610DA3E0090BC9D /* FVCButton.swift in Sources */,
 				70B73297269BAF4300B3A09A /* CardItemTwo.swift in Sources */,
 				700FB6D126A36AEC0080E3CF /* UICollectionView+Ext.swift in Sources */,
