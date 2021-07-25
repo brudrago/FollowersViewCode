@@ -12,5 +12,4 @@ protocol UserInfoViewDelegate: AnyObject {
     func didSelectCardItemOneGetProfileButton()
     
     func didSelectCardItemTwoGetFollowersButton()
-    
 }

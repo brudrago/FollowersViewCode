@@ -101,7 +101,7 @@ extension UserInfoViewController: UserInfoViewDelegate {
     }
     
     func didSelectCardItemTwoGetFollowersButton() {
-        interactor.getUserFollowers()
+        interactor.checkForUserFollowers()
         router.proceedToFollowersList()
     }
 }

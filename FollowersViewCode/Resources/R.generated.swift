@@ -195,7 +195,7 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 29 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 30 localization keys.
     struct localizable {
       /// Value: Acho que você não tem favoritos! 😁
       static let emptyFavorites = Rswift.StringResource(key: "emptyFavorites", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
@@ -255,6 +255,8 @@ struct R: Rswift.Validatable {
       static let errorDescription = Rswift.StringResource(key: "errorDescription", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Sorry, there was an error connecting to the servers.
       static let networkError = Rswift.StringResource(key: "networkError", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: 🔎 Não achamos seguidores
+      static let theresNoFollowers = Rswift.StringResource(key: "theresNoFollowers", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
 
       /// Value: Acho que você não tem favoritos! 😁
       static func emptyFavorites(preferredLanguages: [String]? = nil) -> String {
@@ -633,6 +635,19 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("networkError", bundle: bundle, comment: "")
+      }
+
+      /// Value: 🔎 Não achamos seguidores
+      static func theresNoFollowers(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("theresNoFollowers", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "theresNoFollowers"
+        }
+
+        return NSLocalizedString("theresNoFollowers", bundle: bundle, comment: "")
       }
 
       fileprivate init() {}

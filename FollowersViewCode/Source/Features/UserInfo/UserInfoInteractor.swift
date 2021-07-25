@@ -18,7 +18,7 @@ protocol UserInfoInteractorProtocol {
     
     func showUserProfile()
     
-    func getUserFollowers()
+    func checkForUserFollowers()
 }
 
 class UserInfoInteractor: UserInfoInteractorProtocol, UserInfoDataStoreProtocol {
@@ -79,15 +79,14 @@ class UserInfoInteractor: UserInfoInteractorProtocol, UserInfoDataStoreProtocol 
         presenter.showUserProfile(for: profileURL)
     }
     
-    func getUserFollowers() {
+    func checkForUserFollowers() {
         guard user.followers != 0 else {
-            let title = "Desculpe"
-            let message = "🔎 Não achamos seguidores"
-            let buttonTitle = "OK"
+            let title = R.Localizable.sorry()
+            let message = R.Localizable.theresNoFollowers()
+            let buttonTitle = R.Localizable.ok()
             presenter.showAlert(title: title, message: message, buttonTitle: buttonTitle)
             return
         }
-        
     }
     
     //MARK: - Private Functions

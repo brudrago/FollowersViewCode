@@ -57,8 +57,9 @@ class CardItemTwo: FVCCardView {
     func setItemInfoButtonActionTarget(_ target: Any?, action: Selector) {
         itemInfoButtonAction.addTarget(target, action: action, for: .touchUpInside)
     }
-    
 }
+
+// MARK: - ViewCodeProtocol Extension
 
 extension CardItemTwo: ViewCodeProtocol {
     
