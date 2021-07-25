@@ -20,15 +20,10 @@ class FVCButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
     
-    ///Criei um custom init:
-    ///sempre que um FCButton for iniciado
-    ///será possível setar a cor e o título
-    
-    init(backgroundColor: UIColor, title: String) {
-        super.init(frame: .zero)
+   convenience init(backgroundColor: UIColor, title: String) {
+        self.init(frame: .zero)
         self.backgroundColor = backgroundColor
         self.setTitle(title, for: .normal)
-        configure()
     }
     
     // MARK: - Private Functions

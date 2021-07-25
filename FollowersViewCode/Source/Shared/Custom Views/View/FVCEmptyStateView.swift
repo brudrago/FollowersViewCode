@@ -67,9 +67,4 @@ extension FVCEmptyStateView: ViewCodeProtocol {
             make.bottom.equalToSuperview().inset(-40)
         }
     }
-    
-    func setupComponents() {
-        
-    }
-    
 }

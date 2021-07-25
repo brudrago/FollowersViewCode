@@ -97,8 +97,4 @@ extension FVCItemInfoView: ViewCodeProtocol {
             make.height.equalTo(18)
         }
     }
-    
-    func setupComponents() {
-        
-    }
 }
