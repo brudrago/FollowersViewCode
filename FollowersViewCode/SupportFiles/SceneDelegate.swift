@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(windowScene: windowScene)
         window?.makeKeyAndVisible()
-        window?.rootViewController = FVCTabBarViewController()
+        window?.rootViewController = FVCTabBar()
         
         configureNavigationBar()
     }
