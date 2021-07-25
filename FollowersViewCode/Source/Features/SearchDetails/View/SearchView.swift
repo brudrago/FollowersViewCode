@@ -22,7 +22,6 @@ class SearchView: UIView {
     private lazy var usernameTextField: UITextField = {
         let textField = FVCTextField()
         textField.placeholder = R.Localizable.enterUsername()
-        textField.clearButtonMode = .whileEditing
         textField.delegate = self 
         return textField
     } ()

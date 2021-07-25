@@ -16,18 +16,20 @@ class FVCAlertView: UIView {
     
     private lazy var containerView: UIView = {
         let view = UIView()
+        view.layer.cornerRadius = 16
+        view.layer.borderWidth = 2
+        view.layer.borderColor = UIColor.white.cgColor
+        view.backgroundColor = .systemBackground
         return view
     } ()
     
     private lazy var titleLabel: UILabel = {
         let label = FVCTitleLabel(textAlignment: .center, fontsize: 20)
-      //  label.text = alertTitle ?? "Atenção"
         return label
     } ()
     
     private lazy var bodyLabel: UILabel = {
         let label = FVCBodyLabel(textAlignment: .center)
-      //  label.text = message ?? "Não foi possível completar esta tarefa"
         label.numberOfLines = 4
         return label
     } ()
@@ -35,7 +37,7 @@ class FVCAlertView: UIView {
     private lazy var actionButton: UIButton = {
         let button = FVCButton(
             backgroundColor: .systemPink,
-            title: buttonTitle ?? "Ok")
+            title: buttonTitle ?? R.Localizable.ok())
         button.addTarget(self, action: #selector(actionButtontapped), for: .touchUpInside)
         return button
     } ()
@@ -52,7 +54,6 @@ class FVCAlertView: UIView {
     
     init() {
         super.init(frame: .zero)
-        configure()
         setupUI()
     }
     
@@ -75,14 +76,10 @@ class FVCAlertView: UIView {
     private func actionButtontapped() {
         delegate?.dismissVC()
     }
-    
-    private func configure() {
-        containerView.layer.cornerRadius = 16
-        containerView.layer.borderWidth = 2
-        containerView.layer.borderColor = UIColor.white.cgColor
-        containerView.backgroundColor = .systemBackground
-    }
 }
+
+// MARK: - ViewCodeProtocol Extensions
+
 extension FVCAlertView: ViewCodeProtocol {
     
     func setupSubviews() {
@@ -123,6 +120,6 @@ extension FVCAlertView: ViewCodeProtocol {
     }
     
     func setupComponents() {
-        backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.75)
+        backgroundColor = UIColor.black.withAlphaComponent(0.75)
     }
 }

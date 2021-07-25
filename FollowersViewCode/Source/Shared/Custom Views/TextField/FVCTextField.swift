@@ -45,7 +45,6 @@ class FVCTextField: UITextField {
         backgroundColor = .tertiarySystemBackground
         autocorrectionType = .no
         returnKeyType = .go
-        
+        clearButtonMode = .whileEditing
     }
-    
 }
