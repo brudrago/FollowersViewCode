@@ -15,7 +15,7 @@ class FVCItemInfoView: UIView {
     
     private var symbolImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView .image = UIImage(systemName: SFSymbols.location)
+        imageView .image = SFSymbols.location
         imageView .tintColor = .label
         imageView.contentMode = .scaleAspectFill
         return imageView
@@ -50,16 +50,16 @@ class FVCItemInfoView: UIView {
     func set(itemInfoType: ItemInfoType, withCount count: Int) {
         switch itemInfoType {
         case .repos:
-            symbolImageView.image = UIImage(systemName: SFSymbols.repos)
+            symbolImageView.image = SFSymbols.repos
             titleLabel.text = R.Localizable.publicRepos()
         case .gists:
-            symbolImageView.image = UIImage(systemName: SFSymbols.gists)
+            symbolImageView.image = SFSymbols.gists
             titleLabel.text = R.Localizable.publicGists()
         case .followers:
-            symbolImageView.image = UIImage(systemName: SFSymbols.followers)
+            symbolImageView.image = SFSymbols.followers
             titleLabel.text = R.Localizable.followers()
         case .following:
-            symbolImageView.image = UIImage(systemName: SFSymbols.following)
+            symbolImageView.image =  SFSymbols.following
             titleLabel.text = R.Localizable.following()
         }
         
