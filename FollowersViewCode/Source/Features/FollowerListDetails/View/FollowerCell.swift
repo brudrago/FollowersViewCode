@@ -51,8 +51,7 @@ class FollowerCell: UICollectionViewCell {
 extension FollowerCell: ViewCodeProtocol {
     
     func setupSubviews() {
-        addSubview(avatarImageView)
-        addSubview(usernameLabel)
+        addSubviews(avatarImageView, usernameLabel)
     }
     
     func setupConstraints() {

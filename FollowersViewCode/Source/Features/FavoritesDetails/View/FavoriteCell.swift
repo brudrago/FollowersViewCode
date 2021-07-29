@@ -29,13 +29,13 @@ class FavoriteCell: UITableViewCell {
     // MARK: - Inits
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-          super.init(style: style, reuseIdentifier: reuseIdentifier)
-          setupUI()
-      }
-
-      required init?(coder: NSCoder) {
-          fatalError("init(coder:) has not been implemented")
-      }
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        setupUI()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     // MARK: - Public Functions
     
@@ -48,9 +48,9 @@ class FavoriteCell: UITableViewCell {
 // MARK: - ViewCode Protocol Extension
 
 extension FavoriteCell: ViewCodeProtocol {
-    func setupSubviews() {
-        addSubview(avatarImageView)
-        addSubview(usernameLabel)
+    
+    func setupSubviews() { 
+        addSubviews(avatarImageView, usernameLabel)
     }
     
     func setupConstraints() {

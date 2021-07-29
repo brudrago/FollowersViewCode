@@ -36,7 +36,7 @@ class UserInfoView: UIView {
     }()
     
     private lazy var locationLabel: FVCSubtitleLabel = {
-        let label = FVCSubtitleLabel(fontsize: 18)
+        let label = FVCSubtitleLabel(fontsize: 14)
         return label
     }()
     
@@ -114,16 +114,13 @@ class UserInfoView: UIView {
 // MARK: - ViewCodeProtocol Extension
 
 extension UserInfoView: ViewCodeProtocol {
+    
     func setupSubviews() {
-        addSubview(avatarImageView)
-        addSubview(usernameLabel)
-        addSubview(nameLabel)
-        addSubview(locationImageView)
-        addSubview(locationLabel)
-        addSubview(bioLabel)
-        addSubview(cardItemOne)
-        addSubview(cardItemTwo)
-        addSubview(dateLabel)
+        addSubviews(
+            avatarImageView, usernameLabel,
+            nameLabel, locationImageView,
+            locationLabel, bioLabel,
+            cardItemOne, cardItemTwo, dateLabel)
     }
     
     func setupConstraints() {
@@ -145,7 +142,7 @@ extension UserInfoView: ViewCodeProtocol {
             make.centerY.equalTo(avatarImageView.snp.centerY).offset(8)
             make.left.equalTo(avatarImageView.snp.right).offset(20)
             make.right.equalToSuperview().inset(12)
-            make.height.equalTo(20)
+            make.height.equalTo(18)
         }
         
         locationImageView.snp.makeConstraints { make in
@@ -158,14 +155,14 @@ extension UserInfoView: ViewCodeProtocol {
         locationLabel.snp.makeConstraints { make in
             make.centerY.equalTo(locationImageView.snp.centerY)
             make.left.equalTo(locationImageView.snp.right).offset(5)
-            make.height.equalTo(14)
+            make.height.equalTo(16)
         }
         
         bioLabel.snp.makeConstraints { make in
             make.top.equalTo(avatarImageView.snp.bottom).offset(20)
             make.left.equalToSuperview().offset(12)
             make.right.equalToSuperview().inset(12)
-            make.height.equalTo(60)
+            make.height.equalTo(90)
         }
         
         cardItemOne.snp.makeConstraints { make in
@@ -186,7 +183,7 @@ extension UserInfoView: ViewCodeProtocol {
             make.top.equalTo(cardItemTwo.snp.bottom).offset(20)
             make.left.equalToSuperview().offset(12)
             make.right.equalToSuperview().inset(12)
-            make.height.equalTo(18)
+            make.height.equalTo(50)
         }
     }
     

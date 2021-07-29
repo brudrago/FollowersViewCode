@@ -51,6 +51,8 @@ class FollowerListInteractor: FollowerListInteractorProtocol {
     
     private var hasMoreFollowers = true
     
+    private var isLoadingMoreFollowers = false
+    
     //MARK: - Inits
     
     init() {
@@ -69,6 +71,7 @@ class FollowerListInteractor: FollowerListInteractorProtocol {
     
     func fetchFollowers() {
         presenter.showLoading()
+        isLoadingMoreFollowers = true
         
         followerWorker.fetchList(for: username ) { [weak self] result in
             guard let self = self else { return }
@@ -82,11 +85,12 @@ class FollowerListInteractor: FollowerListInteractorProtocol {
             case .failure:
                 self.didFetchFailed()
             }
+            self.isLoadingMoreFollowers = false
         }
     }
     
     func fetchNextPage() {
-        if hasMoreFollowers {
+        if hasMoreFollowers && !isLoadingMoreFollowers {
             followerWorker.nextPage()
             fetchFollowers()
         }

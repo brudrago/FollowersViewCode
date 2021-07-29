@@ -48,8 +48,7 @@ class FVCEmptyStateView: UIView {
 
 extension FVCEmptyStateView: ViewCodeProtocol {
     func setupSubviews() {
-        addSubview(messageLabel)
-        addSubview(logoImageView)
+        addSubviews(messageLabel, logoImageView)
     }
     
     func setupConstraints() {

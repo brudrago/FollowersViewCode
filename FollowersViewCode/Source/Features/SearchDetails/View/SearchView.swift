@@ -67,9 +67,7 @@ class SearchView: UIView {
 extension SearchView: ViewCodeProtocol {
     
     func  setupSubviews()  {
-        addSubview(logoImageView)
-        addSubview(usernameTextField)
-        addSubview(searchFollowerButton)
+        addSubviews(logoImageView, usernameTextField, searchFollowerButton)
     }
     
     func setupConstraints() {

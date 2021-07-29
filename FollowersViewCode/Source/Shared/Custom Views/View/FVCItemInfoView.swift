@@ -70,9 +70,7 @@ class FVCItemInfoView: UIView {
 extension FVCItemInfoView: ViewCodeProtocol {
     
     func setupSubviews() {
-        addSubview(symbolImageView)
-        addSubview(titleLabel)
-        addSubview(countLabel)
+        addSubviews(symbolImageView, titleLabel, countLabel)
     }
     
     func setupConstraints() {
