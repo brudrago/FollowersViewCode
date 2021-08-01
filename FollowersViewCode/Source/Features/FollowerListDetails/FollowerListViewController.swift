@@ -129,7 +129,10 @@ extension FollowerListViewController: FollowerListViewDelegate {
 extension FollowerListViewController:  UISearchResultsUpdating,  UISearchBarDelegate {
     
     func updateSearchResults(for searchController: UISearchController) {
-        guard let filter = searchController.searchBar.text , !filter.isEmpty else { return }
+        guard let filter = searchController.searchBar.text , !filter.isEmpty else {
+            interactor.cleanFilteredListAfterSearch()
+            return
+        }
         interactor.fetchFilteredFollowers(filter)
     }
     
