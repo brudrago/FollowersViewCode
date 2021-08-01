@@ -48,11 +48,6 @@ class SearchViewController: UIViewController {
     
     // MARK: - Public Functions
     
-    func createDismissKeyboardTapGesture() {
-        let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing(_:)))
-        view.addGestureRecognizer(tap)
-    }
-    
     func showAlert(title: String, message: String, buttonTitle: String) {
         presentFVCAlertOnMainThread(title: title , message: message, buttonTitle: buttonTitle)
     }
@@ -65,6 +60,11 @@ class SearchViewController: UIViewController {
     
     private func setupNavigation() {
         navigationController?.isNavigationBarHidden = true
+    }
+    
+    private  func createDismissKeyboardTapGesture() {
+        let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing(_:)))
+        view.addGestureRecognizer(tap)
     }
 }
 
@@ -80,8 +80,6 @@ extension SearchViewController: SearchViewDelegate {
 
 // MARK: - SearchViewControllerProtocol Extension
 
-extension SearchViewController: SearchViewControllerProtocol {
-    
-}
+extension SearchViewController: SearchViewControllerProtocol { }
 
 

@@ -20,7 +20,7 @@ protocol FollowerListInteractorProtocol {
     
     func fetchFilteredFollowers(_ filter: String)
     
-    func cleanFilteredListAfterSearch()
+    func cleanAndUpdateListResultsAfterSearch()
     
     func updateListFollowers()
     
@@ -105,7 +105,7 @@ class FollowerListInteractor: FollowerListInteractorProtocol {
         presenter.set(follower: filteredFollowerList)
     }
     
-    func cleanFilteredListAfterSearch() {
+    func cleanAndUpdateListResultsAfterSearch() {
         filteredFollowerList.removeAll()
         presenter.set(follower: followerList)
     }

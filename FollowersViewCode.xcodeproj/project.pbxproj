@@ -64,6 +64,11 @@
 		70DEBC7E2698B1EA00FBD477 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DEBC7D2698B1EA00FBD477 /* UIImageView.swift */; };
 		70DFC7FF262CF0AB00A17501 /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DFC7FE262CF0AB00A17501 /* Follower.swift */; };
 		70DFC803262CF16800A17501 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DFC802262CF16800A17501 /* User.swift */; };
+		70EBAA0726B7523F00D204F6 /* FollowersViewCodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EBAA0626B7523F00D204F6 /* FollowersViewCodeTests.swift */; };
+		70EBAA1226B753CD00D204F6 /* SearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EBAA1126B753CD00D204F6 /* SearchTests.swift */; };
+		70EBAA1426B753EC00D204F6 /* SearchViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EBAA1326B753EC00D204F6 /* SearchViewControllerMock.swift */; };
+		70EBAA1726B75AFE00D204F6 /* FollowerListViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EBAA1626B75AFE00D204F6 /* FollowerListViewControllerMock.swift */; };
+		70EBAA1926B75CEE00D204F6 /* FollowerListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EBAA1826B75CEE00D204F6 /* FollowerListTests.swift */; };
 		70F9EF802610D49E0090BC9D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F9EF7F2610D49E0090BC9D /* SearchViewController.swift */; };
 		70F9EF832610D4D80090BC9D /* FavoriteListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F9EF822610D4D80090BC9D /* FavoriteListVC.swift */; };
 		70F9EF882610DA3E0090BC9D /* FVCButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F9EF872610DA3E0090BC9D /* FVCButton.swift */; };
@@ -82,6 +87,16 @@
 		70F9EFC4261142D30090BC9D /* FVCAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F9EFC3261142D30090BC9D /* FVCAlertView.swift */; };
 		F929C0248D83DBA10EF156B3 /* Pods_FollowersViewCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA59C9FACE706593E59B1427 /* Pods_FollowersViewCode.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		70EBAA0926B7523F00D204F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 70D0AAB82610BF1B0045B210 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 70D0AABF2610BF1B0045B210;
+			remoteInfo = FollowersViewCode;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		700FB6B926A32AD90080E3CF /* FavoriteListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListBuilder.swift; sourceTree = "<group>"; };
@@ -143,6 +158,13 @@
 		70DEBC7D2698B1EA00FBD477 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		70DFC7FE262CF0AB00A17501 /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 		70DFC802262CF16800A17501 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		70EBAA0426B7523F00D204F6 /* FollowersViewCodeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FollowersViewCodeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		70EBAA0626B7523F00D204F6 /* FollowersViewCodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersViewCodeTests.swift; sourceTree = "<group>"; };
+		70EBAA0826B7523F00D204F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70EBAA1126B753CD00D204F6 /* SearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTests.swift; sourceTree = "<group>"; };
+		70EBAA1326B753EC00D204F6 /* SearchViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewControllerMock.swift; sourceTree = "<group>"; };
+		70EBAA1626B75AFE00D204F6 /* FollowerListViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListViewControllerMock.swift; sourceTree = "<group>"; };
+		70EBAA1826B75CEE00D204F6 /* FollowerListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListTests.swift; sourceTree = "<group>"; };
 		70F9EF7F2610D49E0090BC9D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		70F9EF822610D4D80090BC9D /* FavoriteListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListVC.swift; sourceTree = "<group>"; };
 		70F9EF872610DA3E0090BC9D /* FVCButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FVCButton.swift; sourceTree = "<group>"; };
@@ -170,6 +192,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F929C0248D83DBA10EF156B3 /* Pods_FollowersViewCode.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70EBAA0126B7523F00D204F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +377,7 @@
 			isa = PBXGroup;
 			children = (
 				70D0AAC22610BF1B0045B210 /* FollowersViewCode */,
+				70EBAA0526B7523F00D204F6 /* FollowersViewCodeTests */,
 				70D0AAC12610BF1B0045B210 /* Products */,
 				A1151B8BDF3FBDB367AE9DB1 /* Pods */,
 				3D1F7F9FBC4648010FF38C89 /* Frameworks */,
@@ -358,6 +388,7 @@
 			isa = PBXGroup;
 			children = (
 				70D0AAC02610BF1B0045B210 /* FollowersViewCode.app */,
+				70EBAA0426B7523F00D204F6 /* FollowersViewCodeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -407,6 +438,35 @@
 				704EEABE263441D200D40A36 /* NetworkManager.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		70EBAA0526B7523F00D204F6 /* FollowersViewCodeTests */ = {
+			isa = PBXGroup;
+			children = (
+				70EBAA1526B75AE000D204F6 /* FollowerListDetails */,
+				70EBAA1026B752A400D204F6 /* SearchDetails */,
+				70EBAA0626B7523F00D204F6 /* FollowersViewCodeTests.swift */,
+				70EBAA0826B7523F00D204F6 /* Info.plist */,
+			);
+			path = FollowersViewCodeTests;
+			sourceTree = "<group>";
+		};
+		70EBAA1026B752A400D204F6 /* SearchDetails */ = {
+			isa = PBXGroup;
+			children = (
+				70EBAA1126B753CD00D204F6 /* SearchTests.swift */,
+				70EBAA1326B753EC00D204F6 /* SearchViewControllerMock.swift */,
+			);
+			path = SearchDetails;
+			sourceTree = "<group>";
+		};
+		70EBAA1526B75AE000D204F6 /* FollowerListDetails */ = {
+			isa = PBXGroup;
+			children = (
+				70EBAA1626B75AFE00D204F6 /* FollowerListViewControllerMock.swift */,
+				70EBAA1826B75CEE00D204F6 /* FollowerListTests.swift */,
+			);
+			path = FollowerListDetails;
 			sourceTree = "<group>";
 		};
 		70F9EF602610C19E0090BC9D /* Features */ = {
@@ -571,17 +631,39 @@
 			productReference = 70D0AAC02610BF1B0045B210 /* FollowersViewCode.app */;
 			productType = "com.apple.product-type.application";
 		};
+		70EBAA0326B7523F00D204F6 /* FollowersViewCodeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70EBAA0B26B7523F00D204F6 /* Build configuration list for PBXNativeTarget "FollowersViewCodeTests" */;
+			buildPhases = (
+				70EBAA0026B7523F00D204F6 /* Sources */,
+				70EBAA0126B7523F00D204F6 /* Frameworks */,
+				70EBAA0226B7523F00D204F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				70EBAA0A26B7523F00D204F6 /* PBXTargetDependency */,
+			);
+			name = FollowersViewCodeTests;
+			productName = FollowersViewCodeTests;
+			productReference = 70EBAA0426B7523F00D204F6 /* FollowersViewCodeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		70D0AAB82610BF1B0045B210 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1240;
+				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
 					70D0AABF2610BF1B0045B210 = {
 						CreatedOnToolsVersion = 12.4;
+					};
+					70EBAA0326B7523F00D204F6 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 70D0AABF2610BF1B0045B210;
 					};
 				};
 			};
@@ -599,6 +681,7 @@
 			projectRoot = "";
 			targets = (
 				70D0AABF2610BF1B0045B210 /* FollowersViewCode */,
+				70EBAA0326B7523F00D204F6 /* FollowersViewCodeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -611,6 +694,13 @@
 				70D0AAD02610BF1C0045B210 /* LaunchScreen.storyboard in Resources */,
 				704EEB0E263497ED00D40A36 /* Localizable.strings in Resources */,
 				70D0AACD2610BF1C0045B210 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70EBAA0226B7523F00D204F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -756,7 +846,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		70EBAA0026B7523F00D204F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70EBAA1426B753EC00D204F6 /* SearchViewControllerMock.swift in Sources */,
+				70EBAA0726B7523F00D204F6 /* FollowersViewCodeTests.swift in Sources */,
+				70EBAA1726B75AFE00D204F6 /* FollowerListViewControllerMock.swift in Sources */,
+				70EBAA1926B75CEE00D204F6 /* FollowerListTests.swift in Sources */,
+				70EBAA1226B753CD00D204F6 /* SearchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		70EBAA0A26B7523F00D204F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 70D0AABF2610BF1B0045B210 /* FollowersViewCode */;
+			targetProxy = 70EBAA0926B7523F00D204F6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		70D0AACE2610BF1C0045B210 /* LaunchScreen.storyboard */ = {
@@ -924,6 +1034,46 @@
 			};
 			name = Release;
 		};
+		70EBAA0C26B7523F00D204F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FollowersViewCodeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.brunadrago.FollowersViewCodeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FollowersViewCode.app/FollowersViewCode";
+			};
+			name = Debug;
+		};
+		70EBAA0D26B7523F00D204F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FollowersViewCodeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.brunadrago.FollowersViewCodeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FollowersViewCode.app/FollowersViewCode";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -941,6 +1091,15 @@
 			buildConfigurations = (
 				70D0AAD52610BF1C0045B210 /* Debug */,
 				70D0AAD62610BF1C0045B210 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		70EBAA0B26B7523F00D204F6 /* Build configuration list for PBXNativeTarget "FollowersViewCodeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70EBAA0C26B7523F00D204F6 /* Debug */,
+				70EBAA0D26B7523F00D204F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
