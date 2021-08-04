@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		700E117326BB248F0008E7F6 /* FollowerWorkerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700E117226BB248F0008E7F6 /* FollowerWorkerMock.swift */; };
+		700E117526BB26920008E7F6 /* PersistenceWorkerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700E117426BB26920008E7F6 /* PersistenceWorkerMock.swift */; };
+		700E117726BB2A1A0008E7F6 /* UserWorkerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700E117626BB2A1A0008E7F6 /* UserWorkerMock.swift */; };
 		700FB6BA26A32AD90080E3CF /* FavoriteListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700FB6B926A32AD90080E3CF /* FavoriteListBuilder.swift */; };
 		700FB6BC26A32AE90080E3CF /* FavoriteListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700FB6BB26A32AE90080E3CF /* FavoriteListInteractor.swift */; };
 		700FB6BE26A32AF50080E3CF /* FavoriteListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700FB6BD26A32AF50080E3CF /* FavoriteListPresenter.swift */; };
@@ -99,6 +102,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		700E117226BB248F0008E7F6 /* FollowerWorkerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerWorkerMock.swift; sourceTree = "<group>"; };
+		700E117426BB26920008E7F6 /* PersistenceWorkerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceWorkerMock.swift; sourceTree = "<group>"; };
+		700E117626BB2A1A0008E7F6 /* UserWorkerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserWorkerMock.swift; sourceTree = "<group>"; };
 		700FB6B926A32AD90080E3CF /* FavoriteListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListBuilder.swift; sourceTree = "<group>"; };
 		700FB6BB26A32AE90080E3CF /* FavoriteListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListInteractor.swift; sourceTree = "<group>"; };
 		700FB6BD26A32AF50080E3CF /* FavoriteListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListPresenter.swift; sourceTree = "<group>"; };
@@ -211,6 +217,16 @@
 				CA59C9FACE706593E59B1427 /* Pods_FollowersViewCode.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		700E117126BB24630008E7F6 /* WorkerMock */ = {
+			isa = PBXGroup;
+			children = (
+				700E117226BB248F0008E7F6 /* FollowerWorkerMock.swift */,
+				700E117426BB26920008E7F6 /* PersistenceWorkerMock.swift */,
+				700E117626BB2A1A0008E7F6 /* UserWorkerMock.swift */,
+			);
+			path = WorkerMock;
 			sourceTree = "<group>";
 		};
 		700FB6C126A32B0C0080E3CF /* View */ = {
@@ -443,6 +459,7 @@
 		70EBAA0526B7523F00D204F6 /* FollowersViewCodeTests */ = {
 			isa = PBXGroup;
 			children = (
+				700E117126BB24630008E7F6 /* WorkerMock */,
 				70EBAA1526B75AE000D204F6 /* FollowerListDetails */,
 				70EBAA1026B752A400D204F6 /* SearchDetails */,
 				70EBAA0626B7523F00D204F6 /* FollowersViewCodeTests.swift */,
@@ -851,9 +868,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				70EBAA1426B753EC00D204F6 /* SearchViewControllerMock.swift in Sources */,
+				700E117326BB248F0008E7F6 /* FollowerWorkerMock.swift in Sources */,
+				700E117726BB2A1A0008E7F6 /* UserWorkerMock.swift in Sources */,
 				70EBAA0726B7523F00D204F6 /* FollowersViewCodeTests.swift in Sources */,
 				70EBAA1726B75AFE00D204F6 /* FollowerListViewControllerMock.swift in Sources */,
 				70EBAA1926B75CEE00D204F6 /* FollowerListTests.swift in Sources */,
+				700E117526BB26920008E7F6 /* PersistenceWorkerMock.swift in Sources */,
 				70EBAA1226B753CD00D204F6 /* SearchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
