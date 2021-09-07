@@ -16,3 +16,12 @@ class UserWorkerMock: UserInfoWorkerProtocol {
         completion(.success(user))
     }
 }
+
+class UserWorkerFailedMock: UserInfoWorkerProtocol {
+    
+    func fetchList(for username: String, completion: @escaping UserResult) {
+        let user = User(login: "brudrago", avatarUrl: "", name: "Bruna", location: "California", bio: "", publicRepos: 0, publicGists: 0, followers: 0, following: 0, htmlUrl: "", createdAt: Date())
+        
+        completion(.failure(.invalidUsername))
+    }
+}

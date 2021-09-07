@@ -37,16 +37,43 @@ class FollowerListTests: XCTestCase {
         let viewController = build()
         viewController.interactor.fetchFollowers()
         XCTAssertTrue(viewController.showLoadingCalled)
+        XCTAssertTrue(viewController.dismissLoadingCalled)
+    }
+    
+    func testFetchFollowersFailed() {
+        self.followerWorker = FollowerWorkerFailedMock()
+        let viewController = build()
+        
+        viewController.interactor.fetchFollowers()
+        XCTAssertTrue(viewController.showLoadingCalled)
+        XCTAssertTrue(viewController.showAlertCalled)
     }
     
     func testFetchNextPage() {
         let viewController = build()
         viewController.interactor.fetchNextPage()
+        XCTAssertTrue(viewController.showLoadingCalled)
+        XCTAssertTrue(viewController.dismissLoadingCalled)
+    }
+    
+    func testFetchNextPageFailed() {
+        self.followerWorker = FollowerWorkerFailedMock()
+        let viewController = build()
+        viewController.interactor.fetchNextPage()
+        XCTAssertTrue(viewController.showLoadingCalled)
+        XCTAssertTrue(viewController.dismissLoadingCalled)
     }
     
     func testFetchFilteredFollowers() {
         let viewController = build()
         let filter = "brudrago"
+        viewController.interactor.fetchFilteredFollowers(filter)
+        XCTAssertTrue(viewController.setCalled)
+    }
+    
+    func testFetchFilteredFollowersFailed() {
+        let viewController = build()
+        let filter = ""
         viewController.interactor.fetchFilteredFollowers(filter)
         XCTAssertTrue(viewController.setCalled)
     }

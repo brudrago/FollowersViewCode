@@ -25,6 +25,10 @@
 		701C0488269673840010A5DE /* FVCAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701C0487269673840010A5DE /* FVCAvatarImageView.swift */; };
 		701C048A269692FB0010A5DE /* FollowerListViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701C0489269692FB0010A5DE /* FollowerListViewDelegate.swift */; };
 		701CBC1E2617BBEF00A5D951 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701CBC1D2617BBEF00A5D951 /* UIViewController+Ext.swift */; };
+		702A714F26E7E3F50074FD73 /* FavoriteDetailsViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702A714E26E7E3F50074FD73 /* FavoriteDetailsViewControllerMock.swift */; };
+		702A715126E7E4FA0074FD73 /* FavoriteListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702A715026E7E4FA0074FD73 /* FavoriteListTests.swift */; };
+		702A715426E7E9A20074FD73 /* UserInfoViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702A715326E7E9A20074FD73 /* UserInfoViewControllerMock.swift */; };
+		702A715626E7EAD60074FD73 /* UserInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702A715526E7EAD60074FD73 /* UserInfoTests.swift */; };
 		702D16BA26AE0D9F009D559D /* FVCTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702D16B926AE0D9F009D559D /* FVCTabBar.swift */; };
 		703045D226B223F70044CD95 /* UIView + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703045D126B223F70044CD95 /* UIView + Ext.swift */; };
 		7034282626ACB8EA00AE10F5 /* FavoriteListViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7034282526ACB8EA00AE10F5 /* FavoriteListViewDelegate.swift */; };
@@ -67,7 +71,6 @@
 		70DEBC7E2698B1EA00FBD477 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DEBC7D2698B1EA00FBD477 /* UIImageView.swift */; };
 		70DFC7FF262CF0AB00A17501 /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DFC7FE262CF0AB00A17501 /* Follower.swift */; };
 		70DFC803262CF16800A17501 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DFC802262CF16800A17501 /* User.swift */; };
-		70EBAA0726B7523F00D204F6 /* FollowersViewCodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EBAA0626B7523F00D204F6 /* FollowersViewCodeTests.swift */; };
 		70EBAA1226B753CD00D204F6 /* SearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EBAA1126B753CD00D204F6 /* SearchTests.swift */; };
 		70EBAA1426B753EC00D204F6 /* SearchViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EBAA1326B753EC00D204F6 /* SearchViewControllerMock.swift */; };
 		70EBAA1726B75AFE00D204F6 /* FollowerListViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EBAA1626B75AFE00D204F6 /* FollowerListViewControllerMock.swift */; };
@@ -120,6 +123,10 @@
 		701C0487269673840010A5DE /* FVCAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FVCAvatarImageView.swift; sourceTree = "<group>"; };
 		701C0489269692FB0010A5DE /* FollowerListViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListViewDelegate.swift; sourceTree = "<group>"; };
 		701CBC1D2617BBEF00A5D951 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		702A714E26E7E3F50074FD73 /* FavoriteDetailsViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteDetailsViewControllerMock.swift; sourceTree = "<group>"; };
+		702A715026E7E4FA0074FD73 /* FavoriteListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListTests.swift; sourceTree = "<group>"; };
+		702A715326E7E9A20074FD73 /* UserInfoViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewControllerMock.swift; sourceTree = "<group>"; };
+		702A715526E7EAD60074FD73 /* UserInfoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoTests.swift; sourceTree = "<group>"; };
 		702D16B926AE0D9F009D559D /* FVCTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FVCTabBar.swift; sourceTree = "<group>"; };
 		703045D126B223F70044CD95 /* UIView + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Ext.swift"; sourceTree = "<group>"; };
 		7034282526ACB8EA00AE10F5 /* FavoriteListViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListViewDelegate.swift; sourceTree = "<group>"; };
@@ -165,7 +172,6 @@
 		70DFC7FE262CF0AB00A17501 /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 		70DFC802262CF16800A17501 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		70EBAA0426B7523F00D204F6 /* FollowersViewCodeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FollowersViewCodeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		70EBAA0626B7523F00D204F6 /* FollowersViewCodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersViewCodeTests.swift; sourceTree = "<group>"; };
 		70EBAA0826B7523F00D204F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70EBAA1126B753CD00D204F6 /* SearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTests.swift; sourceTree = "<group>"; };
 		70EBAA1326B753EC00D204F6 /* SearchViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewControllerMock.swift; sourceTree = "<group>"; };
@@ -321,6 +327,24 @@
 			path = TextField;
 			sourceTree = "<group>";
 		};
+		702A714D26E7E3C00074FD73 /* FavoriteDetails */ = {
+			isa = PBXGroup;
+			children = (
+				702A714E26E7E3F50074FD73 /* FavoriteDetailsViewControllerMock.swift */,
+				702A715026E7E4FA0074FD73 /* FavoriteListTests.swift */,
+			);
+			path = FavoriteDetails;
+			sourceTree = "<group>";
+		};
+		702A715226E7E9840074FD73 /* UserInfoDetails */ = {
+			isa = PBXGroup;
+			children = (
+				702A715326E7E9A20074FD73 /* UserInfoViewControllerMock.swift */,
+				702A715526E7EAD60074FD73 /* UserInfoTests.swift */,
+			);
+			path = UserInfoDetails;
+			sourceTree = "<group>";
+		};
 		702D16B826AE0D76009D559D /* TabBarC */ = {
 			isa = PBXGroup;
 			children = (
@@ -459,10 +483,11 @@
 		70EBAA0526B7523F00D204F6 /* FollowersViewCodeTests */ = {
 			isa = PBXGroup;
 			children = (
+				702A715226E7E9840074FD73 /* UserInfoDetails */,
 				700E117126BB24630008E7F6 /* WorkerMock */,
+				702A714D26E7E3C00074FD73 /* FavoriteDetails */,
 				70EBAA1526B75AE000D204F6 /* FollowerListDetails */,
 				70EBAA1026B752A400D204F6 /* SearchDetails */,
-				70EBAA0626B7523F00D204F6 /* FollowersViewCodeTests.swift */,
 				70EBAA0826B7523F00D204F6 /* Info.plist */,
 			);
 			path = FollowersViewCodeTests;
@@ -868,12 +893,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				70EBAA1426B753EC00D204F6 /* SearchViewControllerMock.swift in Sources */,
+				702A715626E7EAD60074FD73 /* UserInfoTests.swift in Sources */,
 				700E117326BB248F0008E7F6 /* FollowerWorkerMock.swift in Sources */,
 				700E117726BB2A1A0008E7F6 /* UserWorkerMock.swift in Sources */,
-				70EBAA0726B7523F00D204F6 /* FollowersViewCodeTests.swift in Sources */,
 				70EBAA1726B75AFE00D204F6 /* FollowerListViewControllerMock.swift in Sources */,
 				70EBAA1926B75CEE00D204F6 /* FollowerListTests.swift in Sources */,
+				702A714F26E7E3F50074FD73 /* FavoriteDetailsViewControllerMock.swift in Sources */,
+				702A715126E7E4FA0074FD73 /* FavoriteListTests.swift in Sources */,
 				700E117526BB26920008E7F6 /* PersistenceWorkerMock.swift in Sources */,
+				702A715426E7E9A20074FD73 /* UserInfoViewControllerMock.swift in Sources */,
 				70EBAA1226B753CD00D204F6 /* SearchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
