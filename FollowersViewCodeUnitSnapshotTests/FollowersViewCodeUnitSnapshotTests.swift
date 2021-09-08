@@ -11,14 +11,25 @@ import FBSnapshotTestCase
 
 class FollowersViewCodeUnitSnapshotTests: FBSnapshotTestCase {
     
-    let controller = SearchView()
-
+   // var view: UIView!
+    var controller: UIViewController!
+    
     override func setUp() {
         super.setUp()
-        recordMode = true
+        self.recordMode = true
+//        view = SearchView()
+        controller = SearchViewController()
     }
-
-    func testView() {
-        FBSnapshotVerifyView(controller)
+    
+    override func tearDown() {
+        super.tearDown()
+//        view = nil
+//        controller = nil
+    }
+    
+    func testExample() {
+//     FBSnapshotVerifyView(view)
+     FBSnapshotVerifyViewController(controller)
+        
     }
 }

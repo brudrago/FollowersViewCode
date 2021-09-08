@@ -161,6 +161,8 @@
 		704EEB1D26349E6B00D40A36 /* GithubResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubResource.swift; sourceTree = "<group>"; };
 		706F3BC8269C5A8B005AC02A /* String + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Ext.swift"; sourceTree = "<group>"; };
 		706F3BCA269C5A9F005AC02A /* Date + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + Ext.swift"; sourceTree = "<group>"; };
+		7071376F26E96E7C00B273C2 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7071377126E96F1600B273C2 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7098CA33261494F7000A60A0 /* FollowerListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListBuilder.swift; sourceTree = "<group>"; };
 		7098CA3626149508000A60A0 /* FollowerListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListInteractor.swift; sourceTree = "<group>"; };
 		7098CA3926149517000A60A0 /* FollowerListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListPresenter.swift; sourceTree = "<group>"; };
@@ -681,6 +683,8 @@
 		B402660BA27AE66DE8E3F0F4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7071377126E96F1600B273C2 /* FBSnapshotTestCase.framework */,
+				7071376F26E96E7C00B273C2 /* FBSnapshotTestCase.framework */,
 				A9E59F2ED2716B55480446C6 /* Pods_FollowersViewCode.framework */,
 				867432D4CBEB6B1AAD48B3AD /* Pods_FollowersViewCodeUnitSnapshotTests.framework */,
 			);
