@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_FollowersViewCodeSnapshotTestsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_FollowersViewCodeSnapshotTestsVersionString[];
+FOUNDATION_EXPORT double Pods_FollowersViewCodeUnitSnapshotTestsVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_FollowersViewCodeUnitSnapshotTestsVersionString[];
 

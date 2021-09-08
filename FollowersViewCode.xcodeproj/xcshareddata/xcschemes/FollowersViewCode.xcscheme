@@ -58,6 +58,16 @@
                ReferencedContainer = "container:FollowersViewCode.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "702A717626E8357D0074FD73"
+               BuildableName = "FollowersViewCodeUnitSnapshotTests.xctest"
+               BlueprintName = "FollowersViewCodeUnitSnapshotTests"
+               ReferencedContainer = "container:FollowersViewCode.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

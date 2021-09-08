@@ -14,7 +14,7 @@ target 'FollowersViewCode' do
   
 end
 
-target "FollowersViewCodeSnapshotTests" do
+target "FollowersViewCodeUnitSnapshotTests" do
   use_frameworks!
   pod 'iOSSnapshotTestCase'
 end

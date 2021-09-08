@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CF71B51A0523526BFD588C3C78454841"
-               BuildableName = "Pods_FollowersViewCodeSnapshotTests.framework"
-               BlueprintName = "Pods-FollowersViewCodeSnapshotTests"
+               BlueprintIdentifier = "7E8CE8B4B2E2770449316D575CFCAE5C"
+               BuildableName = "Pods_FollowersViewCodeUnitSnapshotTests.framework"
+               BlueprintName = "Pods-FollowersViewCodeUnitSnapshotTests"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
