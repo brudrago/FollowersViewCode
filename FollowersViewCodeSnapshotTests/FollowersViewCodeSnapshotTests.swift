@@ -23,5 +23,4 @@ class FollowersViewCodeSnapshotTests: XCTestCase {
         let vc = SearchViewController()
         assertSnapshot(matching: vc, as: .image)
     }
-
 }
