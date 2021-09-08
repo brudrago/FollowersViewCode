@@ -11,7 +11,7 @@ import FBSnapshotTestCase
 
 class FollowersViewCodeUnitSnapshotTests: FBSnapshotTestCase {
     
-    let controller = SearchViewController()
+    let controller = SearchView()
 
     override func setUp() {
         super.setUp()
@@ -19,6 +19,6 @@ class FollowersViewCodeUnitSnapshotTests: FBSnapshotTestCase {
     }
 
     func testView() {
-        FBSnapshotVerifyView(controller.view)
+        FBSnapshotVerifyView(controller)
     }
 }
