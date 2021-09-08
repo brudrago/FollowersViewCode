@@ -1,5 +1,10 @@
 PODS:
   - Alamofire (5.4.1)
+  - iOSSnapshotTestCase (7.0.0):
+    - iOSSnapshotTestCase/SwiftSupport (= 7.0.0)
+  - iOSSnapshotTestCase/Core (7.0.0)
+  - iOSSnapshotTestCase/SwiftSupport (7.0.0):
+    - iOSSnapshotTestCase/Core
   - Kingfisher (5.14.1):
     - Kingfisher/Core (= 5.14.1)
   - Kingfisher/Core (5.14.1)
@@ -10,6 +15,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 5.2)
+  - iOSSnapshotTestCase
   - Kingfisher (= 5.14.1)
   - R.swift
   - SnapKit (~> 5.0.0)
@@ -17,6 +23,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - iOSSnapshotTestCase
     - Kingfisher
     - R.swift
     - R.swift.Library
@@ -24,11 +31,12 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  iOSSnapshotTestCase: 63402a5707db9c4103b6cc3f04c76e981fff7952
   Kingfisher: 8050bc6f7f68cbf3908bd04df7ccbac188f6d6d6
   R.swift: 56ec7e3aef34b9eee47a659e42462db2c1cc5ac3
   R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: 0b487b134341a55072e3b374d3341b359f9e190a
+PODFILE CHECKSUM: e338c67a153ca8291b89b4dc1046138a8121512b
 
 COCOAPODS: 1.10.1

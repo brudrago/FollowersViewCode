@@ -4,12 +4,19 @@
 target 'FollowersViewCode' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-
+  
   # Pods for FollowersViewCode
   
-    pod 'SnapKit', '~> 5.0.0'
-    pod 'Alamofire', '~> 5.2'
-    pod 'R.swift'
-    pod 'Kingfisher', '5.14.1'
-
+  pod 'SnapKit', '~> 5.0.0'
+  pod 'Alamofire', '~> 5.2'
+  pod 'R.swift'
+  pod 'Kingfisher', '5.14.1'
+  
 end
+
+target "FollowersViewCodeSnapshotTests" do
+  use_frameworks!
+  pod 'iOSSnapshotTestCase'
+end
+
+
