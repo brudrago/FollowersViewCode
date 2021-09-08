@@ -1,0 +1,6 @@
+module Pods_FollowersViewCodeSnapshotTests {
+  umbrella header "Pods-FollowersViewCodeSnapshotTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

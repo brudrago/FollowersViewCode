@@ -13,3 +13,8 @@ target 'FollowersViewCode' do
     pod 'Kingfisher', '5.14.1'
 
 end
+
+target 'FollowersViewCodeSnapshotTests' do
+  pod 'SnapshotTesting', '~> 1.9.0'
+
+end

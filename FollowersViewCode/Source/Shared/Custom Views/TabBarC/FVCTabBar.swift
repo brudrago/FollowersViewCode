@@ -26,7 +26,7 @@ class FVCTabBar: UITabBarController {
     }
     
     func createSearchNavigationController() -> UINavigationController {
-        let searchVC = SearchBuilder.build()
+        let searchVC = FollowerListBuilder.build("brudrago")//SearchBuilder.build() //
         searchVC.title = "Search"
         searchVC.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
         
