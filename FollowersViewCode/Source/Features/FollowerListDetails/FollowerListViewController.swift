@@ -60,11 +60,11 @@ class FollowerListViewController: UIViewController {
     }
     
     func showLoading() {
-        startLoading()
+     //   startLoading()
     }
     
     func dismissLoading() {
-        stopLoading()
+     //   stopLoading()
     }
     
     func showEmptyState(_ message: String) {

@@ -13,7 +13,7 @@ class FollowerWorkerMock: FollowerWorkerProtocol {
     var currentPage: Int = 0
     
     func fetchList(for username: String, completion: @escaping FollowerListResults) {
-        let follower = Follower(login: "", avatarUrl: "")
+        let follower = Follower(login: "brudrago", avatarUrl: "")
         let followerListResults = [follower]
         
         completion(.success(followerListResults))

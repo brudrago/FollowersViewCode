@@ -15,6 +15,7 @@ class FollowerListViewControllerSnapshotTests: XCTestCase {
         let viewController = FollowerListBuilder.build("brudrago")
         
         
+        
         let result = verifySnapshot(matching: viewController,
                                     as: .image(on: .iPhoneX),
                                     named: "Default",
