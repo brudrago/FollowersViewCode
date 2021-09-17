@@ -71,6 +71,7 @@
 		70DEBC7E2698B1EA00FBD477 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DEBC7D2698B1EA00FBD477 /* UIImageView.swift */; };
 		70DFC7FF262CF0AB00A17501 /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DFC7FE262CF0AB00A17501 /* Follower.swift */; };
 		70DFC803262CF16800A17501 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DFC802262CF16800A17501 /* User.swift */; };
+		70E493DF26F4B93100F945CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70E493DE26F4B93100F945CE /* GoogleService-Info.plist */; };
 		70EBAA1226B753CD00D204F6 /* SearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EBAA1126B753CD00D204F6 /* SearchTests.swift */; };
 		70EBAA1426B753EC00D204F6 /* SearchViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EBAA1326B753EC00D204F6 /* SearchViewControllerMock.swift */; };
 		70EBAA1726B75AFE00D204F6 /* FollowerListViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EBAA1626B75AFE00D204F6 /* FollowerListViewControllerMock.swift */; };
@@ -171,6 +172,7 @@
 		70DEBC7D2698B1EA00FBD477 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		70DFC7FE262CF0AB00A17501 /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 		70DFC802262CF16800A17501 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		70E493DE26F4B93100F945CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		70EBAA0426B7523F00D204F6 /* FollowersViewCodeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FollowersViewCodeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		70EBAA0826B7523F00D204F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70EBAA1126B753CD00D204F6 /* SearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTests.swift; sourceTree = "<group>"; };
@@ -436,6 +438,7 @@
 		70D0AAC22610BF1B0045B210 /* FollowersViewCode */ = {
 			isa = PBXGroup;
 			children = (
+				70E493DE26F4B93100F945CE /* GoogleService-Info.plist */,
 				70F9EF732610C21D0090BC9D /* Resources */,
 				70F9EF742610C2350090BC9D /* Source */,
 				70F9EF752610C2490090BC9D /* SupportFiles */,
@@ -663,6 +666,7 @@
 				70D0AABD2610BF1B0045B210 /* Frameworks */,
 				70D0AABE2610BF1B0045B210 /* Resources */,
 				C8A8AB52FEEF8ACE3CED55F7 /* [CP] Embed Pods Frameworks */,
+				70E493E026F4BB5300F945CE /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -734,6 +738,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70D0AAD02610BF1C0045B210 /* LaunchScreen.storyboard in Resources */,
+				70E493DF26F4B93100F945CE /* GoogleService-Info.plist in Resources */,
 				704EEB0E263497ED00D40A36 /* Localizable.strings in Resources */,
 				70D0AACD2610BF1C0045B210 /* Assets.xcassets in Resources */,
 			);
@@ -768,6 +773,25 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/R.swift/rswift\" generate \"${SRCROOT}/FollowersViewCode/Resources/R.generated.swift\"\n\n";
+		};
+		70E493E026F4BB5300F945CE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
 		};
 		C8A8AB52FEEF8ACE3CED55F7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1051,6 +1075,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				INFOPLIST_FILE = FollowersViewCode/SupportFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
