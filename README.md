@@ -5,21 +5,21 @@ Projeto Followers View Code
 Projeto criado a partir do curso iOS Dev Job Interview Practice - Take Home Project.
 Foram realizadas algumas alterações em relação ao projeto do curso , para por em prática outros conhecimentos.
 
-Padrão de Arquitetura
+# Padrão de Arquitetura
 * VIP - Clean Swift
 
-Bibliotecas
+# Bibliotecas
 * Alamofire
 * Kingfisher
 * R.swift
 * SnapshotTesting
 * SnapKit
 
-Testes
+# Testes
 * Testes unitários com XCTest
 * Tests de Snapshot com SnapshotTesting
 
-Executando
+# Executando
 * Instale o CocoaPods sudo gem install cocoapods
 * Execute pod install 
 * Use o xCode 11+ para abrir o projeto pelo arquivo FollowersViewCode.xcworkspace.
