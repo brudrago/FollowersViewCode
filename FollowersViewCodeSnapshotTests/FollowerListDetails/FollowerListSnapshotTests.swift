@@ -7,10 +7,9 @@
 
 import XCTest
 @testable import FollowersViewCode
-//@testable import FollowersViewCodeTests
 import SnapshotTesting
 
-class FollowersViewCodeSnapshotTests: XCTestCase {
+class FollowerListSnapshotTests: XCTestCase {
     
     // MARK: - Public Properties
     
@@ -23,9 +22,9 @@ class FollowersViewCodeSnapshotTests: XCTestCase {
     // MARK: - Test Lifecycle
 
     override func setUp() {
-        self.followerWorker = FollowerWorkerMock()
-        self.userWorker = UserWorkerMock()
-        self.persistenceWorker = PersistenceWorkerMock()
+        self.followerWorker = FollowerWorkerMockSnapshot()
+        self.userWorker = UserWorkerMockSnapshot()
+        self.persistenceWorker = PersistenceWorkerMockSnapshot()
     }
 
 
