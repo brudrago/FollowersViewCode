@@ -11,7 +11,7 @@ target 'FollowersViewCode' do
     pod 'Alamofire', '~> 5.2'
     pod 'R.swift'
     pod 'Kingfisher', '5.14.1'
-    pod 'Firebase/Analytics'
-    pod 'Firebase/Crashlytics'
+#    pod 'Firebase/Analytics'
+#    pod 'Firebase/Crashlytics'
 
 end
