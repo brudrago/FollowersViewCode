@@ -4,7 +4,6 @@
 //
 //  Created by Bruna Drago on 28/03/21.
 //
-
 import UIKit
 
 protocol FavoriteListVCProtocol: AnyObject {
