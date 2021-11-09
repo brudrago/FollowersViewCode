@@ -47,10 +47,10 @@ extension UIViewController {
     }
     
     func stopLoading() {
-        DispatchQueue.main.async {
-            containerView.removeFromSuperview()
-            containerView = nil
-        }
+//        DispatchQueue.main.async {
+//            containerView.removeFromSuperview()
+//            containerView = nil
+//        }
     }
     
     func showEmptyStateView(with message: String, in view: UIView) {
