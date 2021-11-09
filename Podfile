@@ -15,3 +15,8 @@ target 'FollowersViewCode' do
 #    pod 'Firebase/Crashlytics'
 
 end
+
+target 'FollowersViewCodeSnapTests' do
+  pod 'SnapshotTesting', '~> 1.9.0'
+
+end

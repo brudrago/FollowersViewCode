@@ -7,12 +7,14 @@ PODS:
     - R.swift.Library (~> 5.3.0)
   - R.swift.Library (5.3.0)
   - SnapKit (5.0.1)
+  - SnapshotTesting (1.9.0)
 
 DEPENDENCIES:
   - Alamofire (~> 5.2)
   - Kingfisher (= 5.14.1)
   - R.swift
   - SnapKit (~> 5.0.0)
+  - SnapshotTesting (~> 1.9.0)
 
 SPEC REPOS:
   trunk:
@@ -21,6 +23,7 @@ SPEC REPOS:
     - R.swift
     - R.swift.Library
     - SnapKit
+    - SnapshotTesting
 
 SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
@@ -28,7 +31,8 @@ SPEC CHECKSUMS:
   R.swift: c533450b0f7dc494e0993f5f1a1db925d84c3006
   R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SnapshotTesting: 6141c48b6aa76ead61431ca665c14ab9a066c53b
 
-PODFILE CHECKSUM: ea5951fa3f6aee44e3ff8bbb371354eef7e64596
+PODFILE CHECKSUM: 6ac1739fbada97863da1bbcdc428c7f719c05d97
 
 COCOAPODS: 1.10.0
