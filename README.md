@@ -22,7 +22,7 @@ Foram realizadas algumas alterações em relação ao projeto do curso , para po
 # Executando
 * Instale o CocoaPods sudo gem install cocoapods
 * Execute pod install 
-* Use o xCode 11+ para abrir o projeto pelo arquivo FollowersViewCode.xcworkspace.
+* Use o XCode 11+ para abrir o projeto pelo arquivo FollowersViewCode.xcworkspace.
 * ▶️
 
 ![5ji033](https://user-images.githubusercontent.com/22052855/129388268-7f989616-bf10-4939-b602-84f3f1adf882.gif)
