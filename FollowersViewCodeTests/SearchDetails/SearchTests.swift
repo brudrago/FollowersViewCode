@@ -38,7 +38,7 @@ class SearchTests: XCTestCase {
     
     // MARK: - Private Functions
     
-    private func build(file: StaticString = #filePath, line: UInt = #line) -> SearchViewControllerMock {
+    private func build() -> SearchViewControllerMock {
         let interactor = SearchInteractor()
         
         let presenter = SearchPresenter()
@@ -47,8 +47,6 @@ class SearchTests: XCTestCase {
         viewController.interactor = interactor
         interactor.presenter = presenter
         presenter.viewController = viewController
-        
-        checkMemoryLeaks(for: viewController,file: file, line: line)
         
         return viewController
     }

@@ -76,7 +76,7 @@ class  UserInfoTests: XCTestCase {
     
     // MARK: - Private Functions
     
-    private func build(userMock: User, file: StaticString = #filePath, line: UInt = #line) -> UserInfoViewControllerMock {
+    private func build(userMock: User) -> UserInfoViewControllerMock {
         let interactor = UserInfoInteractor(
             userInfoWorker: userWorker)
         
@@ -89,8 +89,6 @@ class  UserInfoTests: XCTestCase {
         
         interactor.follower = Follower(login: "brudrago", avatarUrl: "")
         interactor.user = userMock
-        
-        checkMemoryLeaks(for: viewController, file: file, line: line)
         
         return viewController
     }

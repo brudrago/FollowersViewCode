@@ -105,7 +105,7 @@ class FollowerListTests: XCTestCase {
     }
     // MARK: - Private Functions
     
-    private func build(file: StaticString = #filePath, line: UInt = #line) -> FollowerListViewControllerMock {
+    private func build() -> FollowerListViewControllerMock {
         let interactor = FollowerListInteractor(
             followerWorker: followerWorker,
             userWorker: userWorker,
@@ -119,8 +119,6 @@ class FollowerListTests: XCTestCase {
         presenter.viewController = viewController
         
         interactor.username = "brudrago"
-        
-        checkMemoryLeaks(for: viewController,file: file, line: line)
         
         return viewController
     }
