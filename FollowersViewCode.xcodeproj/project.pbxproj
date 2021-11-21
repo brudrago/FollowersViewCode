@@ -94,6 +94,7 @@
 		70F9EFBB2611416B0090BC9D /* FVCBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F9EFBA2611416B0090BC9D /* FVCBodyLabel.swift */; };
 		70F9EFBF261142700090BC9D /* FVCAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F9EFBE261142700090BC9D /* FVCAlertVC.swift */; };
 		70F9EFC4261142D30090BC9D /* FVCAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F9EFC3261142D30090BC9D /* FVCAlertView.swift */; };
+		F54A735C274AF6EC00EAE9CB /* Tests+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54A735B274AF6EC00EAE9CB /* Tests+ext.swift */; };
 		F5912B05273B04F400A71644 /* SearchSnapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5912B04273B04F400A71644 /* SearchSnapTests.swift */; };
 		F5912B09273B083E00A71644 /* FollowerWorkerSnapMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5912B08273B083E00A71644 /* FollowerWorkerSnapMock.swift */; };
 		F5912B0B273B087900A71644 /* PersistenceWorkerSnapMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5912B0A273B087800A71644 /* PersistenceWorkerSnapMock.swift */; };
@@ -216,6 +217,7 @@
 		8019B035C79C8B5B3C4113E1 /* Pods-FollowersViewCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FollowersViewCode.release.xcconfig"; path = "Target Support Files/Pods-FollowersViewCode/Pods-FollowersViewCode.release.xcconfig"; sourceTree = "<group>"; };
 		C7304DBDD8845A32CDF8BD42 /* Pods_FollowersViewCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FollowersViewCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD00079871FADBCEDD89EECA /* libPods-FollowersViewCodeSnapTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FollowersViewCodeSnapTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F54A735B274AF6EC00EAE9CB /* Tests+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tests+ext.swift"; sourceTree = "<group>"; };
 		F5912AFB273B02D600A71644 /* FollowersViewCodeSnapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FollowersViewCodeSnapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5912B04273B04F400A71644 /* SearchSnapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSnapTests.swift; sourceTree = "<group>"; };
 		F5912B08273B083E00A71644 /* FollowerWorkerSnapMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerWorkerSnapMock.swift; sourceTree = "<group>"; };
@@ -520,6 +522,7 @@
 				70EBAA1526B75AE000D204F6 /* FollowerListDetails */,
 				70EBAA1026B752A400D204F6 /* SearchDetails */,
 				70EBAA0826B7523F00D204F6 /* Info.plist */,
+				F54A735B274AF6EC00EAE9CB /* Tests+ext.swift */,
 			);
 			path = FollowersViewCodeTests;
 			sourceTree = "<group>";
@@ -1072,6 +1075,7 @@
 				702A714F26E7E3F50074FD73 /* FavoriteDetailsViewControllerMock.swift in Sources */,
 				702A715126E7E4FA0074FD73 /* FavoriteListTests.swift in Sources */,
 				700E117526BB26920008E7F6 /* PersistenceWorkerMock.swift in Sources */,
+				F54A735C274AF6EC00EAE9CB /* Tests+ext.swift in Sources */,
 				702A715426E7E9A20074FD73 /* UserInfoViewControllerMock.swift in Sources */,
 				70EBAA1226B753CD00D204F6 /* SearchTests.swift in Sources */,
 			);

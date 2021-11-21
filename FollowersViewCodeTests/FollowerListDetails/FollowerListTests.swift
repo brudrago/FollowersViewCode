@@ -97,9 +97,15 @@ class FollowerListTests: XCTestCase {
         XCTAssertTrue(viewController.dismissLoadingCalled)
     }
     
+    func testAddFollowerInFavoriteListFailed() {
+        self.userWorker = UserWorkerFailedMock()
+        let viewController = build()
+        viewController.interactor.addFollowerInFavoriteList()
+        XCTAssertTrue(viewController.showAlertCalled)
+    }
     // MARK: - Private Functions
     
-    private func build() -> FollowerListViewControllerMock {
+    private func build(file: StaticString = #filePath, line: UInt = #line) -> FollowerListViewControllerMock {
         let interactor = FollowerListInteractor(
             followerWorker: followerWorker,
             userWorker: userWorker,
@@ -113,6 +119,8 @@ class FollowerListTests: XCTestCase {
         presenter.viewController = viewController
         
         interactor.username = "brudrago"
+        
+        checkMemoryLeaks(for: viewController,file: file, line: line)
         
         return viewController
     }

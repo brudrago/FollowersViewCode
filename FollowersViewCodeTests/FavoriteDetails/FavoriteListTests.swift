@@ -57,7 +57,7 @@ class FavoriteListTests: XCTestCase {
     
     // MARK: - Private Functions
     
-    private func build() -> FavoriteDetailsViewControllerMock {
+    private func build(file: StaticString = #filePath, line: UInt = #line) -> FavoriteDetailsViewControllerMock {
         let interactor = FavoriteListInteractor(
             persistenceWorker: persistenceWorker)
         
@@ -67,6 +67,8 @@ class FavoriteListTests: XCTestCase {
         viewController.interactor = interactor
         interactor.presenter = presenter
         presenter.viewController = viewController
+        
+        checkMemoryLeaks(for: viewController, file: file, line: line)
         
         return viewController
     }
