@@ -20,7 +20,7 @@ class UserInfoSnapTests: XCTestCase {
         self.userWorker = UserWorkerSnapMock()
     }
 
-    func testUserInfoController() {
+    func testUserInfoControllerWithFakeUser() {
         let vc = build()
         
         assertSnapshot(matching: vc, as: .image, record: false)

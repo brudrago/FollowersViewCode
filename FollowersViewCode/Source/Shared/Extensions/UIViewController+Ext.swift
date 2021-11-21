@@ -9,7 +9,7 @@ import UIKit
 //import SnapKit
 import SafariServices
 
-fileprivate var containerView: UIView!
+fileprivate var containerView: UIView?
 
 extension UIViewController {
     
@@ -24,19 +24,19 @@ extension UIViewController {
     
     func startLoading() {
         containerView = UIView(frame: view.bounds)
-        view.addSubview(containerView)
+        view.addSubview(containerView ?? UIView())
         
-        containerView.backgroundColor = .systemBackground
-        containerView.alpha = 0
+        containerView?.backgroundColor = .systemBackground
+        containerView?.alpha = 0
         
         UIView.animate(withDuration: 0.25) {
-            containerView.alpha = 0.8
+            containerView?.alpha = 0.8
         }
         
         let activityIndicator = UIActivityIndicatorView(style: .large)
         activityIndicator.color = .systemGreen
         
-        containerView.addSubview(activityIndicator)
+        containerView?.addSubview(activityIndicator)
         
         activityIndicator.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
@@ -47,10 +47,10 @@ extension UIViewController {
     }
     
     func stopLoading() {
-//        DispatchQueue.main.async {
-//            containerView.removeFromSuperview()
-//            containerView = nil
-//        }
+        DispatchQueue.main.async {
+            containerView?.removeFromSuperview()
+            containerView = nil
+        }
     }
     
     func showEmptyStateView(with message: String, in view: UIView) {

@@ -20,7 +20,7 @@ class FavoritesSnapTests: XCTestCase {
         self.persistenceWorker = PersistenceWorkerSnapMock()
     }
     
-    func testFavoritesList() throws {
+    func testFavoritesListWithFavoritesMock() throws {
         let vc = build()
         
         assertSnapshot(matching: vc, as: .image, record: false)
